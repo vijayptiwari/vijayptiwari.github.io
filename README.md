@@ -15,19 +15,19 @@ Hi, I'm Vijay Prakash Tiwari, a passionate and dedicated Software Engineer with 
 
 ## 🚀 Projects
 
-### [RealTime Billing Product](https://github.com/yourusername/realtime-billing-product)
+### RealTime Billing Product
 - **Description**: Engineered the Amdocs Technology's RealTime Billing Product, a microservices application suite for business operations.
 - **Technologies Used**: Java, Spring Boot, MS360 SDK, RESTful Web Services
 - **Role**: Lead Developer
 - **Highlights**: Solved complex cloud application system problems, participated in code reviews, and designed end-to-end solutions.
 
-### [SOA Solutions with TIBCO](https://github.com/yourusername/soa-solutions-tibco)
+### SOA Solutions with TIBCO
 - **Description**: Developed SOA solutions for clients using TIBCO suite of products.
 - **Technologies Used**: TIBCO BusinessEvents, TIBCO BusinessWorks, TIBCO ActiveMatrix, TIBCO Enterprise Messaging Services, HTML, CSS, JavaScript, SOAP/REST Web Services, Java
 - **Role**: Integration Specialist
 - **Highlights**: Customized SOA solutions, performed development work, and deployed applications on client cloud and servers.
 
-### [DevOps Automation](https://github.com/yourusername/devops-automation)
+### DevOps Automation
 - **Description**: Implemented DevOps automation processes to streamline development and deployment workflows.
 - **Technologies Used**: Jenkins, Docker, Kubernetes, Ansible
 - **Role**: DevOps Champion
@@ -46,10 +46,10 @@ Hi, I'm Vijay Prakash Tiwari, a passionate and dedicated Software Engineer with 
 Feel free to reach out to me for collaboration, inquiries, or just to connect!
 
 - **LinkedIn**: [Vijay Prakash Tiwari](https://www.linkedin.com/in/vijayptiwari/)
-- **Email**: vijay.tiwari@example.com
+- **Email**: vijayptiwari28@gmail.com
 
 Thank you for visiting my GitHub portfolio!
 
 ---
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=vijayptiwari&show_icons=true&theme=radical)
