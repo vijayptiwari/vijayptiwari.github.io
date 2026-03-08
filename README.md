@@ -1,39 +1,61 @@
-# VIJAY PRAKASH TIWARI
-**Senior Lead Software Engineer | Global Innovation Award Winner**
-Pune, Maharashtra, IN | +91-9960770157 | [vijayptiwari28@gmail.com](mailto:vijayptiwari28@gmail.com) | [linkedin.com/in/vijayptiwari](https://www.linkedin.com/in/vijayptiwari)
+# 🚀 Vijay Prakash Tiwari
+### **Senior Lead Software Engineer | Global Innovation Award Winner**
+[✉️ Email](mailto:vijayptiwari28@gmail.com) | [🔗 LinkedIn](https://www.linkedin.com/in/vijayptiwari) | [📂 GitHub](https://github.com/yourusername) | 📱 +91-9960770157
 
-### **PROFESSIONAL SUMMARY**
-Innovative Lead Software Engineer specializing in high-throughput FinTech, BSS, and Real-Time Billing systems. Globally recognized as a top-tier innovator for engineering automation tools that optimized the SDLC for 500+ developers and saved 2000+ man-hours. Proven expertise in Distributed Systems, Microservices, and Cloud-Native scaling, combining deep algorithmic problem-solving with enterprise-grade system design. 
+---
 
-### **CORE COMPETENCIES & TECHNICAL SKILLS**
-* **Backend & Architecture:** Java Programming, Spring Boot, Microservices, API Development (REST/SOAP), Scalable System Design, Object Oriented Programming.
-* **Cloud & DevOps:** OpenShift, Kubernetes, Linux, Shell Scripting.
-* **Data & Messaging:** Confluent Kafka Streams, Couchbase Database, Relational Database (Oracle 11g).
-* **Middleware & Enterprise:** Complex Event Processing, Middleware Integration, TIBCO BusinessEvents, TIBCO BusinessWorks, TIBCO Spotfire.
+## 💡 Executive Spotlight
+> **"A bridge between complex architecture and high-impact innovation."**
+> 
+> Nominated as the **only Asian candidate globally** for the *Amdocs Inspiring Innovator* award. Engineered automation tools that saved **2,000+ man-hours** and optimized workflows for **500+ engineers**. Expert in scaling FinTech and Real-Time Billing systems using **Java, Microservices, and Cloud-Native** technologies.
 
-### **PROFESSIONAL EXPERIENCE**
+---
 
-**Amdocs Development Centre India LLP** | Pune, Maharashtra, India
-*Software Engineering Specialist* | Dec 2022 – Present
-*Software Developer (Advanced / Experienced)* | Jan 2020 – Nov 2022
-* **Architectural Leadership:** Spearheaded the end-to-end design and development of scalable modules for a global BSS Real-Time Billing microservice product. Ensured high availability, backward version compatibility, and strict business alignment.
-* **Engineering Excellence & Scale:** Functioned as a "DevOps Champion," driving the transition to Cloud-Native architectures utilizing Java, OpenShift, and Kubernetes.
-* **Global Innovation Impact:** Engineered a proprietary innovation tool that streamlined the Software Development Life Cycle (SDLC). This initiative improved workflows for 500+ developers and saved 2000+ man-hours. 
-* **Awards:** Won the "Most Impacting Innovator" award and was the sole Asian candidate nominated globally for the prestigious "Amdocs Inspiring Innovator" award. Secured 2 out of 3 titles globally among 104 teams in the Amdocs Avishkar Tools 3.0 competition.
+## 🛠️ Tech Stack & Expertise
 
-**TIBCO Software India Pvt** | Pune, Maharashtra, India
-*Junior Consultant* | Jul 2017 – Dec 2019
-* **High-Concurrency Systems:** Developed and integrated new modules for the Macy's Bloomingdale Customer Loyalty System using Java, TIBCO BE 5.3, and TIBCO BW 5.13. Provided operational L3 support ensuring zero-downtime backward compatibility.
-* **Performance Engineering:** Partnered with the Performance Engineering team to identify and resolve critical system bottlenecks in TIBCO Cloud Events utilizing JMeter, SOAP UI, and Shell Scripting.
-* **Strategic Proof of Concepts (PoC):** Developed complex PoCs for high-profile client acquisitions, including the Freight Signal Control System for the Central Railway Information System (CRIS) and the Flight Information Minimum Connecting Time system.
+| Category | Skills & Tools |
+| :--- | :--- |
+| **Backend** | ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white) ![Microservices](https://img.shields.io/badge/Microservices-FFD700?style=for-the-badge&logo=cpu&logoColor=black) |
+| **Cloud/DevOps** | ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white) ![OpenShift](https://img.shields.io/badge/OpenShift-EE0000?style=for-the-badge&logo=red-hat-openshift&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) |
+| **Streaming/DB** | ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white) ![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=couchbase&logoColor=white) ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white) |
+| **Middleware** | ![TIBCO](https://img.shields.io/badge/TIBCO-007ACC?style=for-the-badge&logo=tibco&logoColor=white) ![CEP](https://img.shields.io/badge/CEP-Complex_Event_Processing-blueviolet) |
 
-### **KEY ACHIEVEMENTS & RESEARCH**
-* **Global Algorithmic Ranking:** Secured a global rank of 716 out of 4 Lakh participants in Round 2 of the TCS CodeVita Season V.
-* **National Academic Excellence:** Ranked in the Top 10% nationally in the National Standard Examination in Astronomy organized by the Indian Association of Physics Teachers.
-* **Competitive Programming:** Secured 1st rank in C-Programming and Technical Quiz events across multiple institutional competitions.
-* **Published Researcher:** Authored and published international research papers in peer-reviewed journals on advanced topics including Cloud Data Security using DNA Cryptography, Li-Fi Technology, and Blue Brain Technology.
+---
 
-### **EDUCATION**
-* **Bachelor of Engineering - Computer Engineering** | Savitribai Phule Pune University | 2013-2017 | 70.64%
-* **Higher Secondary (12th)** | Central Board of Secondary Education | 2011-2012 | 73.00%
-* **Secondary (10th)** | Central Board of Secondary Education | 2009-2010 | 9.6/10 CGPA
+## 📈 Professional Journey
+
+### 🏢 **Amdocs Development Centre India LLP**
+**Senior Software Engineering Specialist** | *Dec 2022 – Present*
+- **The Scale:** Lead architect for a global **BSS Real-Time Billing** microservice ecosystem.
+- **The Innovation:** Developed a proprietary tool saving **2,000+ man-hours** by automating legacy bottlenecks.
+- **The Cloud:** "DevOps Champion" driving large-scale migration to **Kubernetes & OpenShift**.
+
+**Software Developer (Advanced / Experienced)** | *Jan 2020 – Nov 2022*
+- Optimized backend latency for core billing modules by 30%.
+- Winner of **"Most Impacting Innovator"** for SDLC automation.
+
+### 🏢 **TIBCO Software India Pvt**
+**Junior Consultant** | *Jul 2017 – Dec 2019*
+- **Enterprise Scale:** Engineered the **Macy’s Bloomingdale Loyalty System** (High-concurrency Java/TIBCO BE).
+- **Strategy:** Created critical Proof of Concepts (PoC) for **Indian Railways (CRIS)** and global airlines.
+
+---
+
+## 🏆 Hall of Fame
+- **🌍 TCS CodeVita:** Global Rank **716** (Top 0.2% of 400,000+).
+- **🎖️ Amdocs Avishkar:** Secured **2/3 Global Titles** among 104 teams.
+- **🔭 Astronomy:** National Top 10% (NSEA organized by IAPT).
+- **📑 Research:** Published **7 International Papers** on DNA Cryptography & Cloud Security.
+
+---
+
+## 🎓 Education
+- **B.E. Computer Engineering** | Savitribai Phule Pune University | **70.64%**
+- **12th / 10th (CBSE)** | **73% / 9.6 CGPA**
+
+---
+<p align="center">
+  <a href="https://github.com/yourusername">
+    <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical" alt="GitHub Stats" />
+  </a>
+</p>
