@@ -1,55 +1,39 @@
-# Vijay Prakash Tiwari's GitHub Portfolio
+# VIJAY PRAKASH TIWARI
+**Senior Lead Software Engineer | Global Innovation Award Winner**
+Pune, Maharashtra, IN | +91-9960770157 | [vijayptiwari28@gmail.com](mailto:vijayptiwari28@gmail.com) | [linkedin.com/in/vijayptiwari](https://www.linkedin.com/in/vijayptiwari)
 
-![Profile Banner](https://your-banner-image-link.com/banner.jpg)
+### **PROFESSIONAL SUMMARY**
+Innovative Lead Software Engineer specializing in high-throughput FinTech, BSS, and Real-Time Billing systems. Globally recognized as a top-tier innovator for engineering automation tools that optimized the SDLC for 500+ developers and saved 2000+ man-hours. Proven expertise in Distributed Systems, Microservices, and Cloud-Native scaling, combining deep algorithmic problem-solving with enterprise-grade system design. 
 
-Welcome to my GitHub portfolio! I am an experienced Software Engineer Specialist with a strong background in Integration Technology, Microservices Development, and Cloud Application Systems. Here you'll find a collection of my projects, contributions, and achievements.
+### **CORE COMPETENCIES & TECHNICAL SKILLS**
+* **Backend & Architecture:** Java Programming, Spring Boot, Microservices, API Development (REST/SOAP), Scalable System Design, Object Oriented Programming.
+* **Cloud & DevOps:** OpenShift, Kubernetes, Linux, Shell Scripting.
+* **Data & Messaging:** Confluent Kafka Streams, Couchbase Database, Relational Database (Oracle 11g).
+* **Middleware & Enterprise:** Complex Event Processing, Middleware Integration, TIBCO BusinessEvents, TIBCO BusinessWorks, TIBCO Spotfire.
 
-## 👨‍💻 About Me
+### **PROFESSIONAL EXPERIENCE**
 
-Hi, I'm Vijay Prakash Tiwari, a passionate and dedicated Software Engineer with expertise in:
+**Amdocs Development Centre India LLP** | Pune, Maharashtra, India
+*Software Engineering Specialist* | Dec 2022 – Present
+*Software Developer (Advanced / Experienced)* | Jan 2020 – Nov 2022
+* **Architectural Leadership:** Spearheaded the end-to-end design and development of scalable modules for a global BSS Real-Time Billing microservice product. Ensured high availability, backward version compatibility, and strict business alignment.
+* **Engineering Excellence & Scale:** Functioned as a "DevOps Champion," driving the transition to Cloud-Native architectures utilizing Java, OpenShift, and Kubernetes.
+* **Global Innovation Impact:** Engineered a proprietary innovation tool that streamlined the Software Development Life Cycle (SDLC). This initiative improved workflows for 500+ developers and saved 2000+ man-hours. 
+* **Awards:** Won the "Most Impacting Innovator" award and was the sole Asian candidate nominated globally for the prestigious "Amdocs Inspiring Innovator" award. Secured 2 out of 3 titles globally among 104 teams in the Amdocs Avishkar Tools 3.0 competition.
 
-- **Integration Technology**: Extensive experience with TIBCO suites like TIBCO BusinessEvents, TIBCO BusinessWorks, TIBCO ActiveMatrix, and more.
-- **Microservices Development**: Proficient in developing and deploying microservices applications using Java and Spring Boot.
-- **Cloud Application Systems**: Skilled in solving cloud application system problems and deploying applications on various cloud platforms.
-- **DevOps**: Bridging the gap between development and operations to ensure smooth and efficient project delivery.
+**TIBCO Software India Pvt** | Pune, Maharashtra, India
+*Junior Consultant* | Jul 2017 – Dec 2019
+* **High-Concurrency Systems:** Developed and integrated new modules for the Macy's Bloomingdale Customer Loyalty System using Java, TIBCO BE 5.3, and TIBCO BW 5.13. Provided operational L3 support ensuring zero-downtime backward compatibility.
+* **Performance Engineering:** Partnered with the Performance Engineering team to identify and resolve critical system bottlenecks in TIBCO Cloud Events utilizing JMeter, SOAP UI, and Shell Scripting.
+* **Strategic Proof of Concepts (PoC):** Developed complex PoCs for high-profile client acquisitions, including the Freight Signal Control System for the Central Railway Information System (CRIS) and the Flight Information Minimum Connecting Time system.
 
-## 🚀 Projects
+### **KEY ACHIEVEMENTS & RESEARCH**
+* **Global Algorithmic Ranking:** Secured a global rank of 716 out of 4 Lakh participants in Round 2 of the TCS CodeVita Season V.
+* **National Academic Excellence:** Ranked in the Top 10% nationally in the National Standard Examination in Astronomy organized by the Indian Association of Physics Teachers.
+* **Competitive Programming:** Secured 1st rank in C-Programming and Technical Quiz events across multiple institutional competitions.
+* **Published Researcher:** Authored and published international research papers in peer-reviewed journals on advanced topics including Cloud Data Security using DNA Cryptography, Li-Fi Technology, and Blue Brain Technology.
 
-### RealTime Billing Product
-- **Description**: Engineered the Amdocs Technology's RealTime Billing Product, a microservices application suite for business operations.
-- **Technologies Used**: Java, Spring Boot, MS360 SDK, RESTful Web Services
-- **Role**: Lead Developer
-- **Highlights**: Solved complex cloud application system problems, participated in code reviews, and designed end-to-end solutions.
-
-### SOA Solutions with TIBCO
-- **Description**: Developed SOA solutions for clients using TIBCO suite of products.
-- **Technologies Used**: TIBCO BusinessEvents, TIBCO BusinessWorks, TIBCO ActiveMatrix, TIBCO Enterprise Messaging Services, HTML, CSS, JavaScript, SOAP/REST Web Services, Java
-- **Role**: Integration Specialist
-- **Highlights**: Customized SOA solutions, performed development work, and deployed applications on client cloud and servers.
-
-### DevOps Automation
-- **Description**: Implemented DevOps automation processes to streamline development and deployment workflows.
-- **Technologies Used**: Jenkins, Docker, Kubernetes, Ansible
-- **Role**: DevOps Champion
-- **Highlights**: Bridged the gap between development and operations, ensuring efficient and reliable project delivery.
-
-## 🛠 Skills
-
-- **Programming Languages**: Java, Python, JavaScript
-- **Frameworks and Tools**: Spring Boot, MS360 SDK, TIBCO BusinessEvents, TIBCO BusinessWorks
-- **Cloud Platforms**: AWS, Azure, Google Cloud
-- **DevOps Tools**: Jenkins, Docker, Kubernetes, Ansible
-- **Web Technologies**: HTML, CSS, RESTful Web Services, SOAP
-
-## 📞 Contact
-
-Feel free to reach out to me for collaboration, inquiries, or just to connect!
-
-- **LinkedIn**: [Vijay Prakash Tiwari](https://www.linkedin.com/in/vijayptiwari/)
-- **Email**: vijayptiwari28@gmail.com
-
-Thank you for visiting my GitHub portfolio!
-
----
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=vijayptiwari&show_icons=true&theme=radical)
+### **EDUCATION**
+* **Bachelor of Engineering - Computer Engineering** | Savitribai Phule Pune University | 2013-2017 | 70.64%
+* **Higher Secondary (12th)** | Central Board of Secondary Education | 2011-2012 | 73.00%
+* **Secondary (10th)** | Central Board of Secondary Education | 2009-2010 | 9.6/10 CGPA
