@@ -1,0 +1,9 @@
+{
+  "name": "Vijay Prakash Tiwari Portfolio",
+  "short_name": "Vijay Tiwari",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "description": "Portfolio of Vijay Prakash Tiwari, software engineer focused on AI, agentic systems, microservices, integration, and cloud delivery."
+}
