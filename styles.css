@@ -398,6 +398,7 @@ h3 {
   border-radius: 18px;
   border: 1px solid var(--line);
   background: rgba(17, 21, 27, 0.88);
+  overflow: hidden;
 }
 
 .brand-pill img,
@@ -409,8 +410,11 @@ h3 {
 }
 
 .brand-pill img {
+  display: block;
   object-fit: contain;
   padding: 8px;
+  max-width: 46px;
+  max-height: 46px;
   border-radius: 14px;
   border: 1px solid var(--line-strong);
   background: rgba(255, 255, 255, 0.03);
@@ -474,6 +478,7 @@ h3 {
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: rgba(17, 21, 27, 0.86);
+  overflow: hidden;
 }
 
 .technology-card img,
@@ -488,8 +493,11 @@ h3 {
 }
 
 .technology-card img {
+  display: block;
   object-fit: contain;
   padding: 10px;
+  max-width: 52px;
+  max-height: 52px;
 }
 
 .technology-wordmark {
@@ -504,9 +512,40 @@ h3 {
   text-transform: uppercase;
 }
 
+.technology-kafka {
+  background: linear-gradient(135deg, #161b24, #262f3c);
+  color: #f3f6fb;
+}
+
 .technology-confluent {
-  background: linear-gradient(135deg, #0f1722, #213448);
-  color: #7fc2ff;
+  position: relative;
+  background: linear-gradient(135deg, rgba(248, 251, 255, 0.98), rgba(225, 235, 248, 0.96));
+  color: transparent;
+  font-size: 0;
+}
+
+.technology-confluent::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 2px solid #203c73;
+}
+
+.technology-confluent::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background:
+    linear-gradient(#203c73, #203c73) center/2px 100% no-repeat,
+    linear-gradient(90deg, #203c73, #203c73) center/100% 2px no-repeat,
+    linear-gradient(45deg, transparent 45%, #203c73 45%, #203c73 55%, transparent 55%) center/100% 100% no-repeat,
+    linear-gradient(-45deg, transparent 45%, #203c73 45%, #203c73 55%, transparent 55%) center/100% 100% no-repeat;
+  clip-path: circle(50%);
 }
 
 .technology-openai {
@@ -545,58 +584,72 @@ h3 {
 
 .presence-card {
   padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  overflow: hidden;
 }
 
 .presence-platform {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+  align-items: flex-start;
+  gap: 18px;
 }
 
 .platform-logo {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  border-radius: 22px;
   display: inline-grid;
   place-items: center;
   border: 1px solid var(--line-strong);
-  flex: 0 0 auto;
+  flex: 0 0 78px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
 }
 
 .platform-logo svg {
-  width: 24px;
-  height: 24px;
+  width: 42px;
+  height: 42px;
+  display: block;
 }
 
 .youtube-logo {
   background: linear-gradient(135deg, #ff5b57, #bb0d18);
-  color: #fff;
-}
-
-.youtube-logo svg {
-  fill: currentColor;
-}
-
-.youtube-logo .logo-cut {
-  fill: #fff;
 }
 
 .instagram-logo {
   background: linear-gradient(135deg, #feda75, #fa7e1e 30%, #d62976 68%, #962fbf 100%);
-  color: #fff;
 }
 
-.instagram-logo svg {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
+.presence-summary {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.68;
 }
 
-.instagram-logo .insta-dot {
-  fill: currentColor;
-  stroke: none;
+.presence-group-list {
+  display: grid;
+  gap: 14px;
+}
+
+.presence-item {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.presence-item h4 {
+  margin: 0 0 8px;
+  font-family: "Sora", sans-serif;
+  font-size: 0.98rem;
+  letter-spacing: -0.02em;
+}
+
+.presence-item p {
+  margin: 0;
 }
 
 .presence-links {
@@ -785,15 +838,49 @@ h3 {
 }
 
 .amdocs-logo {
-  background: linear-gradient(135deg, #0a63ff, #2ba6ff);
-  color: #ffffff;
+  position: relative;
+  gap: 10px;
+  padding: 0 18px 0 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 244, 250, 0.96));
+  color: #111318;
   text-transform: lowercase;
 }
 
-.tibco-logo {
-  background: linear-gradient(135deg, #9d0f1d, #d22538);
+.amdocs-logo::before {
+  content: "a-";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  padding: 0 6px;
+  background: linear-gradient(135deg, #f7b23b, #ef6a73 46%, #d73ba8 100%);
   color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.tibco-logo {
+  position: relative;
+  gap: 8px;
+  padding: 0 18px 0 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(232, 242, 252, 0.95));
+  color: #2f87d7;
   text-transform: uppercase;
+}
+
+.tibco-logo::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex: 0 0 18px;
+  background:
+    linear-gradient(135deg, transparent 42%, rgba(255, 255, 255, 0.96) 42%, rgba(255, 255, 255, 0.96) 56%, transparent 56%),
+    linear-gradient(135deg, #56a4ea, #2f87d7);
+  box-shadow: inset 0 0 0 1px rgba(47, 135, 215, 0.22);
 }
 
 .delivery-logo {
@@ -857,6 +944,18 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .platform-logo {
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    flex-basis: 68px;
+  }
+
+  .platform-logo svg {
+    width: 38px;
+    height: 38px;
+  }
+
   .summary-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -889,6 +988,10 @@ h3 {
 
   .technology-grid {
     grid-template-columns: 1fr;
+  }
+
+  .presence-platform {
+    flex-direction: column;
   }
 
   .experience-brand {

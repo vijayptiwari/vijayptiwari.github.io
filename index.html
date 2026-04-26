@@ -227,11 +227,11 @@
             <span>Spring Boot</span>
           </div>
           <div class="brand-pill">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka logo">
+            <span class="technology-wordmark technology-kafka" aria-label="Apache Kafka badge">AK</span>
             <span>Apache Kafka</span>
           </div>
           <div class="brand-pill">
-            <span class="technology-wordmark technology-confluent" aria-label="Confluent wordmark">confluent</span>
+            <span class="technology-wordmark technology-confluent" aria-label="Confluent logo"></span>
             <span>Confluent</span>
           </div>
           <div class="brand-pill">
@@ -334,14 +334,14 @@
               </div>
             </article>
             <article class="technology-card">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" alt="Apache Kafka logo">
+              <span class="technology-wordmark technology-kafka" aria-label="Apache Kafka badge">AK</span>
               <div>
                 <strong>Apache Kafka</strong>
                 <span>Streaming and event-driven systems</span>
               </div>
             </article>
             <article class="technology-card">
-              <span class="technology-wordmark technology-confluent" aria-label="Confluent wordmark">confluent</span>
+              <span class="technology-wordmark technology-confluent" aria-label="Confluent logo"></span>
               <div>
                 <strong>Confluent</strong>
                 <span>Managed streaming ecosystem</span>
@@ -507,82 +507,80 @@
           <article class="presence-card">
             <div class="presence-platform">
               <span class="platform-logo youtube-logo" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8Z"></path>
-                  <path d="m9.5 15.4 6.3-3.4-6.3-3.4v6.8Z" class="logo-cut"></path>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2.5" y="5" width="19" height="14" rx="4.5" fill="#ffffff"></rect>
+                  <path d="m10 9 5.5 3-5.5 3V9Z" fill="#ff2733"></path>
                 </svg>
               </span>
               <div>
                 <p class="presence-label">YouTube</p>
                 <h3>Video Channels</h3>
+                <p class="presence-summary">
+                  Long-form content focused on fitness and informative communication, grouped together so the
+                  platform story is immediately clear.
+                </p>
               </div>
             </div>
-            <p>Long-form content that reflects the fitness and informative side of my public presence.</p>
-            <div class="presence-links">
-              <a href="https://www.youtube.com/@generally_fit" target="_blank" rel="noreferrer">Generally Fit</a>
-              <a href="https://www.youtube.com/@generally_informed" target="_blank" rel="noreferrer">Generally Informed</a>
+            <div class="presence-group-list">
+              <div class="presence-item">
+                <h4>Fitness</h4>
+                <p>Strength, discipline, and training-focused long-form content.</p>
+                <div class="presence-links">
+                  <a href="https://www.youtube.com/@generally_fit" target="_blank" rel="noreferrer">Generally Fit</a>
+                </div>
+              </div>
+              <div class="presence-item">
+                <h4>Informative</h4>
+                <p>Explanatory and insight-led videos that extend the communicator side of the brand.</p>
+                <div class="presence-links">
+                  <a href="https://www.youtube.com/@generally_informed" target="_blank" rel="noreferrer">Generally Informed</a>
+                </div>
+              </div>
             </div>
           </article>
 
           <article class="presence-card">
             <div class="presence-platform">
               <span class="platform-logo instagram-logo" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                  <circle cx="12" cy="12" r="4.2"></circle>
-                  <circle cx="17.2" cy="6.8" r="1.2" class="insta-dot"></circle>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="4.5" fill="none" stroke="#ffffff" stroke-width="2"></rect>
+                  <circle cx="12" cy="12" r="3.8" fill="none" stroke="#ffffff" stroke-width="2"></circle>
+                  <circle cx="17.1" cy="6.9" r="1.2" fill="#ffffff"></circle>
                 </svg>
               </span>
               <div>
                 <p class="presence-label">Instagram</p>
-                <h3>Fitness and Performance</h3>
+                <h3>Instagram Channels</h3>
+                <p class="presence-summary">
+                  Short-form content grouped into clear themes so people can understand the broader personality
+                  without losing the professional center of the site.
+                </p>
               </div>
             </div>
-            <p>A discipline-first view into strength, consistency, and performance mindset.</p>
-            <div class="presence-links">
-              <a href="https://www.instagram.com/generally_fit/" target="_blank" rel="noreferrer">Generally Fit</a>
-            </div>
-          </article>
-
-          <article class="presence-card">
-            <div class="presence-platform">
-              <span class="platform-logo instagram-logo" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                  <circle cx="12" cy="12" r="4.2"></circle>
-                  <circle cx="17.2" cy="6.8" r="1.2" class="insta-dot"></circle>
-                </svg>
-              </span>
-              <div>
-                <p class="presence-label">Instagram</p>
-                <h3>Vlogging and Personality</h3>
+            <div class="presence-group-list">
+              <div class="presence-item">
+                <h4>Fitness and Performance</h4>
+                <p>A discipline-first view into strength, consistency, and performance mindset.</p>
+                <div class="presence-links">
+                  <a href="https://www.instagram.com/generally_fit/" target="_blank" rel="noreferrer">Generally Fit</a>
+                </div>
               </div>
-            </div>
-            <p>A more personal layer that helps people understand the human side beyond the engineering role.</p>
-            <div class="presence-links">
-              <a href="https://www.instagram.com/generally_vlogging/" target="_blank" rel="noreferrer">Generally Vlogging</a>
-              <a href="https://www.instagram.com/why_vijay_why/" target="_blank" rel="noreferrer">Why Vijay Why</a>
-            </div>
-          </article>
-
-          <article class="presence-card">
-            <div class="presence-platform">
-              <span class="platform-logo instagram-logo" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                  <circle cx="12" cy="12" r="4.2"></circle>
-                  <circle cx="17.2" cy="6.8" r="1.2" class="insta-dot"></circle>
-                </svg>
-              </span>
-              <div>
-                <p class="presence-label">Instagram</p>
-                <h3>Food and Informative Content</h3>
+              <div class="presence-item">
+                <h4>Vlogging and Personality</h4>
+                <p>A more personal layer that helps people understand the human side beyond the engineering role.</p>
+                <div class="presence-links">
+                  <a href="https://www.instagram.com/generally_vlogging/" target="_blank" rel="noreferrer">Generally Vlogging</a>
+                  <a href="https://www.instagram.com/why_vijay_why/" target="_blank" rel="noreferrer">Why Vijay Why</a>
+                </div>
               </div>
-            </div>
-            <p>Lightweight channels that show curiosity, lifestyle, and the ability to communicate beyond work.</p>
-            <div class="presence-links">
-              <a href="https://www.instagram.com/hunger_bhi_zaroori_hai/" target="_blank" rel="noreferrer">Hunger Bhi Zaroori Hai</a>
-              <a href="https://www.instagram.com/generally__informed/" target="_blank" rel="noreferrer">Generally Informed</a>
+              <div class="presence-item">
+                <h4>Food and Informative</h4>
+                <p>Lightweight channels that show curiosity, lifestyle, and the ability to communicate beyond work.</p>
+                <div class="presence-links">
+                  <a href="https://www.instagram.com/hunger_bhi_zaroori_hai/" target="_blank" rel="noreferrer">Hunger Bhi Zaroori Hai</a>
+                  <a href="https://www.instagram.com/generally__informed/" target="_blank" rel="noreferrer">Generally Informed</a>
+                </div>
+              </div>
             </div>
           </article>
         </div>
