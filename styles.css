@@ -393,7 +393,7 @@ h3 {
 }
 
 .brand-track {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   width: max-content;
@@ -407,7 +407,7 @@ h3 {
 }
 
 .brand-sequence {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
@@ -430,6 +430,12 @@ h3 {
   border: 1px solid var(--line);
   background: rgba(17, 21, 27, 0.88);
   overflow: hidden;
+}
+
+.brand-track,
+.brand-sequence,
+.brand-pill {
+  flex-wrap: nowrap !important;
 }
 
 .brand-pill .brand-logo-surface,
