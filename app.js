@@ -12,10 +12,10 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.use(express.static(path.resolve(__dirname, "public")));
+app.use(express.static(path.resolve(__dirname)));
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 const server = app.listen(port, function () {
