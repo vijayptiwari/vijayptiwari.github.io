@@ -384,15 +384,37 @@ h3 {
   font-size: clamp(1.5rem, 2.6vw, 2.3rem);
 }
 
-.brand-ribbon-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+.brand-marquee {
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
-.brand-pill {
+.brand-track {
+  display: flex;
+  width: max-content;
+  animation: brand-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.brand-marquee:hover .brand-track {
+  animation-play-state: paused;
+}
+
+.brand-sequence {
   display: flex;
   align-items: center;
   gap: 14px;
+  padding-right: 14px;
+  flex-shrink: 0;
+}
+
+.brand-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 220px;
   min-height: 72px;
   padding: 14px 16px;
   border-radius: 18px;
@@ -532,6 +554,20 @@ h3 {
 
 .technology-company-logo-kafka,
 .technology-company-logo-openai {
+  padding: 7px;
+}
+
+.technology-company-logo-argo {
+  padding: 4px;
+}
+
+.technology-company-logo-jenkins,
+.technology-company-logo-kubernetes,
+.technology-company-logo-swagger {
+  padding: 6px;
+}
+
+.technology-company-logo-openshift {
   padding: 7px;
 }
 
@@ -792,34 +828,6 @@ h3 {
   grid-template-columns: 1fr;
 }
 
-.experience-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.experience-strip-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 16px 18px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 55%),
-    rgba(12, 16, 21, 0.82);
-  box-shadow: var(--shadow);
-}
-
-.experience-strip-item span:last-child {
-  color: var(--text);
-  font-family: "Sora", sans-serif;
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
 .experience-card {
   min-height: 0;
 }
@@ -967,10 +975,8 @@ h3 {
 @media (max-width: 980px) {
   .hero-layout,
   .impact-band,
-  .brand-ribbon-grid,
   .engineering-grid,
   .expertise-grid,
-  .experience-strip,
   .identity-grid,
   .presence-grid,
   .testimonial-grid,
@@ -1039,6 +1045,16 @@ h3 {
 }
 
 @keyframes technology-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes brand-scroll {
   from {
     transform: translateX(0);
   }
