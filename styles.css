@@ -154,6 +154,7 @@ h3,
 .expertise-grid,
 .experience-list,
 .impact-band,
+.brand-ribbon-grid,
 .engineering-grid,
 .identity-grid,
 .presence-grid,
@@ -325,6 +326,13 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.summary-grid article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 132px;
+}
+
 .summary-label,
 .summary-kicker,
 .identity-index,
@@ -339,13 +347,81 @@ h3 {
   margin-bottom: 10px;
 }
 
+.summary-kicker {
+  white-space: nowrap;
+}
+
 .summary-grid strong {
+  display: block;
   line-height: 1.45;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
 }
 
 .impact-band {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 24px;
+}
+
+.brand-ribbon {
+  margin-top: 24px;
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 42%),
+    rgba(10, 14, 19, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.brand-ribbon-heading {
+  margin-bottom: 20px;
+}
+
+.brand-ribbon-heading h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+}
+
+.brand-ribbon-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.brand-pill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 72px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(17, 21, 27, 0.88);
+}
+
+.brand-pill img,
+.brand-pill .experience-logo,
+.brand-pill .technology-wordmark {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+}
+
+.brand-pill img {
+  object-fit: contain;
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.brand-pill span:last-child {
+  font-family: "Sora", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .impact-item,
@@ -766,6 +842,7 @@ h3 {
 @media (max-width: 980px) {
   .hero-layout,
   .impact-band,
+  .brand-ribbon-grid,
   .engineering-grid,
   .expertise-grid,
   .experience-strip,
