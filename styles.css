@@ -629,8 +629,9 @@ li {
     var(--panel-strong);
 }
 
-.experience-panel + .experience-panel {
-  margin-top: 26px;
+.experience-stack {
+  display: grid;
+  gap: 28px;
 }
 
 .experience-header {
