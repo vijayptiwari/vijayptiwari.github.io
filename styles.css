@@ -629,6 +629,10 @@ li {
     var(--panel-strong);
 }
 
+.experience-panel + .experience-panel {
+  margin-top: 26px;
+}
+
 .experience-header {
   display: flex;
   justify-content: space-between;
