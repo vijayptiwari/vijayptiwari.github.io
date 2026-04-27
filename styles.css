@@ -165,6 +165,27 @@ h4,
   padding-top: 92px;
 }
 
+.section-surface {
+  margin-top: 34px;
+  padding: 48px 28px 8px;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  box-shadow: var(--glow);
+}
+
+.section-surface-dark {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 26%),
+    rgba(7, 13, 20, 0.94);
+}
+
+.section-surface-tint {
+  background:
+    linear-gradient(180deg, rgba(104, 191, 255, 0.06), transparent 28%),
+    linear-gradient(135deg, rgba(15, 34, 52, 0.96), rgba(7, 19, 30, 0.95));
+  border-color: rgba(108, 168, 255, 0.18);
+}
+
 .hero {
   padding-top: 48px;
 }
@@ -718,6 +739,12 @@ li {
 
   .nav.is-open .nav-links {
     display: flex;
+  }
+
+  .section-surface {
+    margin-top: 24px;
+    padding: 36px 20px 4px;
+    border-radius: 24px;
   }
 
   .hero-copy,
