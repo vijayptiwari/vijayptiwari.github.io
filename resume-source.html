@@ -7,15 +7,17 @@
   <meta name="robots" content="noindex, nofollow">
   <style>
     :root {
-      --text: #111827;
+      --text: #0f172a;
       --muted: #475569;
-      --line: #d7dee7;
-      --accent: #0f4c81;
+      --line: #dbe3ec;
+      --line-strong: #c4d0dd;
+      --accent: #0d4f8b;
+      --accent-soft: #eef5fb;
     }
 
     @page {
       size: A4;
-      margin: 0.5in;
+      margin: 0.45in 0.5in 0.5in;
     }
 
     * {
@@ -25,9 +27,9 @@
     body {
       margin: 0;
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 11pt;
-      line-height: 1.45;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      font-size: 10.2pt;
+      line-height: 1.36;
       background: #ffffff;
     }
 
@@ -37,29 +39,29 @@
     }
 
     header {
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 16px;
-      margin-bottom: 18px;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     h1 {
       margin: 0;
-      font-size: 24pt;
-      line-height: 1.05;
+      font-size: 23pt;
+      line-height: 1;
       letter-spacing: -0.02em;
     }
 
     .headline {
       margin: 8px 0 0;
       color: var(--accent);
-      font-size: 12pt;
+      font-size: 11.4pt;
       font-weight: 700;
     }
 
     .contact-line {
       margin-top: 10px;
       color: var(--muted);
-      font-size: 10.5pt;
+      font-size: 10pt;
     }
 
     .contact-line a {
@@ -68,16 +70,23 @@
     }
 
     section {
-      margin-top: 18px;
+      margin-top: 12px;
+    }
+
+    .section-block {
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
 
     h2 {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       color: var(--accent);
-      font-size: 11pt;
+      font-size: 10.3pt;
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
     }
 
     p {
@@ -91,18 +100,26 @@
     .skill-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 8px;
+      gap: 6px;
     }
 
     .skill-row {
       display: grid;
       grid-template-columns: 1.35in 1fr;
       gap: 12px;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
 
     .skill-label {
       color: var(--text);
       font-weight: 700;
+    }
+
+    .experience-entry,
+    .project-card {
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
 
     .experience-header,
@@ -132,7 +149,7 @@
     }
 
     ul {
-      margin: 8px 0 0 18px;
+      margin: 6px 0 0 15px;
       padding: 0;
     }
 
@@ -141,8 +158,8 @@
     }
 
     .project-card + .project-card {
-      margin-top: 12px;
-      padding-top: 12px;
+      margin-top: 8px;
+      padding-top: 8px;
       border-top: 1px solid var(--line);
     }
 
@@ -157,9 +174,84 @@
     }
 
     .footer-note {
-      margin-top: 10px;
+      margin-top: 6px;
       color: var(--muted);
-      font-size: 10pt;
+      font-size: 9.8pt;
+    }
+
+    .section-lead {
+      margin-bottom: 4px;
+    }
+
+    .compact-list li + li {
+      margin-top: 3px;
+    }
+
+    .pill-line {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9.7pt;
+    }
+
+    .project-subtitle {
+      text-align: right;
+      max-width: 2.45in;
+    }
+
+    .experience-entry + .experience-entry {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+
+    .highlight-box {
+      margin-top: 6px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      border-radius: 8px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .highlight-box p + p {
+      margin-top: 3px;
+    }
+
+    .company-role-list {
+      margin-top: 7px;
+      display: grid;
+      gap: 5px;
+    }
+
+    .company-role {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .company-role span:last-child {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .inline-list {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 9.8pt;
+    }
+
+    @media print {
+      section,
+      .experience-entry,
+      .project-card,
+      .skill-row,
+      .highlight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
     }
   </style>
 </head>
@@ -170,19 +262,19 @@
       <p class="headline">Senior Backend Engineer | Distributed Systems | Kafka | System Design | AI-Assisted Automation</p>
       <p class="contact-line">
         Pune, India |
+        <a href="tel:+919960770157">+91-9960770157</a> |
         <a href="mailto:vijayptiwari28@gmail.com">vijayptiwari28@gmail.com</a> |
         <a href="https://github.com/vijayptiwari">github.com/vijayptiwari</a> |
         <a href="https://www.linkedin.com/in/vijayptiwari">linkedin.com/in/vijayptiwari</a>
       </p>
     </header>
 
-    <section>
+    <section class="section-block">
       <h2>Professional Summary</h2>
-      <p class="section-copy">Senior Software Engineer with 8+ years of experience building backend systems in the telecom domain. Focused on Java, Spring Boot, Kafka, Couchbase, Kubernetes, microservices, low-level design, distributed systems, and engineering automation.</p>
-      <p class="section-copy">Currently expanding into AI-assisted engineering workflows with emphasis on root-cause analysis, observability, workflow automation, anomaly detection, and developer productivity tooling. Known for building systems that are functional, debuggable, scalable, and maintainable in production environments.</p>
+      <p class="section-copy">Senior Software Engineer with 8+ years of experience building backend systems in the telecom domain. Focused on Java, Spring Boot, Kafka, Couchbase, Kubernetes, microservices, low-level design, distributed systems, and engineering automation, with growing emphasis on AI-assisted root-cause analysis, observability, workflow automation, anomaly detection, and developer productivity tooling.</p>
     </section>
 
-    <section>
+    <section class="section-block">
       <h2>Core Skills</h2>
       <div class="skill-grid">
         <div class="skill-row">
@@ -212,82 +304,99 @@
       </div>
     </section>
 
-    <section>
+    <section class="section-block">
       <h2>Professional Experience</h2>
-      <div class="experience-header">
-        <div class="experience-role">Senior Software Engineer - Amdocs</div>
-        <div class="experience-meta">Jan 2020 - Present</div>
+      <div class="experience-entry">
+        <div class="experience-header">
+          <div class="experience-role">Amdocs Development Centre India LLP</div>
+          <div class="experience-meta">Jan 2020 - Present</div>
+        </div>
+        <div class="experience-domain">Telecom Domain | Backend Engineering | Microservices | Integration</div>
+        <div class="company-role-list">
+          <div class="company-role">
+            <span>Software Engineering Specialist</span>
+            <span>Dec 2022 - Present</span>
+          </div>
+          <div class="company-role">
+            <span>Software Developer - Advanced</span>
+            <span>Dec 2021 - Nov 2022</span>
+          </div>
+          <div class="company-role">
+            <span>Software Developer - Experienced</span>
+            <span>Jan 2020 - Nov 2021</span>
+          </div>
+        </div>
+        <ul class="compact-list">
+          <li>Working on backend microservices and enterprise telecom platforms with focus on low-level design, service development, and maintainable architecture.</li>
+          <li>Contributing to Kafka-based integrations and event-driven workflows across enterprise backend systems.</li>
+          <li>Building automation tools and developer productivity improvements for engineering workflows and debugging support.</li>
+          <li>Supporting production issue investigation, backend debugging improvements, and operational reliability.</li>
+          <li>Improving release execution through simplification of manual steps and better repeatability in deployment workflows.</li>
+        </ul>
       </div>
-      <div class="experience-domain">Telecom Domain | Backend Engineering | Microservices | Integration</div>
-      <ul>
-        <li>Working on backend microservices and enterprise telecom platforms with focus on low-level design, service development, and maintainable architecture.</li>
-        <li>Contributing to Kafka-based integrations and event-driven workflows across enterprise backend systems.</li>
-        <li>Building automation tools and developer productivity improvements for engineering workflows and debugging support.</li>
-        <li>Supporting production issue investigation, backend debugging improvements, and operational reliability.</li>
-        <li>Improving release execution through simplification of manual steps and better repeatability in deployment workflows.</li>
-      </ul>
-      <div style="margin-top: 14px;" class="experience-header">
-        <div class="experience-role">Junior Consultant - TIBCO Software India Pvt. Ltd.</div>
-        <div class="experience-meta">Jul 2017 - Dec 2019</div>
+      <div class="experience-entry">
+        <div class="experience-header">
+          <div class="experience-role">Junior Consultant - TIBCO Software India Pvt. Ltd.</div>
+          <div class="experience-meta">Jul 2017 - Dec 2019</div>
+        </div>
+        <div class="experience-domain">Enterprise Integration | Java | TIBCO | SOA</div>
+        <ul class="compact-list">
+          <li>Worked on enterprise integration solutions using TIBCO technologies and Java-backed services.</li>
+          <li>Contributed to integration-heavy workflows involving web services, service orchestration, and message-driven processing.</li>
+          <li>Supported delivery, issue analysis, and maintainable behavior across business-critical integration systems.</li>
+        </ul>
       </div>
-      <div class="experience-domain">Enterprise Integration | Java | TIBCO | SOA</div>
-      <ul>
-        <li>Worked on enterprise integration solutions using TIBCO technologies and Java-backed services.</li>
-        <li>Contributed to integration-heavy workflows involving web services, service orchestration, and message-driven processing.</li>
-        <li>Supported delivery, issue analysis, and maintainable behavior across business-critical integration systems.</li>
-      </ul>
     </section>
 
-    <section>
+    <section class="section-block">
       <h2>Selected Projects</h2>
       <div class="project-card">
         <div class="project-header">
           <div class="project-title">Event-Ore</div>
           <div class="project-subtitle">Kafka Monitoring &amp; Debugging Tool</div>
         </div>
-        <p><span class="label">Problem:</span> Kafka debugging in restricted environments can be slow when developers lack visibility into topics, consumers, and message flows.</p>
-        <p><span class="label">Design:</span> Improves Kafka visibility in namespace-restricted environments by helping developers inspect message flow and understand consumer behavior.</p>
-        <p><span class="label">Impact:</span> Improves developer productivity, reduces debugging friction, and supports faster investigation of integration issues.</p>
+        <p>Designed to improve Kafka visibility in namespace-restricted environments and reduce debugging friction around topics, consumers, and message flows.</p>
       </div>
       <div class="project-card">
         <div class="project-header">
           <div class="project-title">Trapper</div>
           <div class="project-subtitle">Automation Traffic Interceptor with AI-Assisted RCA</div>
         </div>
-        <p><span class="label">Problem:</span> Automation failures are difficult to diagnose when traffic, logs, and failure patterns are scattered across systems.</p>
-        <p><span class="label">Design:</span> Captures automation traffic, identifies failure patterns, and supports AI-assisted root-cause analysis workflows.</p>
-        <p><span class="label">Impact:</span> Improves debugging speed, supports anomaly detection, and helps teams understand recurring backend failure patterns.</p>
+        <p>Built to capture automation traffic, identify failure patterns, and support AI-assisted root-cause analysis for backend workflow debugging.</p>
       </div>
       <div class="project-card">
         <div class="project-header">
           <div class="project-title">One-Click Release Automation</div>
           <div class="project-subtitle">Release Workflow Simplification</div>
         </div>
-        <p><span class="label">Problem:</span> Manual release processes increase operational effort, inconsistency, and deployment risk.</p>
-        <p><span class="label">Design:</span> Simplifies release workflows by reducing manual steps and improving repeatability across deployment stages.</p>
-        <p><span class="label">Impact:</span> Supports consistent releases, reduces operational overhead, and improves engineering execution.</p>
+        <p>Focused on reducing manual deployment steps, improving repeatability, and supporting more consistent release execution.</p>
       </div>
     </section>
 
-    <section>
-      <h2>System Design Focus</h2>
-      <ul>
-        <li>Production-first design thinking across scale, data flow, failure handling, observability, security, and engineering trade-offs.</li>
-        <li>Strong attention to synchronous versus asynchronous communication patterns, retries, fallbacks, DLQs, dashboards, alerts, and maintainability.</li>
+    <section class="section-block">
+      <h2>Education</h2>
+      <p><span class="label">Bachelor of Engineering in Computer Engineering</span></p>
+      <p class="pill-line">Savitribai Phule Pune University | 2013 - 2017 | 70.64%</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Achievements</h2>
+      <ul class="compact-list">
+        <li>Winner of Most Impacting Innovator at Amdocs for innovation work focused on improving engineering workflows.</li>
+        <li>Nominated for Amdocs Inspiring Innovator and won Amdocs Avishkar Tools 3.0 with 2 titles out of 3 among 104 teams.</li>
+        <li>Secured global rank 716 in TCS CodeVita Season V 2016.</li>
+        <li>Earned top placements in KUVIO-WEB, a C programming competition, a technical quiz event, and the National Standard Examination in Astronomy.</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Current Focus</h2>
-      <ul class="focus-list">
-        <li>Agentic AI development for engineering workflows</li>
-        <li>AI-assisted root-cause analysis</li>
-        <li>Distributed system observability</li>
-        <li>Backend automation platforms</li>
-        <li>Advanced system design</li>
-        <li>Integration reliability</li>
+    <section class="section-block">
+      <h2>Selected Publications</h2>
+      <ul class="compact-list">
+        <li>Cloud Data Security using DNA Cryptography Techniques - International Journal of Innovative Research in Computer and Communication Engineering.</li>
+        <li>DNA Computing and Implementations - International Journal of Recent and Innovative Trends in Computing and Communication.</li>
+        <li>LI-FI Technology, Implementations and Applications and Blue Brain Technology to Preserve Intelligence - International Research Journal of Engineering and Technology.</li>
       </ul>
-      <p class="footer-note">Open to opportunities in Senior Backend Engineering, Platform Engineering, Distributed Systems, Integration Architecture, AI-Assisted Developer Tools, and System Design focused roles.</p>
+      <p class="inline-list">Additional published topics include Face Analysis for Improvised System Security using Laser Focus, Wearable Technology and Extended Applications, and Augmented Reality and Its Technologies.</p>
     </section>
   </main>
 </body>

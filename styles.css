@@ -482,6 +482,24 @@ li {
   grid-template-columns: 1fr;
 }
 
+.project-group + .project-group {
+  margin-top: 32px;
+}
+
+.project-group-heading {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.project-group-heading h3 {
+  margin-bottom: 10px;
+  font-size: 1.45rem;
+}
+
+.project-group-heading p {
+  margin: 0;
+}
+
 .project-card {
   display: grid;
   gap: 24px;
