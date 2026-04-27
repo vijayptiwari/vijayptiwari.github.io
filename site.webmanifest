@@ -1,9 +1,9 @@
 {
-  "name": "Vijay Prakash Tiwari Portfolio",
+  "name": "Vijay Prakash Tiwari | Senior Backend Engineer",
   "short_name": "Vijay Tiwari",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#07111f",
   "theme_color": "#07111f",
-  "description": "Official portfolio of Vijay Prakash Tiwari, enterprise software engineer focused on AI-ready backend systems, Java microservices, integration, streaming, and cloud delivery."
+  "description": "Portfolio of Vijay Prakash Tiwari, Senior Backend Engineer focused on distributed systems, Kafka, integration platforms, system design, and AI-assisted engineering automation."
 }
