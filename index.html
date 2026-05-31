@@ -16,6 +16,9 @@
   <meta property="og:description" content="Senior Backend Engineer · Creator of Meridian · Distributed systems · Kafka">
   <meta property="og:url" content="https://vijayptiwari.github.io/">
   <link rel="stylesheet" href="/styles.css">
+  <script>
+    document.documentElement.classList.add("js", "is-loading");
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,11 +42,30 @@
   </script>
 </head>
 <body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-mark" aria-hidden="true">
+        <span>V</span><span>T</span>
+      </div>
+      <div class="preloader-track">
+        <div class="preloader-bar" id="preloader-bar"></div>
+      </div>
+      <p class="preloader-label" id="preloader-label">Warming up the stack</p>
+    </div>
+  </div>
+
+  <div class="bg-layers" aria-hidden="true">
+    <canvas id="bg-mesh" class="bg-mesh"></canvas>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+    <div class="bg-vignette"></div>
+  </div>
+
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="header" id="top">
     <div class="container header-inner">
-      <a class="logo" href="#top">Vijay Prakash Tiwari</a>
+      <a class="logo" href="#top"><span class="logo-mark">VT</span> Vijay Prakash Tiwari</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <nav class="nav-links" id="nav-links">
         <a href="#projects">Projects</a>
@@ -73,27 +95,21 @@
 
       <div class="hero-visual" id="hero-visual">
         <div class="hero-visual-inner">
-          <div class="floating-badge floating-badge--1">Kafka · Java · K8s</div>
-          <div class="floating-badge floating-badge--2">Meridian v0.2</div>
-          <div class="laptop">
-            <div class="laptop-screen">
-              <div class="laptop-code">
-                <span class="cm">// meridian pipeline</span><br>
-                <span class="kw">async function</span> <span class="fn">runPipeline</span>() {<br>
-                &nbsp;&nbsp;<span class="kw">await</span> <span class="fn">research</span>(<span class="str">"linkedin"</span>);<br>
-                &nbsp;&nbsp;<span class="kw">await</span> <span class="fn">scoreFit</span>(jobs);<br>
-                &nbsp;&nbsp;<span class="kw">await</span> <span class="fn">tailorResume</span>(shortlist);<br>
-                &nbsp;&nbsp;<span class="kw">return</span> <span class="fn">prepTasks</span>();<br>
-                }
-              </div>
+          <canvas id="hero-topology" class="hero-topology" aria-hidden="true"></canvas>
+          <div class="hero-signature">
+            <div class="hero-signature-ring"></div>
+            <div class="hero-signature-core">
+              <span>VT</span>
+              <small>Backend · Agentic</small>
             </div>
-            <div class="laptop-base"></div>
           </div>
+          <div class="floating-badge floating-badge--1">Kafka pipelines</div>
+          <div class="floating-badge floating-badge--2">Meridian · local-first</div>
         </div>
       </div>
 
-      <a class="scroll-hint" href="#projects" aria-label="Scroll to projects">
-        <span>Scroll to projects</span>
+      <a class="scroll-hint" href="#projects" aria-label="Explore work">
+        <span>Explore work</span>
         <span class="scroll-hint__line" aria-hidden="true"></span>
       </a>
     </section>
@@ -229,7 +245,7 @@
     <!-- About -->
     <section class="section about-section" id="about">
       <div class="container about-grid">
-        <h2 class="reveal">Hi there</h2>
+        <h2 class="reveal">About me</h2>
         <div class="about-text reveal">
           <p>
             I'm Vijay, based in Pune and working as a Senior Software Engineer at
@@ -320,9 +336,9 @@
   <footer class="footer">
     <div class="container">
       <p>
-        © Vijay Prakash Tiwari ·
-        <a href="https://github.com/vijayptiwari/vijayptiwari.github.io" target="_blank" rel="noreferrer">Source</a> ·
-        Design inspired by <a href="https://hamishw.com/" target="_blank" rel="noreferrer">Hamish Williams</a>
+        © <span id="year"></span> Vijay Prakash Tiwari · Pune ·
+        <a href="https://github.com/vijayptiwari/meridian" target="_blank" rel="noreferrer">Meridian</a> ·
+        <a href="https://github.com/vijayptiwari/vijayptiwari.github.io" target="_blank" rel="noreferrer">Source</a>
       </p>
     </div>
   </footer>
