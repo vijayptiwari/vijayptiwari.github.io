@@ -1,9 +1,9 @@
 {
-  "name": "Vijay Prakash Tiwari | Senior Backend Engineer",
+  "name": "Vijay Prakash Tiwari | Backend Engineer",
   "short_name": "Vijay Tiwari",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#07111f",
-  "theme_color": "#07111f",
-  "description": "Portfolio of Vijay Prakash Tiwari, Senior Backend Engineer focused on distributed systems, Kafka, integration platforms, system design, and AI-assisted engineering automation."
+  "background_color": "#050810",
+  "theme_color": "#050810",
+  "description": "Portfolio of Vijay Prakash Tiwari — Senior Backend Engineer and creator of Meridian, an open-source local-first AI career agent."
 }
