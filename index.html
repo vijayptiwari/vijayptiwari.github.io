@@ -135,187 +135,79 @@
       </div>
     </section>
 
-    <!-- Featured projects -->
-    <section class="project-showcase" id="projects">
+    <!-- Work -->
+    <section class="section work-section" id="projects">
       <div class="container">
-        <article class="project-slide reveal" style="--slide-accent: #0d2137;">
-          <div class="project-slide__visual parallax-tilt" data-tilt-max="5">
-            <div class="parallax-tilt-inner">
-              <div class="visual-inner">
-                <div>
-                  <strong>Meridian</strong>
-                  <span>Open-source · Local-first · MIT</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project-slide__content">
-            <h2>Align your next move</h2>
-            <p>
-              Local-first AI career agent — job research, fit scoring, resume tailoring, and application assistance
-              on LinkedIn and Naukri. Your data never leaves your machine. Multi-agent pipeline with BYOK LLM support.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">Playwright</span>
-              <span class="project-tag">Multi-Agent</span>
-              <span class="project-tag">Open Source</span>
-            </div>
-            <a class="project-cta" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">
-              View project
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </article>
+        <header class="section-intro reveal">
+          <p class="section-label">Work</p>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-lead">Production systems, agentic platforms, and tools I have designed and shipped.</p>
+        </header>
 
-        <article class="project-slide reveal" style="--slide-accent: #14202a;">
-          <div class="project-slide__visual parallax-tilt" data-tilt-max="5">
-            <div class="parallax-tilt-inner">
-              <div class="visual-inner">
-                <div>
-                  <strong>Agentic Billing</strong>
-                  <span>Jan 2026 – Present · Digital BSS</span>
-                </div>
-              </div>
+        <div class="work-list">
+          <article class="work-entry work-entry--current reveal">
+            <div class="work-entry__meta">
+              <span class="work-entry__badge">Current · Enterprise</span>
+              <time datetime="2026-01">Jan 2026 – Present</time>
             </div>
-          </div>
-          <div class="project-slide__content">
-            <h2>Zero-code agentic platform for billing</h2>
-            <p class="meta">Jan 2026 – Present · Tech lead · Team of 3</p>
-            <p>
-              Agentic Offering of Billing Domain for Amdocs Technology, Digital BSS Real Time Billing.
-              I own system design and end-to-end implementation, leading a team of 3 developers to build
-              business agents, MCP servers, and governed RAG at production scale on OpenShift.
+            <h3 class="work-entry__title">Agentic Offering — Billing Domain</h3>
+            <p class="work-entry__role">Amdocs · Tech lead · Team of 3 · AI System Design</p>
+            <p class="work-entry__desc">
+              Zero-code agent platform for Digital BSS Real Time Billing. I own system design and implementation —
+              from SDK and MCP automation through governed RAG and production guardrails on OpenShift.
             </p>
-            <ul class="project-highlights">
-              <li>Foundation SDK for a zero-code agentic system — business agents and MCP servers without boilerplate</li>
-              <li>Automated OpenAPI → MCP conversion with tools, prompts, resources, and A2A cards</li>
-              <li>CI automation for agent deliverable pipelines across environments</li>
-              <li>Versioned RAG with ingestion, rollback, dynamic/static knowledge, and citation-backed retrieval</li>
-              <li>RBAC on tools plus infrastructure and application guardrails for safe agent execution</li>
+            <ul class="work-entry__bullets">
+              <li>Foundation SDK for business agents and MCP servers</li>
+              <li>OpenAPI → MCP conversion with A2A cards and CI deliverable pipelines</li>
+              <li>Versioned RAG with citations; RBAC and infrastructure guardrails</li>
             </ul>
-            <div class="project-tags">
-              <span class="project-tag">Python 3.13</span>
-              <span class="project-tag">AI Gateway</span>
-              <span class="project-tag">LangGraph</span>
-              <span class="project-tag">MCP</span>
-              <span class="project-tag">A2A</span>
-              <span class="project-tag">RAG</span>
-              <span class="project-tag">Spring AI</span>
-              <span class="project-tag">Elasticsearch</span>
-              <span class="project-tag">PostgreSQL</span>
-              <span class="project-tag">Langfuse</span>
-              <span class="project-tag">OpenShift</span>
-              <span class="project-tag">Argo CD</span>
-            </div>
-            <a class="project-cta" href="#experience">
-              View experience
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </article>
+            <p class="work-entry__tech">Python · LangGraph · MCP · RAG · Spring AI · OpenShift · Argo CD</p>
+          </article>
 
-        <article class="project-slide reveal" style="--slide-accent: #1a1520;">
-          <div class="project-slide__visual parallax-tilt" data-tilt-max="5">
-            <div class="parallax-tilt-inner">
-              <div class="visual-inner">
-                <div>
-                  <strong>BSS Billing</strong>
-                  <span>Amdocs · 5G Telecom · Kafka Streams</span>
-                </div>
-              </div>
+          <article class="work-entry reveal">
+            <div class="work-entry__meta">
+              <span class="work-entry__badge">Open source</span>
             </div>
-          </div>
-          <div class="project-slide__content">
-            <h2>Real-time billing at telecom scale</h2>
-            <p>
-              Cloud-ready microservice product development for 5G-era BSS platforms — regional taxation,
-              invoicing flows, B2B2X, IoT, and NaaS use cases on OpenShift and Kubernetes.
+            <h3 class="work-entry__title">Meridian</h3>
+            <p class="work-entry__desc">
+              Local-first AI career agent — job research, fit scoring, resume tailoring, and application assistance.
+              Multi-agent pipeline with Playwright; data stays on your machine.
             </p>
-            <div class="project-tags">
-              <span class="project-tag">Java</span>
-              <span class="project-tag">Spring Boot</span>
-              <span class="project-tag">Kafka Streams</span>
-              <span class="project-tag">OpenShift</span>
-            </div>
-            <a class="project-cta" href="#experience">
-              View experience
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </article>
+            <p class="work-entry__tech">Node.js · Playwright · Multi-agent · MIT</p>
+            <a class="work-entry__link" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">vijayptiwari.github.io/meridian</a>
+          </article>
 
-        <article class="project-slide reveal" style="--slide-accent: #0f1f1a;">
-          <div class="project-slide__visual parallax-tilt" data-tilt-max="4">
-            <div class="parallax-tilt-inner">
-              <div class="visual-inner">
-                <div>
-                  <strong>Event-Ore</strong>
-                  <span>Kafka debugging · K8s namespaces</span>
-                </div>
-              </div>
+          <article class="work-entry reveal">
+            <div class="work-entry__meta">
+              <span class="work-entry__badge">Enterprise</span>
             </div>
-          </div>
-          <div class="project-slide__content">
-            <h2>Kafka visibility where it's hardest to get</h2>
-            <p>
-              Innovation tool for topic, consumer, and message-level inspection in namespace-restricted environments.
-              Reduces debugging friction and improves developer productivity for integration teams.
+            <h3 class="work-entry__title">Real-time BSS billing</h3>
+            <p class="work-entry__role">Amdocs · Software Engineering Specialist</p>
+            <p class="work-entry__desc">
+              Cloud-ready microservices for 5G-era billing — taxation, invoicing, B2B2X, IoT, and NaaS on OpenShift.
             </p>
-            <div class="project-tags">
-              <span class="project-tag">Kafka</span>
-              <span class="project-tag">Kubernetes</span>
-              <span class="project-tag">Observability</span>
-            </div>
-            <a class="project-cta" href="#more-work">
-              More innovation work
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
+            <p class="work-entry__tech">Java · Spring Boot · Kafka Streams · Kubernetes</p>
+          </article>
 
-    <!-- More work -->
-    <section class="section" id="more-work">
-      <div class="container">
-        <p class="section-label reveal">More work</p>
-        <h2 class="section-title reveal parallax-layer parallax-layer--soft">Innovation &amp; enterprise delivery</h2>
-        <div class="work-grid">
-          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
-            <h3>Agentic Offering · Billing Domain</h3>
-            <p>System design, implementation, and tech lead for a team of 3 — zero-code agent SDK, OpenAPI→MCP, versioned RAG, RBAC and guardrails.</p>
-            <p class="meta">Jan 2026 – Present · Amdocs · Digital BSS</p>
+          <article class="work-entry reveal">
+            <div class="work-entry__meta">
+              <span class="work-entry__badge">Innovation</span>
+            </div>
+            <h3 class="work-entry__title">Event-Ore</h3>
+            <p class="work-entry__desc">
+              Kafka inspection tool for namespace-restricted environments — topics, consumers, and message-level debugging.
+            </p>
+            <p class="work-entry__tech">Kafka · Kubernetes</p>
           </article>
-          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
-            <h3>Trapper</h3>
-            <p>AI-assisted root-cause analysis for automation traffic and backend workflow debugging.</p>
-            <p class="meta">Innovation · AI RCA</p>
+
+          <article class="work-entry work-entry--compact reveal">
+            <h3 class="work-entry__title">Trapper</h3>
+            <p class="work-entry__desc">AI-assisted root-cause analysis for automation and backend workflow debugging.</p>
           </article>
-          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
-            <h3>One-Click Release Automation</h3>
-            <p>Release workflow simplification reducing manual deployment steps and operational risk.</p>
-            <p class="meta">Innovation · DevOps</p>
-          </article>
-          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
-            <h3>Macy's Bloomingdale Loyalty</h3>
-            <p>Loyalty system migration — registration, points, offers, and campaigns with backward compatibility.</p>
-            <p class="meta">TIBCO · 2018–2019</p>
-          </article>
-          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
-            <h3>United Airlines Integration</h3>
-            <p>Minimum Connecting Time and ticket pricing/refund validation for airline order handling.</p>
-            <p class="meta">TIBCO · 2017–2018</p>
-          </article>
-          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
-            <h3>Indian Railways CRIS PoC</h3>
-            <p>Freight schedule management presales prototype with ETA and capacity-oriented data flows.</p>
-            <p class="meta">TIBCO · 2018</p>
-          </article>
-          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
-            <h3>Meridian on GitHub</h3>
-            <p>Open-source career ops platform — clone, run locally, full data control.</p>
-            <p class="meta"><a href="https://github.com/vijayptiwari/meridian" target="_blank" rel="noreferrer" style="color:var(--accent)">github.com/vijayptiwari/meridian</a></p>
+
+          <article class="work-entry work-entry--compact reveal">
+            <h3 class="work-entry__title">One-Click Release Automation</h3>
+            <p class="work-entry__desc">Release workflow automation — fewer manual steps, lower operational risk.</p>
           </article>
         </div>
       </div>
@@ -381,51 +273,55 @@
     </section>
 
     <!-- Experience -->
-    <section class="section" id="experience">
+    <section class="section exp-section" id="experience">
       <div class="container">
-        <p class="section-label reveal">Experience</p>
-        <h2 class="section-title reveal">Where I've worked</h2>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <h3>Amdocs Development Centre India LLP</h3>
-            <p class="meta">Jan 2020 – Present · Software Engineering Specialist</p>
-            <p class="meta">Agentic Offering of Billing Domain · Jan 2026 – Present · Tech lead · Team of 3</p>
-            <p>
-              Owned system design and end-to-end implementation for Digital BSS Real Time Billing —
-              foundation SDK for zero-code business agents and MCP servers; OpenAPI-to-MCP automation with A2A cards;
-              CI pipelines for agent deliverables; versioned RAG with ingestion, rollback, and citation-backed retrieval;
-              RBAC on tools with infrastructure and application guardrails on Red Hat OpenShift and Argo CD.
-            </p>
-            <p>
-              Earlier at Amdocs: real-time BSS microservices, Kafka integrations, cloud-ready billing product development,
-              automation tooling, DevOps champion, and release optimization across BSS R&amp;D.
-            </p>
+        <header class="section-intro reveal">
+          <p class="section-label">Experience</p>
+          <h2 class="section-title">Career</h2>
+        </header>
+
+        <div class="exp-list">
+          <article class="exp-item reveal">
+            <div class="exp-item__head">
+              <div>
+                <h3>Amdocs Development Centre India LLP</h3>
+                <p class="exp-item__role">Software Engineering Specialist</p>
+              </div>
+              <time datetime="2020-01">Jan 2020 – Present</time>
+            </div>
+            <div class="exp-item__body">
+              <div class="exp-item__block">
+                <p class="exp-item__period">Jan 2026 – Present · Tech lead</p>
+                <p>Agentic Offering for Digital BSS Real Time Billing — system design, implementation, team of 3.</p>
+              </div>
+              <div class="exp-item__block">
+                <p class="exp-item__period">2020 – 2025</p>
+                <p>Real-time billing microservices, Kafka integrations, DevOps champion, release automation, innovation tools (Event-Ore, Trapper).</p>
+              </div>
+            </div>
           </article>
-          <article class="timeline-item reveal">
-            <h3>TIBCO Software India Pvt. Ltd.</h3>
-            <p class="meta">Jul 2017 – Dec 2019 · Junior Consultant</p>
-            <p>Enterprise integration workflows, Java services, presales prototyping, and delivery for retail, airline, and public sector clients.</p>
+
+          <article class="exp-item reveal">
+            <div class="exp-item__head">
+              <div>
+                <h3>TIBCO Software India Pvt. Ltd.</h3>
+                <p class="exp-item__role">Junior Consultant</p>
+              </div>
+              <time datetime="2017-07">Jul 2017 – Dec 2019</time>
+            </div>
+            <div class="exp-item__body">
+              <p>Enterprise integration for Macy's (loyalty migration), United Airlines (MCT, pricing), and Indian Railways CRIS (freight scheduling PoC).</p>
+            </div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- Achievements strip -->
-    <section class="section" style="padding-top: 0;">
-      <div class="container">
-        <div class="work-grid">
-          <article class="work-card reveal">
-            <h3>Amdocs Inspiring Innovator</h3>
-            <p>Global nominee — automation tool saving 2,000+ man-hours.</p>
-          </article>
-          <article class="work-card reveal">
-            <h3>Amdocs Avishkar</h3>
-            <p>2 of 3 global titles among 104 teams.</p>
-          </article>
-          <article class="work-card reveal">
-            <h3>TCS CodeVita</h3>
-            <p>Global rank 716 — top 0.2% of 400,000+ participants.</p>
-          </article>
+        <div class="recognition reveal">
+          <p class="section-label">Recognition</p>
+          <ul class="recognition-list">
+            <li><strong>Amdocs Inspiring Innovator</strong> — global nominee; automation saving 2,000+ man-hours</li>
+            <li><strong>Amdocs Avishkar</strong> — 2 of 3 global titles among 104 teams</li>
+            <li><strong>TCS CodeVita</strong> — global rank 716 (top 0.2% of 400k+)</li>
+          </ul>
         </div>
       </div>
     </section>

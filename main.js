@@ -26,7 +26,7 @@ const bgMesh = document.getElementById("bg-mesh");
 const topologyCanvas = document.getElementById("hero-topology");
 const yearEl = document.getElementById("year");
 const tiltElements = document.querySelectorAll(".parallax-tilt");
-const scrollShiftElements = document.querySelectorAll(".project-slide__content, .timeline-item, .about-text p");
+const scrollShiftElements = document.querySelectorAll(".exp-item, .about-text p");
 
 const motionEnabled = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
