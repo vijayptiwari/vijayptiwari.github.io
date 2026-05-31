@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="preload" as="image" href="/assets/photos/vijay-portrait-hero.webp" type="image/webp">
+  <link rel="preload" as="image" href="/assets/photos/vijay-portrait-about.webp" type="image/webp">
   <meta property="og:title" content="Vijay Prakash Tiwari | Backend Engineer + Open Source">
   <meta property="og:description" content="Senior Backend Engineer · Agentic billing platform · Creator of Meridian · LangGraph · MCP · RAG">
   <meta property="og:url" content="https://vijayptiwari.github.io/">
@@ -98,29 +98,33 @@
       </div>
 
       <div class="hero-visual" id="hero-visual">
-        <div class="hero-visual-inner">
-          <canvas id="hero-topology" class="hero-topology" aria-hidden="true"></canvas>
+        <div class="hero-visual-inner hero-visual-inner--bg" aria-hidden="true">
+          <canvas id="hero-topology" class="hero-topology"></canvas>
           <div class="hero-signature">
             <div class="hero-signature-ring"></div>
-            <div class="hero-signature-core hero-signature-core--photo parallax-tilt" data-tilt-max="5">
-              <div class="parallax-tilt-inner">
-                <picture>
-                  <source srcset="/assets/photos/vijay-portrait-hero.webp" type="image/webp">
-                  <img
-                    src="/assets/photos/vijay-portrait-hero.jpg"
-                    alt="Vijay Prakash Tiwari"
-                    width="640"
-                    height="640"
-                    decoding="async"
-                    fetchpriority="high"
-                  />
-                </picture>
-              </div>
+            <div class="hero-signature-core">
+              <span>VT</span>
+              <small>Backend · Agentic</small>
             </div>
           </div>
-          <div class="floating-badge floating-badge--1">LangGraph · MCP · RAG</div>
-          <div class="floating-badge floating-badge--2">Meridian · local-first</div>
         </div>
+        <figure class="hero-portrait parallax-tilt" data-tilt-max="3">
+          <div class="hero-portrait-frame parallax-tilt-inner">
+            <picture>
+              <source srcset="/assets/photos/vijay-portrait-about.webp" type="image/webp">
+              <img
+                src="/assets/photos/vijay-portrait-about.jpg"
+                alt="Vijay Prakash Tiwari"
+                width="900"
+                height="1120"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
+          </div>
+        </figure>
+        <div class="floating-badge floating-badge--1">LangGraph · MCP · RAG</div>
+        <div class="floating-badge floating-badge--2">Meridian · local-first</div>
       </div>
 
       <a class="scroll-hint" href="#projects" aria-label="Explore work">

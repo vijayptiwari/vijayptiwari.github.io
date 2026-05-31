@@ -530,8 +530,10 @@ body.is-loaded .scroll-hint {
 
 /* Hero signature visual */
 .hero-visual {
+  position: relative;
   display: grid;
   place-items: center;
+  min-height: min(72vh, 560px);
   opacity: 0;
   transform: translateY(28px);
 }
@@ -542,6 +544,55 @@ body.is-loaded .scroll-hint {
   aspect-ratio: 1;
   transition: transform 0.5s var(--ease-out);
   will-change: transform;
+}
+
+.hero-visual-inner--bg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: min(100%, 440px);
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-portrait {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 300px);
+  margin: 0;
+}
+
+.hero-portrait-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.45);
+  aspect-ratio: 4 / 5;
+  background: #12121a;
+}
+
+.hero-portrait-frame picture,
+.hero-portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.hero-visual .floating-badge {
+  z-index: 2;
+}
+
+.hero-visual .floating-badge--1 {
+  top: 6%;
+  right: 0;
+}
+
+.hero-visual .floating-badge--2 {
+  bottom: 8%;
+  left: 0;
 }
 
 .hero-topology {
@@ -859,32 +910,6 @@ body.is-loaded .scroll-hint {
   border-top: 1px solid var(--border);
 }
 
-.hero-signature-core--photo {
-  width: 132px;
-  height: 132px;
-  padding: 3px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: linear-gradient(145deg, rgba(94, 234, 212, 0.35), rgba(251, 191, 36, 0.2));
-}
-
-.hero-signature-core--photo .parallax-tilt-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  overflow: hidden;
-  border: 2px solid rgba(18, 18, 26, 0.9);
-}
-
-.hero-signature-core--photo picture,
-.hero-signature-core--photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: min(300px, 38%) 1fr;
@@ -1084,6 +1109,17 @@ body.is-loaded .scroll-hint {
 
   .hero-visual {
     order: -1;
+    min-height: auto;
+    padding: 20px 0 8px;
+  }
+
+  .hero-portrait {
+    width: min(100%, 280px);
+    margin-inline: auto;
+  }
+
+  .hero-visual-inner--bg {
+    width: min(100%, 360px);
   }
 
   .about-portrait-frame {
