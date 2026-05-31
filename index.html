@@ -59,6 +59,7 @@
     <div class="bg-grid"></div>
     <div class="bg-noise"></div>
     <div class="bg-vignette"></div>
+    <div class="bg-spotlight" id="bg-spotlight"></div>
   </div>
 
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -79,7 +80,8 @@
   <main>
     <!-- Hero -->
     <section class="container hero" id="hero">
-      <div class="hero-copy">
+      <div class="hero-copy parallax-layer">
+        <div class="hero-copy-inner parallax-layer--soft">
         <p class="hero-label">Pune, India · Available for opportunities</p>
         <h1 class="hero-title">Vijay Prakash Tiwari</h1>
         <p class="hero-role"><em>Backend Engineer</em> + Open Source Builder</p>
@@ -90,6 +92,7 @@
         <div class="hero-links">
           <a class="btn btn-primary" href="#contact">Send me a message</a>
           <a class="btn btn-ghost" href="/Vijay-Prakash-Tiwari-Resume.pdf" download>Download resume</a>
+        </div>
         </div>
       </div>
 
@@ -118,11 +121,13 @@
     <section class="project-showcase" id="projects">
       <div class="container">
         <article class="project-slide reveal" style="--slide-accent: #0d2137;">
-          <div class="project-slide__visual">
-            <div class="visual-inner">
-              <div>
-                <strong>Meridian</strong>
-                <span>Open-source · Local-first · MIT</span>
+          <div class="project-slide__visual parallax-tilt" data-tilt-max="5">
+            <div class="parallax-tilt-inner">
+              <div class="visual-inner">
+                <div>
+                  <strong>Meridian</strong>
+                  <span>Open-source · Local-first · MIT</span>
+                </div>
               </div>
             </div>
           </div>
@@ -146,11 +151,13 @@
         </article>
 
         <article class="project-slide reveal" style="--slide-accent: #1a1520;">
-          <div class="project-slide__visual">
-            <div class="visual-inner">
-              <div>
-                <strong>BSS Billing</strong>
-                <span>Amdocs · 5G Telecom · Kafka Streams</span>
+          <div class="project-slide__visual parallax-tilt" data-tilt-max="5">
+            <div class="parallax-tilt-inner">
+              <div class="visual-inner">
+                <div>
+                  <strong>BSS Billing</strong>
+                  <span>Amdocs · 5G Telecom · Kafka Streams</span>
+                </div>
               </div>
             </div>
           </div>
@@ -174,11 +181,13 @@
         </article>
 
         <article class="project-slide reveal" style="--slide-accent: #0f1f1a;">
-          <div class="project-slide__visual">
-            <div class="visual-inner">
-              <div>
-                <strong>Event-Ore</strong>
-                <span>Kafka debugging · K8s namespaces</span>
+          <div class="project-slide__visual parallax-tilt" data-tilt-max="4">
+            <div class="parallax-tilt-inner">
+              <div class="visual-inner">
+                <div>
+                  <strong>Event-Ore</strong>
+                  <span>Kafka debugging · K8s namespaces</span>
+                </div>
               </div>
             </div>
           </div>
@@ -206,34 +215,34 @@
     <section class="section" id="more-work">
       <div class="container">
         <p class="section-label reveal">More work</p>
-        <h2 class="section-title reveal">Innovation &amp; enterprise delivery</h2>
+        <h2 class="section-title reveal parallax-layer parallax-layer--soft">Innovation &amp; enterprise delivery</h2>
         <div class="work-grid">
-          <article class="work-card reveal">
+          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
             <h3>Trapper</h3>
             <p>AI-assisted root-cause analysis for automation traffic and backend workflow debugging.</p>
             <p class="meta">Innovation · AI RCA</p>
           </article>
-          <article class="work-card reveal">
+          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
             <h3>One-Click Release Automation</h3>
             <p>Release workflow simplification reducing manual deployment steps and operational risk.</p>
             <p class="meta">Innovation · DevOps</p>
           </article>
-          <article class="work-card reveal">
+          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
             <h3>Macy's Bloomingdale Loyalty</h3>
             <p>Loyalty system migration — registration, points, offers, and campaigns with backward compatibility.</p>
             <p class="meta">TIBCO · 2018–2019</p>
           </article>
-          <article class="work-card reveal">
+          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
             <h3>United Airlines Integration</h3>
             <p>Minimum Connecting Time and ticket pricing/refund validation for airline order handling.</p>
             <p class="meta">TIBCO · 2017–2018</p>
           </article>
-          <article class="work-card reveal">
+          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
             <h3>Indian Railways CRIS PoC</h3>
             <p>Freight schedule management presales prototype with ETA and capacity-oriented data flows.</p>
             <p class="meta">TIBCO · 2018</p>
           </article>
-          <article class="work-card reveal">
+          <article class="work-card reveal parallax-tilt" data-tilt-max="3">
             <h3>Meridian on GitHub</h3>
             <p>Open-source career ops platform — clone, run locally, full data control.</p>
             <p class="meta"><a href="https://github.com/vijayptiwari/meridian" target="_blank" rel="noreferrer" style="color:var(--accent)">github.com/vijayptiwari/meridian</a></p>
@@ -245,8 +254,8 @@
     <!-- About -->
     <section class="section about-section" id="about">
       <div class="container about-grid">
-        <h2 class="reveal">About me</h2>
-        <div class="about-text reveal">
+        <h2 class="reveal parallax-layer parallax-layer--soft">About me</h2>
+        <div class="about-text reveal parallax-layer parallax-layer--medium">
           <p>
             I'm Vijay, based in Pune and working as a Senior Software Engineer at
             <strong>Amdocs</strong> on BSS real-time billing and backend microservices. My work spans Java,

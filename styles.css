@@ -18,6 +18,11 @@
   --display: "Space Grotesk", var(--font);
   --mono: "JetBrains Mono", monospace;
   --progress: 0%;
+  --px: 0;
+  --py: 0;
+  --spot-x: 50%;
+  --spot-y: 40%;
+  --scroll-y: 0;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-fast: 0.35s;
@@ -129,24 +134,28 @@ html.is-loading body {
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  transform: translate3d(calc(var(--px) * 6px), calc(var(--py) * 4px), 0);
+  transition: transform 0.12s linear;
 }
 
 .bg-mesh {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
   opacity: 0.55;
 }
 
 .bg-grid {
   position: absolute;
-  inset: 0;
+  inset: -5%;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 20%, transparent 75%);
+  transform: translate3d(calc(var(--px) * -14px), calc(var(--py) * -10px), 0);
+  will-change: transform;
 }
 
 .bg-noise {
@@ -154,15 +163,37 @@ html.is-loading body {
   inset: 0;
   opacity: 0.045;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  transform: translate3d(calc(var(--px) * 4px), calc(var(--py) * 3px), 0);
 }
 
 .bg-vignette {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 120% 80% at 50% -10%, rgba(94, 234, 212, 0.07), transparent 45%),
-    radial-gradient(ellipse 80% 60% at 100% 50%, rgba(251, 191, 36, 0.04), transparent 50%),
+    radial-gradient(ellipse 120% 80% at 50% calc(-10% + var(--scroll-y) * -0.02%), rgba(94, 234, 212, 0.07), transparent 45%),
+    radial-gradient(ellipse 80% 60% at calc(100% + var(--px) * -4%) 50%, rgba(251, 191, 36, 0.04), transparent 50%),
     radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0, 0, 0, 0.55), transparent 55%);
+}
+
+.bg-spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    520px circle at var(--spot-x) var(--spot-y),
+    rgba(94, 234, 212, 0.055),
+    transparent 62%
+  );
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-layers,
+  .bg-grid,
+  .bg-noise,
+  .parallax-layer,
+  .parallax-tilt-inner {
+    transform: none !important;
+  }
 }
 
 .page-wrap,
@@ -322,23 +353,57 @@ body.is-loaded .header {
   transform: translateY(28px);
 }
 
+.parallax-layer {
+  will-change: transform;
+  transition: transform 0.15s linear;
+}
+
+.parallax-layer--soft {
+  transform: translate3d(calc(var(--px) * -5px), calc(var(--py) * -3px), 0);
+}
+
+.parallax-layer--medium {
+  transform: translate3d(calc(var(--px) * -9px), calc(var(--py) * -6px), 0);
+}
+
+.parallax-layer--reverse {
+  transform: translate3d(calc(var(--px) * 7px), calc(var(--py) * 5px), 0);
+}
+
+.parallax-tilt {
+  transform-style: preserve-3d;
+  perspective: 900px;
+}
+
+.parallax-tilt-inner {
+  will-change: transform;
+  transition: transform 0.18s var(--ease-out);
+  transform-style: preserve-3d;
+}
+
 body.is-loaded .hero-copy {
-  animation: heroEnter var(--dur-slow) var(--ease-out) 0.15s forwards;
+  animation: heroEnterOpacity var(--dur-slow) var(--ease-out) 0.15s forwards;
+}
+
+body.is-loaded .hero-copy-inner {
+  animation: heroEnterY var(--dur-slow) var(--ease-out) 0.15s forwards;
 }
 
 body.is-loaded .hero-visual {
-  animation: heroEnter var(--dur-slow) var(--ease-out) 0.3s forwards;
+  animation: heroEnterOpacity var(--dur-slow) var(--ease-out) 0.3s forwards;
 }
 
 body.is-loaded .scroll-hint {
-  animation: heroEnter var(--dur-slow) var(--ease-out) 0.55s forwards;
+  animation: heroEnterOpacity var(--dur-slow) var(--ease-out) 0.55s forwards;
 }
 
-@keyframes heroEnter {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes heroEnterOpacity {
+  to { opacity: 1; }
+}
+
+@keyframes heroEnterY {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-label {
@@ -612,11 +677,6 @@ body.is-loaded .scroll-hint {
   aspect-ratio: 16/10;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  transition: transform 0.5s ease;
-}
-
-.project-slide.is-visible .project-slide__visual {
-  transform: scale(1);
 }
 
 .project-slide__visual img,
@@ -630,14 +690,11 @@ body.is-loaded .scroll-hint {
   display: grid;
   place-items: center;
   padding: 32px;
+  width: 100%;
+  height: 100%;
   background:
     linear-gradient(135deg, var(--slide-accent, #1e1e2a), #08080c),
     url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 39h1v1H0zM39 0v1h1V0z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");
-  transition: transform var(--dur-med) var(--ease-out);
-}
-
-.project-slide:hover .visual-inner {
-  transform: scale(1.04);
 }
 
 .visual-inner strong {
@@ -712,6 +769,11 @@ body.is-loaded .scroll-hint {
   padding: 100px 0;
 }
 
+.section-heading.parallax-layer--soft h2,
+.section-title.parallax-layer--soft {
+  transform: translate3d(calc(var(--px) * -4px), calc(var(--py) * -2px), 0);
+}
+
 .section-label {
   color: var(--text-dim);
   font-size: 0.78rem;
@@ -741,12 +803,18 @@ body.is-loaded .scroll-hint {
   background: rgba(22, 22, 31, 0.72);
   border: 1px solid var(--border);
   backdrop-filter: blur(8px);
-  transition: transform var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out), box-shadow var(--dur-med) var(--ease-out);
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
-.work-card:hover {
+.work-card:not(.parallax-tilt):hover {
   transform: translateY(-6px);
   border-color: rgba(94, 234, 212, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.parallax-tilt.is-hovered {
+  border-color: rgba(94, 234, 212, 0.22);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
