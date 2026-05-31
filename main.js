@@ -1,46 +1,142 @@
+const TYPED_ROLES = [
+  "Senior Backend Engineer",
+  "Distributed Systems Specialist",
+  "Creator of Meridian",
+  "Agentic AI Builder",
+  "Kafka Platform Engineer"
+];
+
 const revealNodes = document.querySelectorAll(".reveal");
-const nav = document.querySelector(".nav");
+const header = document.querySelector(".header");
+const nav = document.querySelector(".header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
 const trackedSections = document.querySelectorAll("main section[id]");
-const themeToggle = document.querySelector(".theme-toggle");
 const filterPills = document.querySelectorAll(".filter-pill");
 const projectCards = document.querySelectorAll("[data-project-category]");
 const copyButtons = document.querySelectorAll(".copy-btn");
-
-const THEME_KEY = "portfolio-theme";
+const typedEl = document.getElementById("typed-text");
+const canvas = document.getElementById("particle-canvas");
 
 function setScrollProgress() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
   document.documentElement.style.setProperty("--progress", `${progress}%`);
-}
 
-function applyTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem(THEME_KEY, theme);
-
-  if (themeToggle) {
-    themeToggle.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
-    themeToggle.textContent = theme === "light" ? "Dark mode" : "Light mode";
+  if (header) {
+    header.classList.toggle("is-scrolled", scrollTop > 40);
   }
 }
 
-function initTheme() {
-  const saved = localStorage.getItem(THEME_KEY);
-  const preferred = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-  applyTheme(saved || preferred);
+function initParticles() {
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+  let width = 0;
+  let height = 0;
+  let particles = [];
+  let animationId = 0;
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    const count = Math.min(70, Math.floor((width * height) / 18000));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.45,
+      vy: (Math.random() - 0.5) * 0.45,
+      r: Math.random() * 2 + 1
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = 0; i < particles.length; i += 1) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(108, 99, 255, 0.35)";
+      ctx.fill();
+
+      for (let j = i + 1; j < particles.length; j += 1) {
+        const q = particles[j];
+        const dx = p.x - q.x;
+        const dy = p.y - q.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 130) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(108, 99, 255, ${0.14 * (1 - dist / 130)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    animationId = requestAnimationFrame(draw);
+  }
+
+  resize();
+  draw();
+
+  window.addEventListener("resize", resize);
+
+  return () => {
+    cancelAnimationFrame(animationId);
+    window.removeEventListener("resize", resize);
+  };
 }
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme") || "dark";
-    applyTheme(current === "dark" ? "light" : "dark");
-  });
+function initTyping() {
+  if (!typedEl) return;
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function tick() {
+    const current = TYPED_ROLES[roleIndex];
+
+    if (!deleting) {
+      typedEl.textContent = current.slice(0, charIndex + 1);
+      charIndex += 1;
+
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(tick, 1800);
+        return;
+      }
+    } else {
+      typedEl.textContent = current.slice(0, charIndex - 1);
+      charIndex -= 1;
+
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % TYPED_ROLES.length;
+      }
+    }
+
+    setTimeout(tick, deleting ? 40 : 70);
+  }
+
+  tick();
 }
 
-if (nav && navToggle) {
+if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
@@ -60,6 +156,7 @@ filterPills.forEach((pill) => {
 
     filterPills.forEach((item) => {
       item.classList.toggle("is-active", item === pill);
+      item.setAttribute("aria-selected", item === pill ? "true" : "false");
     });
 
     projectCards.forEach((card) => {
@@ -76,26 +173,25 @@ copyButtons.forEach((button) => {
     event.stopPropagation();
 
     const value = button.getAttribute("data-copy");
-    if (!value) {
-      return;
-    }
+    if (!value) return;
 
     try {
       await navigator.clipboard.writeText(value);
       const original = button.textContent;
-      button.textContent = "Copied";
+      button.textContent = "Copied!";
       window.setTimeout(() => {
         button.textContent = original;
       }, 1400);
     } catch {
-      button.textContent = "Copy failed";
+      button.textContent = "Failed";
     }
   });
 });
 
 window.addEventListener("scroll", setScrollProgress, { passive: true });
 setScrollProgress();
-initTheme();
+initParticles();
+initTyping();
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -107,7 +203,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
 
   revealNodes.forEach((node) => revealObserver.observe(node));
@@ -115,21 +211,14 @@ if ("IntersectionObserver" in window) {
   const navObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
+        if (!entry.isIntersecting) return;
         const activeId = entry.target.getAttribute("id");
-
         navLinks.forEach((link) => {
           link.classList.toggle("is-active", link.getAttribute("href") === `#${activeId}`);
         });
       });
     },
-    {
-      rootMargin: "-25% 0px -55% 0px",
-      threshold: 0
-    }
+    { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
   );
 
   trackedSections.forEach((section) => navObserver.observe(section));
