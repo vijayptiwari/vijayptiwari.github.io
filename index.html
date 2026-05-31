@@ -80,7 +80,8 @@
 
   <main>
     <!-- Hero -->
-    <section class="container hero" id="hero">
+    <section class="hero" id="hero">
+      <div class="hero-shell container-wide">
       <div class="hero-copy parallax-layer">
         <div class="hero-copy-inner parallax-layer--soft">
         <p class="hero-label">Pune, India · Available for opportunities</p>
@@ -131,6 +132,7 @@
         <span>Explore work</span>
         <span class="scroll-hint__line" aria-hidden="true"></span>
       </a>
+      </div>
     </section>
 
     <!-- Featured projects -->
@@ -430,20 +432,23 @@
 
     <!-- Contact -->
     <section class="section contact-section" id="contact">
-      <div class="container reveal">
-        <figure class="contact-portrait">
-          <picture>
-            <source srcset="/assets/photos/vijay-photo-contact.webp" type="image/webp">
-            <img
-              src="/assets/photos/vijay-photo-contact.png"
-              alt="Vijay Prakash Tiwari at work"
-              width="1024"
-              height="1024"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+      <div class="container contact-layout reveal">
+        <figure class="contact-portrait parallax-tilt" data-tilt-max="3">
+          <div class="contact-portrait-frame parallax-tilt-inner">
+            <picture>
+              <source srcset="/assets/photos/vijay-photo-contact.webp" type="image/webp">
+              <img
+                src="/assets/photos/vijay-photo-contact.jpg"
+                alt="Vijay Prakash Tiwari at work with laptop"
+                width="1864"
+                height="4096"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
         </figure>
+        <div class="contact-copy">
         <p class="section-label">Contact</p>
         <h2 class="section-title" style="margin-bottom: 16px;">Let's build something</h2>
         <p>Backend platforms, agentic tools, distributed systems, or open-source — I'm open to conversations.</p>
@@ -452,6 +457,7 @@
           <a class="btn btn-ghost" href="https://github.com/vijayptiwari" target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/vijayptiwari" target="_blank" rel="noreferrer">LinkedIn</a>
           <a class="btn btn-ghost" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">Meridian</a>
+        </div>
         </div>
       </div>
     </section>
