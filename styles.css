@@ -559,7 +559,7 @@ body.is-loaded .scroll-hint {
 .hero-portrait {
   position: relative;
   z-index: 1;
-  width: min(100%, 300px);
+  width: min(100%, 320px);
   margin: 0;
 }
 
@@ -568,17 +568,15 @@ body.is-loaded .scroll-hint {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 24px 56px rgba(0, 0, 0, 0.45);
-  aspect-ratio: 4 / 5;
   background: #12121a;
+  line-height: 0;
 }
 
 .hero-portrait-frame picture,
 .hero-portrait-frame img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 42% 36%;
+  height: auto;
 }
 
 .hero-visual .floating-badge {
@@ -941,17 +939,15 @@ body.is-loaded .scroll-hint {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
-  aspect-ratio: 4 / 5;
   background: #12121a;
+  line-height: 0;
 }
 
 .about-portrait-frame picture,
 .about-portrait-frame img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 22%;
+  height: auto;
 }
 
 .about-text {
@@ -1029,22 +1025,20 @@ body.is-loaded .scroll-hint {
 }
 
 .contact-portrait {
-  width: 88px;
-  height: 88px;
+  width: min(100%, 120px);
   margin: 0 auto 28px;
-  border-radius: 50%;
+  border-radius: 14px;
   overflow: hidden;
-  border: 2px solid rgba(94, 234, 212, 0.35);
+  border: 1px solid rgba(94, 234, 212, 0.35);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  line-height: 0;
 }
 
 .contact-portrait picture,
 .contact-portrait img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
+  height: auto;
 }
 
 .contact-section p {
