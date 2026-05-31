@@ -18,7 +18,9 @@ const header = document.querySelector(".header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
 const trackedSections = document.querySelectorAll("main section[id]");
-const heroInner = document.querySelector(".hero-visual-inner");
+const heroInner = document.querySelector(".hero-decor--left");
+const portraitCluster = document.querySelector(".hero-portrait-cluster");
+const heroPortrait = document.querySelector(".hero-portrait");
 const preloader = document.getElementById("preloader");
 const preloaderBar = document.getElementById("preloader-bar");
 const preloaderLabel = document.getElementById("preloader-label");
@@ -288,54 +290,73 @@ function initBackgroundMesh() {
 }
 
 function initTopology() {
-  if (!topologyCanvas || !motionEnabled) return;
+  if (!topologyCanvas || !motionEnabled || !portraitCluster || !heroPortrait) return;
 
   const ctx = topologyCanvas.getContext("2d");
-  const parent = topologyCanvas.parentElement;
-  let size = 0;
   let time = 0;
 
+  const leftNodes = TOPOLOGY_NODES.filter((_, index) => index % 2 === 0);
+  const rightNodes = TOPOLOGY_NODES.filter((_, index) => index % 2 === 1);
+
   function resize() {
-    size = Math.min(parent.clientWidth, parent.clientHeight, 400);
-    topologyCanvas.width = size;
-    topologyCanvas.height = size;
+    const width = portraitCluster.clientWidth;
+    const height = portraitCluster.clientHeight;
+    topologyCanvas.width = width;
+    topologyCanvas.height = height;
   }
 
-  function draw() {
-    time += 0.01;
-    ctx.clearRect(0, 0, size, size);
+  function getSidePoints(side) {
+    const clusterRect = portraitCluster.getBoundingClientRect();
+    const portraitRect = heroPortrait.getBoundingClientRect();
+    const nodes = side === "left" ? leftNodes : rightNodes;
+    const insetY = portraitRect.height * 0.12;
+    const usableHeight = portraitRect.height - insetY * 2;
 
-    const cx = size / 2 + meshPointerX * 8;
-    const cy = size / 2 + meshPointerY * 6;
-    const orbit = size * 0.36;
-    const points = TOPOLOGY_NODES.map((node, i) => {
-      const a = node.angle + time * (0.28 + i * 0.035);
+    return nodes.map((node, index) => {
+      const t = (index + 1) / (nodes.length + 1);
+      const drift = Math.sin(time * 1.4 + index * 0.9) * 8;
+      const y =
+        portraitRect.top -
+        clusterRect.top +
+        insetY +
+        usableHeight * t +
+        drift;
+      const x =
+        side === "left"
+          ? portraitRect.left - clusterRect.left - 16 + Math.cos(time + index) * 5
+          : portraitRect.right - clusterRect.left + 16 + Math.cos(time + index + 1) * 5;
+
       return {
-        x: cx + Math.cos(a) * orbit,
-        y: cy + Math.sin(a) * orbit,
+        x,
+        y,
         label: node.label,
         color: node.color
       };
     });
+  }
+
+  function draw() {
+    time += 0.01;
+    const width = topologyCanvas.width;
+    const height = topologyCanvas.height;
+    ctx.clearRect(0, 0, width, height);
+
+    const leftPoints = getSidePoints("left");
+    const rightPoints = getSidePoints("right");
+    const points = [...leftPoints, ...rightPoints];
 
     ctx.lineWidth = 1;
     points.forEach((point, i) => {
       for (let j = i + 1; j < points.length; j += 1) {
         const other = points[j];
         const dist = Math.hypot(point.x - other.x, point.y - other.y);
-        const alpha = Math.max(0, 0.2 - dist / (size * 1.4));
+        const alpha = Math.max(0, 0.22 - dist / (width * 0.95));
         ctx.strokeStyle = `rgba(94, 234, 212, ${alpha})`;
         ctx.beginPath();
         ctx.moveTo(point.x, point.y);
         ctx.lineTo(other.x, other.y);
         ctx.stroke();
       }
-
-      ctx.strokeStyle = "rgba(94, 234, 212, 0.16)";
-      ctx.beginPath();
-      ctx.moveTo(cx, cy);
-      ctx.lineTo(point.x, point.y);
-      ctx.stroke();
     });
 
     points.forEach((point) => {
@@ -344,10 +365,11 @@ function initTopology() {
       ctx.arc(point.x, point.y, 5, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.fillStyle = "rgba(244, 244, 248, 0.62)";
+      ctx.fillStyle = "rgba(244, 244, 248, 0.72)";
       ctx.font = "600 10px JetBrains Mono, monospace";
-      ctx.textAlign = "center";
-      ctx.fillText(point.label, point.x, point.y - 12);
+      ctx.textAlign = point.x < width / 2 ? "right" : "left";
+      const labelX = point.x < width / 2 ? point.x - 10 : point.x + 10;
+      ctx.fillText(point.label, labelX, point.y + 4);
     });
 
     requestAnimationFrame(draw);

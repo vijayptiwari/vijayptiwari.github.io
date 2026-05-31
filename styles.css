@@ -554,24 +554,44 @@ body.is-loaded .scroll-hint {
   overflow: visible;
 }
 
-.hero-visual-inner {
+.hero-portrait-cluster {
   position: relative;
-  width: min(100%, clamp(360px, 44vw, 560px));
-  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, clamp(360px, 52vw, 620px));
+  min-height: clamp(320px, 42vw, 480px);
+  padding-inline: clamp(52px, 9vw, 96px);
+}
+
+.hero-visual-inner {
   transition: transform 0.5s var(--ease-out);
   will-change: transform;
 }
 
-.hero-visual-inner--bg {
+.hero-topology {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  margin: 0;
-  width: min(115%, clamp(380px, 48vw, 580px));
-  opacity: 0.72;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
+}
+
+.hero-decor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(52px, 9vw, 96px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-decor--left {
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .hero-portrait {
@@ -579,6 +599,7 @@ body.is-loaded .scroll-hint {
   z-index: 2;
   width: min(100%, clamp(280px, 36vw, 440px));
   margin: 0;
+  flex-shrink: 0;
 }
 
 .hero-portrait-frame {
@@ -598,38 +619,32 @@ body.is-loaded .scroll-hint {
 }
 
 .hero-visual .floating-badge {
-  z-index: 2;
+  z-index: 4;
 }
 
 .hero-visual .floating-badge--1 {
-  top: 4%;
-  right: clamp(-8px, -1vw, 12px);
+  top: 6%;
+  right: clamp(0px, 1vw, 8px);
 }
 
 .hero-visual .floating-badge--2 {
-  bottom: 6%;
-  left: clamp(-8px, -1vw, 12px);
+  bottom: 8%;
+  left: clamp(0px, 1vw, 8px);
 }
 
-.hero-topology {
-  position: absolute;
-  inset: 0;
+.hero-decor--left .hero-signature {
+  position: relative;
   width: 100%;
-  height: 100%;
-}
-
-.hero-signature {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  pointer-events: none;
+  height: clamp(120px, 22vw, 168px);
 }
 
 .hero-signature-ring {
   position: absolute;
-  width: 42%;
-  height: 42%;
+  right: -28%;
+  top: 50%;
+  translate: 0 -50%;
+  width: clamp(88px, 14vw, 120px);
+  height: clamp(88px, 14vw, 120px);
   border-radius: 50%;
   border: 1px solid rgba(94, 234, 212, 0.25);
   animation: ringPulse 4s var(--ease-in-out) infinite;
@@ -654,11 +669,14 @@ body.is-loaded .scroll-hint {
 }
 
 .hero-signature-core {
-  position: relative;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  translate: 0 -50%;
   z-index: 1;
-  width: 112px;
-  height: 112px;
-  border-radius: 28px;
+  width: clamp(64px, 10vw, 88px);
+  height: clamp(64px, 10vw, 88px);
+  border-radius: 22px;
   display: grid;
   place-content: center;
   text-align: center;
@@ -1173,13 +1191,18 @@ body.is-loaded .scroll-hint {
     max-width: none;
   }
 
+  .hero-portrait-cluster {
+    width: min(100%, clamp(300px, 88vw, 440px));
+    padding-inline: clamp(40px, 10vw, 64px);
+  }
+
   .hero-portrait {
     width: min(100%, clamp(260px, 72vw, 380px));
     margin-inline: auto;
   }
 
-  .hero-visual-inner--bg {
-    width: min(100%, clamp(320px, 78vw, 440px));
+  .hero-decor--left .hero-signature {
+    height: clamp(100px, 28vw, 140px);
   }
 
   .contact-copy {
