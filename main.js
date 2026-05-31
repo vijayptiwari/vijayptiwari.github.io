@@ -7,10 +7,10 @@ const PRELOADER_LABELS = [
 
 const TOPOLOGY_NODES = [
   { label: "Kafka", angle: 0, color: "#5eead4" },
-  { label: "Java", angle: 1.26, color: "#fbbf24" },
-  { label: "K8s", angle: 2.51, color: "#a78bfa" },
+  { label: "LangGraph", angle: 1.26, color: "#fbbf24" },
+  { label: "MCP", angle: 2.51, color: "#a78bfa" },
   { label: "Meridian", angle: 3.77, color: "#38bdf8" },
-  { label: "API", angle: 5.03, color: "#fb7185" }
+  { label: "RAG", angle: 5.03, color: "#fb7185" }
 ];
 
 const revealNodes = document.querySelectorAll(".reveal");
