@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vijay Prakash Tiwari | Backend Engineer + Open Source</title>
-  <meta name="description" content="Portfolio of Vijay Prakash Tiwari — Senior Backend Engineer, AI system design for agentic billing platforms, creator of Meridian. Java, Kafka, LangGraph, MCP, distributed systems.">
+  <title>Vijay Prakash Tiwari | Backend Engineer · Creator of Meridian</title>
+  <meta name="description" content="Portfolio of Vijay Prakash Tiwari — Senior Backend Engineer and creator of Meridian, an open-source local-first AI career agent. Java, Kafka, distributed systems, agentic AI.">
   <meta name="author" content="Vijay Prakash Tiwari">
-  <meta name="theme-color" content="#0b0b0f">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#55198b">
   <link rel="canonical" href="https://vijayptiwari.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" as="image" href="/assets/photos/hero.png">
-  <meta property="og:title" content="Vijay Prakash Tiwari | Backend Engineer + Open Source">
-  <meta property="og:description" content="Senior Backend Engineer · Agentic billing platform · Creator of Meridian · LangGraph · MCP · RAG">
+  <meta property="og:title" content="Vijay Prakash Tiwari | Backend Engineer · Creator of Meridian">
+  <meta property="og:description" content="Senior Backend Engineer building distributed systems and Meridian — open-source local-first AI career agent.">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://vijayptiwari.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/styles.css">
-  <script>
-    document.documentElement.classList.add("js", "is-loading");
-  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,83 +36,87 @@
           "name": "Meridian",
           "url": "https://vijayptiwari.github.io/meridian/",
           "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Windows, macOS, Linux"
+          "operatingSystem": "Windows, macOS, Linux",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
         }
       ]
     }
   </script>
 </head>
 <body>
-  <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader-inner">
-      <div class="preloader-mark" aria-hidden="true">
-        <span>V</span><span>T</span>
-      </div>
-      <div class="preloader-track">
-        <div class="preloader-bar" id="preloader-bar"></div>
-      </div>
-      <p class="preloader-label" id="preloader-label">Warming up the stack</p>
-    </div>
-  </div>
-
-  <div class="bg-layers" aria-hidden="true">
-    <canvas id="bg-mesh" class="bg-mesh"></canvas>
-    <div class="bg-grid"></div>
-    <div class="bg-noise"></div>
-    <div class="bg-vignette"></div>
-    <div class="bg-spotlight" id="bg-spotlight"></div>
-  </div>
-
   <div class="scroll-progress" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
-  <header class="header" id="top">
-    <div class="container header-inner">
-      <a class="logo" href="#top"><span class="logo-mark">VT</span> Vijay Prakash Tiwari</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <nav class="nav-links" id="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="hero">
-      <div class="hero-shell container-wide">
-      <div class="hero-copy parallax-layer">
-        <div class="hero-copy-inner parallax-layer--soft">
-        <p class="hero-label">Pune, India · Available for opportunities</p>
-        <h1 class="hero-title">Vijay Prakash Tiwari</h1>
-        <p class="hero-role"><em>Backend Engineer</em> + Open Source Builder</p>
-        <p class="hero-desc">
-          I design production-grade backend and agentic AI systems for telecom-scale billing — and ship open-source tools.
-          Creator of <strong>Meridian</strong> · leading <strong>Agentic Offering</strong> for Digital BSS at Amdocs.
-        </p>
-        <div class="hero-links">
-          <a class="btn btn-primary" href="#contact">Send me a message</a>
-          <a class="btn btn-ghost" href="/Vijay-Prakash-Tiwari-Resume.pdf" download>Download resume</a>
-        </div>
-        </div>
+  <div class="page-wrap">
+    <header class="header" id="top">
+      <div class="container header-inner">
+        <a class="logo" href="#top">&lt;Vijay<span>/</span>&gt;</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <nav class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#meridian">Meridian</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="hero-visual" id="hero-visual">
-        <div class="hero-portrait-cluster">
-          <canvas id="hero-topology" class="hero-topology" aria-hidden="true"></canvas>
-          <div class="hero-decor hero-decor--left hero-visual-inner" aria-hidden="true">
-            <div class="hero-signature">
-              <div class="hero-signature-ring"></div>
-              <div class="hero-signature-core">
-                <span>VT</span>
-                <small>Backend · Agentic</small>
-              </div>
-            </div>
+    <main>
+      <!-- Hero -->
+      <section class="container greet-main" id="hero">
+        <div class="greeting-text-div">
+          <span class="wave" aria-hidden="true">👋</span>
+          <h1 class="greet-title">
+            Hi all, I'm <span class="purple-name">Vijay Prakash Tiwari</span>
+          </h1>
+          <p class="greeting-subtitle">
+            I'm a <span id="typed-text" class="typed-text"></span><span class="typed-cursor">|</span>
+          </p>
+          <p class="greeting-tagline">
+            I design production backend and agentic AI systems for telecom-scale billing — and ship open-source tools like
+            <strong>Meridian</strong>. Currently tech lead on <strong>Agentic Offering</strong> for Digital BSS at Amdocs.
+          </p>
+          <p class="greeting-location">📍 Pune, India · Available for opportunities</p>
+
+          <div class="social-icons">
+            <a class="social-icon social-icon--github" href="https://github.com/vijayptiwari" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a class="social-icon social-icon--linkedin" href="https://www.linkedin.com/in/vijayptiwari" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a class="social-icon social-icon--email" href="mailto:vijayptiwari28@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <a class="social-icon social-icon--blog" href="https://www.livetechie.blogspot.com" target="_blank" rel="noreferrer" aria-label="Blog">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            </a>
+            <a class="social-icon social-icon--leetcode" href="https://leetcode.com/vijayptiwari28" target="_blank" rel="noreferrer" aria-label="LeetCode">
+              <svg viewBox="0 0 24 24"><path d="M16.102 17.93l-2.697 2.607.272-.3-3.918-3.719-.272.3 2.469 2.509.272-.3-3.185-3.24-.272.3 2.205 2.286 6.113-6.233.272-.3-3.185-3.24-.272.3 2.205 2.286-2.205 2.286.272-.3 3.185 3.24.272-.3-2.205-2.286 3.185 3.24.272-.3-2.205-2.286 2.697-2.607-.272.3 3.918 3.719.272-.3-2.469-2.509.272-.3 3.185 3.24.272-.3-2.205-2.286 6.113 6.233-.272.3-3.918-3.719z"/></svg>
+            </a>
           </div>
-          <figure class="hero-portrait parallax-tilt" data-tilt-max="3">
-            <div class="hero-portrait-frame parallax-tilt-inner">
+
+          <div class="hero-btns">
+            <a class="btn btn-primary" href="#contact">Contact Me</a>
+            <a class="btn btn-outline" href="/Vijay-Prakash-Tiwari-Resume.pdf" download>Download Resume</a>
+            <a class="btn btn-outline" href="#meridian">See Meridian</a>
+          </div>
+        </div>
+
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="hero-art">
+            <div class="hero-orbit"></div>
+            <div class="hero-orbit hero-orbit--inner"></div>
+            <div class="orbit-icon"><img src="/assets/logos/java.svg" alt=""></div>
+            <div class="orbit-icon"><img src="/assets/logos/apache-kafka.svg" alt=""></div>
+            <div class="orbit-icon"><img src="/assets/logos/kubernetes.svg" alt=""></div>
+            <div class="orbit-icon"><img src="/assets/logos/spring.svg" alt=""></div>
+            <div class="orbit-icon"><img src="/assets/logos/openai.svg" alt=""></div>
+            <div class="hero-core">
               <img
+                class="hero-core-photo"
                 src="/assets/photos/hero.png"
                 alt="Vijay Prakash Tiwari"
                 width="912"
@@ -121,246 +125,459 @@
                 fetchpriority="high"
               />
             </div>
-          </figure>
-          <div class="floating-badge floating-badge--1">LangGraph · MCP · RAG</div>
-          <div class="floating-badge floating-badge--2">Meridian · local-first</div>
+          </div>
         </div>
+      </section>
+
+      <div class="wave-div" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" fill="#f8f9fb"/>
+        </svg>
       </div>
 
-      <a class="scroll-hint" href="#projects" aria-label="Explore work">
-        <span>Explore work</span>
-        <span class="scroll-hint__line" aria-hidden="true"></span>
-      </a>
-      </div>
-    </section>
-
-    <!-- Work -->
-    <section class="section work-section" id="projects">
-      <div class="container">
-        <header class="section-intro reveal">
-          <p class="section-label">Work</p>
-          <h2 class="section-title">Projects</h2>
-          <p class="section-lead">Production systems, agentic platforms, and tools I have designed and shipped.</p>
-        </header>
-
-        <div class="work-list">
-          <article class="work-entry work-entry--current reveal">
-            <div class="work-entry__meta">
-              <span class="work-entry__badge">Current · Enterprise</span>
-              <time datetime="2026-01">Jan 2026 – Present</time>
-            </div>
-            <h3 class="work-entry__title">Agentic Offering — Billing Domain</h3>
-            <p class="work-entry__role">Amdocs · Tech lead · Team of 3 · AI System Design</p>
-            <p class="work-entry__desc">
-              Zero-code agent platform for Digital BSS Real Time Billing. I own system design and implementation —
-              from SDK and MCP automation through governed RAG and production guardrails on OpenShift.
-            </p>
-            <ul class="work-entry__bullets">
-              <li>Foundation SDK for business agents and MCP servers</li>
-              <li>OpenAPI → MCP conversion with A2A cards and CI deliverable pipelines</li>
-              <li>Versioned RAG with citations; RBAC and infrastructure guardrails</li>
-            </ul>
-            <p class="work-entry__tech">Python · LangGraph · MCP · RAG · Spring AI · OpenShift · Argo CD</p>
-          </article>
-
-          <article class="work-entry reveal">
-            <div class="work-entry__meta">
-              <span class="work-entry__badge">Open source</span>
-            </div>
-            <h3 class="work-entry__title">Meridian</h3>
-            <p class="work-entry__desc">
-              Local-first AI career agent — job research, fit scoring, resume tailoring, and application assistance.
-              Multi-agent pipeline with Playwright; data stays on your machine.
-            </p>
-            <p class="work-entry__tech">Node.js · Playwright · Multi-agent · MIT</p>
-            <a class="work-entry__link" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">vijayptiwari.github.io/meridian</a>
-          </article>
-
-          <article class="work-entry reveal">
-            <div class="work-entry__meta">
-              <span class="work-entry__badge">Enterprise</span>
-            </div>
-            <h3 class="work-entry__title">Real-time BSS billing</h3>
-            <p class="work-entry__role">Amdocs · Software Engineering Specialist</p>
-            <p class="work-entry__desc">
-              Cloud-ready microservices for 5G-era billing — taxation, invoicing, B2B2X, IoT, and NaaS on OpenShift.
-            </p>
-            <p class="work-entry__tech">Java · Spring Boot · Kafka Streams · Kubernetes</p>
-          </article>
-
-          <article class="work-entry reveal">
-            <div class="work-entry__meta">
-              <span class="work-entry__badge">Innovation</span>
-            </div>
-            <h3 class="work-entry__title">Event-Ore</h3>
-            <p class="work-entry__desc">
-              Kafka inspection tool for namespace-restricted environments — topics, consumers, and message-level debugging.
-            </p>
-            <p class="work-entry__tech">Kafka · Kubernetes</p>
-          </article>
-
-          <article class="work-entry work-entry--compact reveal">
-            <h3 class="work-entry__title">Trapper</h3>
-            <p class="work-entry__desc">AI-assisted root-cause analysis for automation and backend workflow debugging.</p>
-          </article>
-
-          <article class="work-entry work-entry--compact reveal">
-            <h3 class="work-entry__title">One-Click Release Automation</h3>
-            <p class="work-entry__desc">Release workflow automation — fewer manual steps, lower operational risk.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section about-section" id="about">
-      <div class="container about-grid">
-        <aside class="about-aside reveal">
-          <figure class="about-portrait parallax-tilt" data-tilt-max="4">
-            <div class="about-portrait-frame parallax-tilt-inner">
+      <!-- About -->
+      <section class="section section--soft" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-emoji">💼</span>
+            <h2>What I do</h2>
+            <p>Production backend engineering with a builder mindset — enterprise systems by day, open-source agentic tools by passion.</p>
+          </div>
+          <div class="about-intro reveal">
+            <figure class="about-photo">
               <img
-                src="/assets/photos/about.png"
+                src="/assets/photos/contact.png"
                 alt="Vijay Prakash Tiwari"
-                width="862"
-                height="862"
+                width="650"
+                height="650"
                 loading="lazy"
                 decoding="async"
               />
+            </figure>
+            <div class="about-intro__copy card">
+              <p style="margin:0; line-height:1.8; color: var(--text-body);">
+                Senior Software Engineer at <strong>Amdocs</strong> — tech lead on the Agentic Offering of Billing Domain
+                (Jan 2026 – present) with a team of 3, plus ongoing backend microservices for telecom-scale billing.
+                Stack spans Java, Spring Boot, Kafka, Kubernetes, Python, LangGraph, MCP, and RAG.
+                Previously at TIBCO: Macy's, United Airlines, and Indian Railways. I also maintain
+                <a href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">Meridian</a>, a local-first AI career agent.
+              </p>
             </div>
-          </figure>
-          <h2 class="parallax-layer parallax-layer--soft">About me</h2>
-        </aside>
-        <div class="about-text reveal parallax-layer parallax-layer--medium">
-          <p>
-            I'm Vijay, based in Pune and working as a Senior Software Engineer at
-            <strong>Amdocs</strong> — tech lead on the Agentic Offering of Billing Domain
-            (Jan 2026 – present), owning system design and implementation with a team of 3 developers,
-            alongside ongoing backend microservices for telecom-scale billing.
-          </p>
-          <p>
-            My stack spans Java, Spring Boot, Kafka, Kubernetes, Python, LangGraph, MCP, RAG, and production-grade system design.
-            I build agentic platforms with governed retrieval, tool RBAC, and CI-driven delivery on OpenShift.
-          </p>
-          <p>
-            I also ship open-source tools — including
-            <a href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">Meridian</a>,
-            a local-first AI career agent with a multi-agent pipeline and Playwright portal integration.
-            Previously at TIBCO, I delivered enterprise integration for Macy's, United Airlines, and Indian Railways.
-          </p>
-          <p>
-            I'm always interested in backend platform work, agentic AI systems, and open-source collaboration —
-            feel free to drop me a line.
-          </p>
-          <div class="skills-row">
-            <span class="skill-chip">Java</span>
-            <span class="skill-chip">Python</span>
-            <span class="skill-chip">LangGraph</span>
-            <span class="skill-chip">MCP</span>
-            <span class="skill-chip">RAG</span>
-            <span class="skill-chip">Kafka</span>
-            <span class="skill-chip">Spring Boot</span>
-            <span class="skill-chip">Kubernetes</span>
-            <span class="skill-chip">OpenShift</span>
-            <span class="skill-chip">System Design</span>
-            <span class="skill-chip">Multi-Agent AI</span>
+          </div>
+          <div class="card-grid card-grid-4">
+            <article class="card reveal">
+              <h3>⚡ Backend Engineering</h3>
+              <p>Java &amp; Spring Boot microservices, REST APIs, and telecom-scale platforms built for reliability.</p>
+            </article>
+            <article class="card reveal">
+              <h3>🔗 Integration &amp; Messaging</h3>
+              <p>Event-driven architectures with Kafka, async processing, and loosely coupled services.</p>
+            </article>
+            <article class="card reveal">
+              <h3>🏗️ System Design</h3>
+              <p>Fault-tolerant, observable systems with clear trade-offs on scale, failure, and data flow.</p>
+            </article>
+            <article class="card reveal">
+              <h3>🤖 Agentic AI Systems</h3>
+              <p>LangGraph, MCP, and governed RAG platforms — SDK design, tool RBAC, and production guardrails on OpenShift.</p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Experience -->
-    <section class="section exp-section" id="experience">
+      <!-- Meridian -->
+      <section class="section" id="meridian">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-emoji">🌟</span>
+            <h2>Featured Project — Meridian</h2>
+            <p>Open-source, local-first AI career agent. Align your next move.</p>
+          </div>
+          <article class="meridian-feature reveal">
+            <div>
+              <span class="meridian-badge">Creator &amp; Maintainer · MIT License</span>
+              <h2>Local-first AI career operations platform</h2>
+              <p>
+                <strong>Meridian</strong> searches jobs, scores fit, tailors resumes, and assists with applications on LinkedIn and Naukri.
+                Your data never leaves your machine. No account. No cloud upload.
+              </p>
+              <ul class="feature-list">
+                <li>Multi-agent pipeline: research → fit scoring → resume tailoring → prep</li>
+                <li>Local dashboard with checkpoint resume, run persistence, and demo mode</li>
+                <li>BYOK LLM — OpenAI-compatible, Ollama, Groq, Azure, or keyword fallback</li>
+                <li>Three workspaces: Find jobs · Upskilling · Career transition</li>
+              </ul>
+              <div class="hero-btns" style="margin-top: 24px;">
+                <a class="btn btn-primary" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">Live Docs</a>
+                <a class="btn btn-outline" href="https://github.com/vijayptiwari/meridian" target="_blank" rel="noreferrer">GitHub Repo</a>
+              </div>
+            </div>
+            <div class="meridian-terminal">
+              <div class="accent">$ npm run ui</div>
+              <div class="green">→ Dashboard at http://127.0.0.1:3030</div>
+              <div style="margin-top:14px" class="accent">Pipeline agents</div>
+              <div>1. Research — LinkedIn / Naukri (Playwright)</div>
+              <div>2. JD comparison — fit scoring &amp; shortlist</div>
+              <div>3. Resume modifier — per-role tailoring</div>
+              <div>4. Learning prep — interview tasks</div>
+              <div style="margin-top:14px" class="green">Local · BYOK · $0 hosting</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section section--tint" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-emoji">🛠️</span>
+            <h2>Proficiency</h2>
+            <p>Backend, integration, cloud, and agentic engineering stack.</p>
+          </div>
+
+          <div class="skills-marquee reveal" aria-label="Technology logos">
+            <div class="skills-track">
+              <div class="skill-logo"><img src="/assets/logos/java.svg" alt="Java"></div>
+              <div class="skill-logo"><img src="/assets/logos/spring.svg" alt="Spring"></div>
+              <div class="skill-logo"><img src="/assets/logos/apache-kafka.svg" alt="Kafka"></div>
+              <div class="skill-logo"><img src="/assets/logos/kubernetes.svg" alt="Kubernetes"></div>
+              <div class="skill-logo"><img src="/assets/logos/openshift.svg" alt="OpenShift"></div>
+              <div class="skill-logo"><img src="/assets/logos/couchbase.svg" alt="Couchbase"></div>
+              <div class="skill-logo"><img src="/assets/logos/jenkins.svg" alt="Jenkins"></div>
+              <div class="skill-logo"><img src="/assets/logos/git.svg" alt="Git"></div>
+              <div class="skill-logo"><img src="/assets/logos/openai.svg" alt="OpenAI"></div>
+              <div class="skill-logo"><img src="/assets/logos/confluent.svg" alt="Confluent"></div>
+              <div class="skill-logo"><img src="/assets/logos/swagger.svg" alt="Swagger"></div>
+              <div class="skill-logo"><img src="/assets/logos/maven.svg" alt="Maven"></div>
+              <!-- duplicate for seamless loop -->
+              <div class="skill-logo"><img src="/assets/logos/java.svg" alt=""></div>
+              <div class="skill-logo"><img src="/assets/logos/spring.svg" alt=""></div>
+              <div class="skill-logo"><img src="/assets/logos/apache-kafka.svg" alt=""></div>
+              <div class="skill-logo"><img src="/assets/logos/kubernetes.svg" alt=""></div>
+              <div class="skill-logo"><img src="/assets/logos/openshift.svg" alt=""></div>
+              <div class="skill-logo"><img src="/assets/logos/couchbase.svg" alt=""></div>
+            </div>
+          </div>
+
+          <div class="skill-pills reveal" style="justify-content:center; margin-top: 36px;">
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Spring Boot</span>
+            <span class="skill-pill">Kafka</span>
+            <span class="skill-pill">LangGraph</span>
+            <span class="skill-pill">MCP</span>
+            <span class="skill-pill">RAG</span>
+            <span class="skill-pill">Kubernetes</span>
+            <span class="skill-pill">OpenShift</span>
+            <span class="skill-pill">System Design</span>
+            <span class="skill-pill">Multi-Agent AI</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section section--soft" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-emoji">🚀</span>
+            <h2>Personal Projects</h2>
+            <p>Open-source products, innovation tools, and enterprise delivery work.</p>
+          </div>
+
+          <div class="filter-bar reveal" role="tablist" aria-label="Filter projects">
+            <button class="filter-pill is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter-pill" type="button" data-filter="opensource" role="tab" aria-selected="false">Open Source</button>
+            <button class="filter-pill" type="button" data-filter="innovation" role="tab" aria-selected="false">Innovation</button>
+            <button class="filter-pill" type="button" data-filter="enterprise" role="tab" aria-selected="false">Enterprise</button>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card project-card--featured reveal" data-project-category="enterprise">
+              <div class="project-banner" style="font-size:1.1rem;">Agentic Platform</div>
+              <div class="project-body">
+                <h3>Agentic Offering — Billing Domain</h3>
+                <p class="project-subtitle">Amdocs · Jan 2026 – Present · Tech lead · Team of 3</p>
+                <p class="project-desc">Zero-code agent platform for Digital BSS Real Time Billing — foundation SDK, OpenAPI → MCP conversion, versioned RAG with citations, and RBAC guardrails on OpenShift.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">LangGraph</span>
+                  <span class="project-tag">MCP</span>
+                  <span class="project-tag">RAG</span>
+                  <span class="project-tag">OpenShift</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card project-card--featured reveal" data-project-category="opensource">
+              <div class="project-banner">Meridian</div>
+              <div class="project-body">
+                <h3>Meridian — AI Career Agent</h3>
+                <p class="project-subtitle">Creator &amp; Maintainer · v0.2.0 · MIT</p>
+                <p class="project-desc">Local-first career ops — job research, fit scoring, resume tailoring, and application assistance. Hosted at vijayptiwari.github.io/meridian.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">Playwright</span>
+                  <span class="project-tag">Multi-Agent</span>
+                  <span class="project-tag">Local-First</span>
+                </div>
+                <div class="project-footer">
+                  <a class="project-link" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">
+                    <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    Live Site
+                  </a>
+                  <a class="project-link" href="https://github.com/vijayptiwari/meridian" target="_blank" rel="noreferrer">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project-category="innovation">
+              <div class="project-banner" style="font-size:1.4rem;">Event-Ore</div>
+              <div class="project-body">
+                <h3>Kafka Monitoring Tool</h3>
+                <p class="project-subtitle">Innovation · Developer Tooling</p>
+                <p class="project-desc">Topic, consumer, and message-level visibility in namespace-restricted K8s environments.</p>
+                <div class="project-tags"><span class="project-tag">Kafka</span><span class="project-tag">K8s</span></div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project-category="innovation">
+              <div class="project-banner" style="font-size:1.4rem;">Trapper</div>
+              <div class="project-body">
+                <h3>AI-Assisted RCA</h3>
+                <p class="project-subtitle">Innovation · Observability</p>
+                <p class="project-desc">Automation traffic interceptor with AI root-cause analysis and anomaly detection.</p>
+                <div class="project-tags"><span class="project-tag">AI RCA</span><span class="project-tag">Automation</span></div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project-category="innovation">
+              <div class="project-banner" style="font-size:1.4rem;">Release</div>
+              <div class="project-body">
+                <h3>One-Click Release Automation</h3>
+                <p class="project-subtitle">Innovation · DevOps</p>
+                <p class="project-desc">Simplified release workflow reducing manual deployment steps.</p>
+                <div class="project-tags"><span class="project-tag">CI/CD</span><span class="project-tag">Platform</span></div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project-category="enterprise">
+              <div class="project-banner" style="font-size:1.2rem;">BSS Billing</div>
+              <div class="project-body">
+                <h3>Real-Time Billing Microservices</h3>
+                <p class="project-subtitle">Amdocs · 2020–Present</p>
+                <p class="project-desc">Cloud-ready 5G telecom billing — taxation, invoicing, B2B2X, IoT, NaaS.</p>
+                <div class="project-tags"><span class="project-tag">Java</span><span class="project-tag">Kafka Streams</span><span class="project-tag">OpenShift</span></div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project-category="enterprise">
+              <div class="project-banner" style="font-size:1.2rem;">Macy's</div>
+              <div class="project-body">
+                <h3>Bloomingdale Loyalty System</h3>
+                <p class="project-subtitle">TIBCO · 2018–2019</p>
+                <p class="project-desc">Loyalty workflows — registration, points, offers, campaigns with backward compatibility.</p>
+                <div class="project-tags"><span class="project-tag">TIBCO BE</span><span class="project-tag">Java</span></div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project-category="enterprise">
+              <div class="project-banner" style="font-size:1.2rem;">Railways</div>
+              <div class="project-body">
+                <h3>CRIS Freight Schedule PoC</h3>
+                <p class="project-subtitle">TIBCO · 2018</p>
+                <p class="project-desc">Indian Railways freight schedule and signal notification presales prototype.</p>
+                <div class="project-tags"><span class="project-tag">TIBCO BE</span><span class="project-tag">PoC</span></div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-project-category="enterprise">
+              <div class="project-banner" style="font-size:1.2rem;">United</div>
+              <div class="project-body">
+                <h3>United Airlines Integration</h3>
+                <p class="project-subtitle">TIBCO · 2017–2018</p>
+                <p class="project-desc">Minimum Connecting Time and ticket pricing/refund validation integration.</p>
+                <div class="project-tags"><span class="project-tag">TIBCO BE</span><span class="project-tag">Airline</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-emoji">💼</span>
+            <h2>Work Experience</h2>
+            <p>Enterprise backend engineering in production telecom environments.</p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <h3>Amdocs Development Centre India LLP</h3>
+              <p class="timeline-meta">Jan 2020 – Present · Amdocs Technology BSS R&amp;D</p>
+              <ul class="role-list">
+                <li><strong>Agentic Offering — Tech Lead</strong><span>Jan 2026 – Present · Team of 3</span></li>
+                <li><strong>Software Engineering Specialist</strong><span>Dec 2022 – Present</span></li>
+                <li><strong>Software Developer – Advanced</strong><span>Dec 2021 – Nov 2022</span></li>
+                <li><strong>Software Developer – Experienced</strong><span>Jan 2020 – Nov 2021</span></li>
+              </ul>
+              <p>Agentic platform for Digital BSS billing; real-time microservices, Kafka integrations, innovation tools (Event-Ore, Trapper), and release automation.</p>
+            </article>
+            <article class="timeline-item reveal">
+              <h3>TIBCO Software India Pvt. Ltd.</h3>
+              <p class="timeline-meta">Jul 2017 – Dec 2019 · Enterprise Integration</p>
+              <p>Integration workflows for Macy's, United Airlines, and Indian Railways — Java services, presales prototyping, and delivery support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section class="section section--soft" id="achievements">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-emoji">🏆</span>
+            <h2>Achievements</h2>
+            <p>Innovation awards, competitions, and research.</p>
+          </div>
+          <div class="card-grid card-grid-3">
+            <article class="card achievement-card reveal">
+              <span class="emoji">🌍</span>
+              <h3>Inspiring Innovator</h3>
+              <p>Global Amdocs nominee — only Asian among nominees. Tool saving 2,000+ man-hours.</p>
+            </article>
+            <article class="card achievement-card reveal">
+              <span class="emoji">🎖️</span>
+              <h3>Amdocs Avishkar</h3>
+              <p>2 of 3 global titles among 104 teams.</p>
+            </article>
+            <article class="card achievement-card reveal">
+              <span class="emoji">💻</span>
+              <h3>TCS CodeVita</h3>
+              <p>Global rank 716 — top 0.2% of 400,000+ participants.</p>
+            </article>
+            <article class="card achievement-card reveal">
+              <span class="emoji">🎓</span>
+              <h3>B.E. Computer Engineering</h3>
+              <p>Savitribai Phule Pune University, 2013–2017.</p>
+            </article>
+            <article class="card achievement-card reveal">
+              <span class="emoji">📜</span>
+              <h3>TIBCO Certified</h3>
+              <p>TCP-BusinessEvents 5 &amp; TCP-Spotfire 7 Professional.</p>
+            </article>
+          </div>
+
+          <div class="publications-block reveal">
+            <h3 class="publications-block__title">📚 7 International Publications</h3>
+            <p class="publications-block__lead">Research papers from undergraduate engineering — cloud security, biocomputing, and emerging technologies.</p>
+            <ul class="publications-list">
+              <li class="publication-item">
+                <a href="https://www.ijircce.com/upload/2016/november/57_11_Cloud.pdf" target="_blank" rel="noreferrer">
+                  <strong>Cloud Data Security using DNA Cryptography Techniques</strong>
+                  <span>International Journal of Innovative Research in Computer and Communication Engineering (IJIRCCE)</span>
+                </a>
+              </li>
+              <li class="publication-item">
+                <a href="https://www.irjet.net/archives/V3/i4/IRJET-V3I4592.pdf" target="_blank" rel="noreferrer">
+                  <strong>Face Analysis for Improvised System Security using LASER Focus</strong>
+                  <span>International Research Journal of Engineering and Technology (IRJET)</span>
+                </a>
+              </li>
+              <li class="publication-item">
+                <a href="https://ijritcc.org/index.php/ijritcc/article/view/1998/1998" target="_blank" rel="noreferrer">
+                  <strong>Wearable Technology and Extended Applications</strong>
+                  <span>International Journal of Recent and Innovative Trends in Computing and Communication (IJRITCC)</span>
+                </a>
+              </li>
+              <li class="publication-item">
+                <a href="https://www.irjet.net/archives/V3/i4/IRJET-V3I4274.pdf" target="_blank" rel="noreferrer">
+                  <strong>Li-Fi Technology, Implementations and Applications</strong>
+                  <span>International Research Journal of Engineering and Technology (IRJET)</span>
+                </a>
+              </li>
+              <li class="publication-item">
+                <a href="https://www.irjet.net/archives/V3/i4/IRJET-V3I4280.pdf" target="_blank" rel="noreferrer">
+                  <strong>Augmented Reality and Its Technologies</strong>
+                  <span>International Research Journal of Engineering and Technology (IRJET)</span>
+                </a>
+              </li>
+              <li class="publication-item">
+                <a href="https://www.irjet.net/archives/V3/i4/IRJET-V3I4275.pdf" target="_blank" rel="noreferrer">
+                  <strong>Blue Brain Technology to Preserve Intelligence</strong>
+                  <span>International Research Journal of Engineering and Technology (IRJET)</span>
+                </a>
+              </li>
+              <li class="publication-item">
+                <a href="https://ijritcc.org/index.php/ijritcc/article/view/1947" target="_blank" rel="noreferrer">
+                  <strong>DNA Computing and Implementations</strong>
+                  <span>International Journal of Recent and Innovative Trends in Computing and Communication (IJRITCC)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="wave-div wave-div--flip" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" fill="#55198b"/>
+        </svg>
+      </div>
+
+      <!-- Contact -->
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="section-heading contact-section__heading reveal">
+            <span class="section-emoji">📬</span>
+            <h2>Contact Me</h2>
+            <p>Backend platforms, agentic tools, or open-source collaboration — let's connect.</p>
+          </div>
+          <div class="contact-grid">
+            <a class="contact-card reveal" href="https://github.com/vijayptiwari" target="_blank" rel="noreferrer">
+              <span class="contact-card__label">GitHub</span>
+              <strong class="contact-card__value">github.com/vijayptiwari</strong>
+            </a>
+            <a class="contact-card reveal" href="https://www.linkedin.com/in/vijayptiwari" target="_blank" rel="noreferrer">
+              <span class="contact-card__label">LinkedIn</span>
+              <strong class="contact-card__value">linkedin.com/in/vijayptiwari</strong>
+            </a>
+            <a class="contact-card reveal" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">
+              <span class="contact-card__label">Meridian</span>
+              <strong class="contact-card__value">Open project docs</strong>
+            </a>
+            <div class="contact-card contact-card--action reveal">
+              <span class="contact-card__label">Email</span>
+              <a class="contact-card__value contact-card__link" href="mailto:vijayptiwari28@gmail.com">vijayptiwari28@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="vijayptiwari28@gmail.com">Copy email</button>
+            </div>
+            <div class="contact-card contact-card--action reveal">
+              <span class="contact-card__label">Phone</span>
+              <a class="contact-card__value contact-card__link" href="tel:+919960770157">+91-9960770157</a>
+              <button class="copy-btn" type="button" data-copy="+919960770157">Copy phone</button>
+            </div>
+            <a class="contact-card reveal" href="/Vijay-Prakash-Tiwari-Resume.pdf" download>
+              <span class="contact-card__label">Resume</span>
+              <strong class="contact-card__value">Download PDF</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
       <div class="container">
-        <header class="section-intro reveal">
-          <p class="section-label">Experience</p>
-          <h2 class="section-title">Career</h2>
-        </header>
-
-        <div class="exp-list">
-          <article class="exp-item reveal">
-            <div class="exp-item__head">
-              <div>
-                <h3>Amdocs Development Centre India LLP</h3>
-                <p class="exp-item__role">Software Engineering Specialist</p>
-              </div>
-              <time datetime="2020-01">Jan 2020 – Present</time>
-            </div>
-            <div class="exp-item__body">
-              <div class="exp-item__block">
-                <p class="exp-item__period">Jan 2026 – Present · Tech lead</p>
-                <p>Agentic Offering for Digital BSS Real Time Billing — system design, implementation, team of 3.</p>
-              </div>
-              <div class="exp-item__block">
-                <p class="exp-item__period">2020 – 2025</p>
-                <p>Real-time billing microservices, Kafka integrations, DevOps champion, release automation, innovation tools (Event-Ore, Trapper).</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="exp-item reveal">
-            <div class="exp-item__head">
-              <div>
-                <h3>TIBCO Software India Pvt. Ltd.</h3>
-                <p class="exp-item__role">Junior Consultant</p>
-              </div>
-              <time datetime="2017-07">Jul 2017 – Dec 2019</time>
-            </div>
-            <div class="exp-item__body">
-              <p>Enterprise integration for Macy's (loyalty migration), United Airlines (MCT, pricing), and Indian Railways CRIS (freight scheduling PoC).</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="recognition reveal">
-          <p class="section-label">Recognition</p>
-          <ul class="recognition-list">
-            <li><strong>Amdocs Inspiring Innovator</strong> — global nominee; automation saving 2,000+ man-hours</li>
-            <li><strong>Amdocs Avishkar</strong> — 2 of 3 global titles among 104 teams</li>
-            <li><strong>TCS CodeVita</strong> — global rank 716 (top 0.2% of 400k+)</li>
-          </ul>
-        </div>
+        <p>
+          © <span id="year"></span> Vijay Prakash Tiwari · Pune ·
+          <a href="https://github.com/vijayptiwari/meridian" target="_blank" rel="noreferrer">Meridian</a> ·
+          <a href="https://github.com/vijayptiwari/vijayptiwari.github.io" target="_blank" rel="noreferrer">Source</a>
+        </p>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact-section" id="contact">
-      <div class="container contact-layout reveal">
-        <figure class="contact-portrait parallax-tilt" data-tilt-max="3">
-          <div class="contact-portrait-frame parallax-tilt-inner">
-            <img
-              src="/assets/photos/contact.png"
-              alt="Vijay Prakash Tiwari at work"
-              width="650"
-              height="650"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </figure>
-        <div class="contact-copy">
-        <p class="section-label">Contact</p>
-        <h2 class="section-title" style="margin-bottom: 16px;">Let's build something</h2>
-        <p>Backend platforms, agentic tools, distributed systems, or open-source — I'm open to conversations.</p>
-        <div class="contact-links">
-          <a class="btn btn-primary" href="mailto:vijayptiwari28@gmail.com">Send me a message</a>
-          <a class="btn btn-ghost" href="https://github.com/vijayptiwari" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/vijayptiwari" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn btn-ghost" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">Meridian</a>
-        </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>
-        © <span id="year"></span> Vijay Prakash Tiwari · Pune ·
-        <a href="https://github.com/vijayptiwari/meridian" target="_blank" rel="noreferrer">Meridian</a> ·
-        <a href="https://github.com/vijayptiwari/vijayptiwari.github.io" target="_blank" rel="noreferrer">Source</a>
-      </p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="/main.js"></script>
 </body>

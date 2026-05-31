@@ -1,411 +1,202 @@
-const PRELOADER_LABELS = [
-  "Warming up the stack",
-  "Loading distributed nodes",
-  "Syncing Meridian agents",
-  "Ready"
-];
-
-const TOPOLOGY_NODES = [
-  { label: "Kafka", angle: 0, color: "#5eead4" },
-  { label: "LangGraph", angle: 1.26, color: "#fbbf24" },
-  { label: "MCP", angle: 2.51, color: "#a78bfa" },
-  { label: "Meridian", angle: 3.77, color: "#38bdf8" },
-  { label: "RAG", angle: 5.03, color: "#fb7185" }
+const TYPED_ROLES = [
+  "Senior Backend Engineer",
+  "Agentic Platform Tech Lead",
+  "Creator of Meridian",
+  "Distributed Systems Engineer",
+  "Kafka Platform Engineer"
 ];
 
 const revealNodes = document.querySelectorAll(".reveal");
 const header = document.querySelector(".header");
+const nav = document.querySelector(".header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
 const trackedSections = document.querySelectorAll("main section[id]");
-const heroInner = document.querySelector(".hero-decor--left");
-const portraitCluster = document.querySelector(".hero-portrait-cluster");
-const heroPortrait = document.querySelector(".hero-portrait");
-const preloader = document.getElementById("preloader");
-const preloaderBar = document.getElementById("preloader-bar");
-const preloaderLabel = document.getElementById("preloader-label");
-const bgMesh = document.getElementById("bg-mesh");
-const topologyCanvas = document.getElementById("hero-topology");
+const filterPills = document.querySelectorAll(".filter-pill");
+const projectCards = document.querySelectorAll("[data-project-category]");
+const copyButtons = document.querySelectorAll(".copy-btn");
+const typedEl = document.getElementById("typed-text");
+const canvas = document.getElementById("particle-canvas");
 const yearEl = document.getElementById("year");
-const tiltElements = document.querySelectorAll(".parallax-tilt");
-const scrollShiftElements = document.querySelectorAll(".exp-item, .about-text p");
-
-const motionEnabled = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-let targetProgress = 0;
-let currentProgress = 0;
-let targetPX = 0;
-let targetPY = 0;
-let currentPX = 0;
-let currentPY = 0;
-let pointerClientX = window.innerWidth * 0.5;
-let pointerClientY = window.innerHeight * 0.5;
-let meshPointerX = 0;
-let meshPointerY = 0;
-
-const tiltControllers = [];
 
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
-function lerp(start, end, amount) {
-  return start + (end - start) * amount;
-}
-
 function setScrollProgress() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  targetProgress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.documentElement.style.setProperty("--progress", `${progress}%`);
 
   if (header) {
-    header.classList.toggle("is-scrolled", scrollTop > 24);
-  }
-
-  document.documentElement.style.setProperty("--scroll-y", String(scrollTop));
-}
-
-function initPointerTracking() {
-  if (!motionEnabled) return;
-
-  document.addEventListener(
-    "pointermove",
-    (event) => {
-      pointerClientX = event.clientX;
-      pointerClientY = event.clientY;
-      targetPX = (event.clientX / window.innerWidth - 0.5) * 2;
-      targetPY = (event.clientY / window.innerHeight - 0.5) * 2;
-    },
-    { passive: true }
-  );
-
-  document.addEventListener(
-    "pointerleave",
-    () => {
-      targetPX = 0;
-      targetPY = 0;
-    },
-    { passive: true }
-  );
-}
-
-function initParallaxTilt() {
-  if (!motionEnabled) return;
-
-  tiltElements.forEach((element) => {
-    const maxTilt = parseFloat(element.dataset.tiltMax || "3");
-    const inner = element.querySelector(".parallax-tilt-inner") || element;
-    const state = {
-      element,
-      inner,
-      maxTilt,
-      localX: 0,
-      localY: 0,
-      targetLX: 0,
-      targetLY: 0,
-      hovering: false
-    };
-
-    element.addEventListener("mouseenter", () => {
-      state.hovering = true;
-      element.classList.add("is-hovered");
-    });
-
-    element.addEventListener("mouseleave", () => {
-      state.hovering = false;
-      element.classList.remove("is-hovered");
-      state.targetLX = 0;
-      state.targetLY = 0;
-    });
-
-    element.addEventListener("mousemove", (event) => {
-      const rect = element.getBoundingClientRect();
-      state.targetLX = ((event.clientX - rect.left) / rect.width - 0.5) * state.maxTilt;
-      state.targetLY = ((event.clientY - rect.top) / rect.height - 0.5) * -state.maxTilt;
-    });
-
-    tiltControllers.push(state);
-  });
-}
-
-function updateTiltControllers() {
-  tiltControllers.forEach((state) => {
-    const ease = state.hovering ? 0.14 : 0.07;
-    state.localX = lerp(state.localX, state.targetLX, ease);
-    state.localY = lerp(state.localY, state.targetLY, ease);
-
-    const rect = state.element.getBoundingClientRect();
-    const dx = (pointerClientX - (rect.left + rect.width / 2)) / window.innerWidth;
-    const dy = (pointerClientY - (rect.top + rect.height / 2)) / window.innerHeight;
-    const globalX = dx * 5;
-    const globalY = dy * 3;
-    const scrollDelta = (rect.top + rect.height / 2 - window.innerHeight / 2) / window.innerHeight;
-    const scrollShift = scrollDelta * -6;
-
-    state.inner.style.transform =
-      `perspective(900px) rotateY(${state.localX + dx * 1.2}deg) rotateX(${state.localY - dy * 1.2}deg) translate3d(${globalX}px, ${globalY + scrollShift}px, 0)`;
-  });
-}
-
-function updateScrollShiftElements() {
-  if (!motionEnabled) return;
-
-  scrollShiftElements.forEach((element) => {
-    const rect = element.getBoundingClientRect();
-    const centerOffset = (rect.top + rect.height / 2 - window.innerHeight / 2) / window.innerHeight;
-    const dx = (pointerClientX - window.innerWidth / 2) / window.innerWidth;
-    const shiftY = centerOffset * -8;
-    const shiftX = dx * 3;
-
-    element.style.transform = `translate3d(${shiftX}px, ${shiftY}px, 0)`;
-  });
-}
-
-function tickMotion() {
-  currentProgress = lerp(currentProgress, targetProgress, 0.12);
-  currentPX = lerp(currentPX, targetPX, 0.06);
-  currentPY = lerp(currentPY, targetPY, 0.06);
-  meshPointerX = lerp(meshPointerX, currentPX, 0.05);
-  meshPointerY = lerp(meshPointerY, currentPY, 0.05);
-
-  document.documentElement.style.setProperty("--progress", `${currentProgress}%`);
-  document.documentElement.style.setProperty("--px", String(currentPX));
-  document.documentElement.style.setProperty("--py", String(currentPY));
-
-  const spotX = 50 + currentPX * 8;
-  const spotY = 40 + currentPY * 6;
-  document.documentElement.style.setProperty("--spot-x", `${spotX}%`);
-  document.documentElement.style.setProperty("--spot-y", `${spotY}%`);
-
-  if (heroInner && motionEnabled) {
-    const scrollTop = window.scrollY;
-    const scrollTilt = scrollTop < window.innerHeight ? scrollTop * 0.008 : 0;
-    const scrollLift = scrollTop < window.innerHeight ? scrollTop * 0.03 : 0;
-    const tiltY = currentPX * 6;
-    const tiltX = -currentPY * 4;
-
-    heroInner.style.transform =
-      `perspective(900px) rotateY(${-6 + tiltY + scrollTilt}deg) rotateX(${4 + tiltX}deg) translateY(${scrollLift}px)`;
-  }
-
-  updateTiltControllers();
-  updateScrollShiftElements();
-
-  requestAnimationFrame(tickMotion);
-}
-
-function initPreloader() {
-  if (!preloader || !preloaderBar) {
-    document.body.classList.add("is-loaded");
-    document.documentElement.classList.remove("is-loading");
-    return;
-  }
-
-  let progress = 0;
-  let labelIndex = 0;
-
-  const step = () => {
-    progress = Math.min(progress + Math.random() * 14 + 4, 96);
-    preloaderBar.style.width = `${progress}%`;
-
-    const nextLabel = Math.floor((progress / 100) * (PRELOADER_LABELS.length - 1));
-    if (nextLabel !== labelIndex && preloaderLabel) {
-      labelIndex = nextLabel;
-      preloaderLabel.textContent = PRELOADER_LABELS[labelIndex];
-    }
-
-    if (progress < 96) {
-      window.setTimeout(step, 120 + Math.random() * 180);
-    }
-  };
-
-  step();
-
-  const finish = () => {
-    if (preloaderBar) preloaderBar.style.width = "100%";
-    if (preloaderLabel) preloaderLabel.textContent = PRELOADER_LABELS[PRELOADER_LABELS.length - 1];
-
-    window.setTimeout(() => {
-      preloader.classList.add("is-done");
-      document.body.classList.add("is-loaded");
-      document.documentElement.classList.remove("is-loading");
-    }, 420);
-  };
-
-  if (document.readyState === "complete") {
-    window.setTimeout(finish, 680);
-  } else {
-    window.addEventListener("load", () => window.setTimeout(finish, 680), { once: true });
+    header.classList.toggle("is-scrolled", scrollTop > 40);
   }
 }
 
-function initBackgroundMesh() {
-  if (!bgMesh || !motionEnabled) return;
+function initParticles() {
+  if (!canvas) return;
 
-  const ctx = bgMesh.getContext("2d");
+  const ctx = canvas.getContext("2d");
   let width = 0;
   let height = 0;
-  let time = 0;
-
-  const blobs = [
-    { x: 0.2, y: 0.25, r: 0.35, color: [94, 234, 212], drift: 1.2 },
-    { x: 0.75, y: 0.15, r: 0.28, color: [167, 139, 250], drift: 0.9 },
-    { x: 0.6, y: 0.7, r: 0.32, color: [251, 191, 36], drift: 1.5 }
-  ];
+  let particles = [];
+  let animationId = 0;
 
   function resize() {
     width = window.innerWidth;
     height = window.innerHeight;
-    bgMesh.width = width;
-    bgMesh.height = height;
+    canvas.width = width;
+    canvas.height = height;
+
+    const count = Math.min(70, Math.floor((width * height) / 18000));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.45,
+      vy: (Math.random() - 0.5) * 0.45,
+      r: Math.random() * 2 + 1
+    }));
   }
 
   function draw() {
-    time += 0.0035;
     ctx.clearRect(0, 0, width, height);
 
-    blobs.forEach((blob, index) => {
-      const ox = Math.sin(time + index * 1.7) * 0.05;
-      const oy = Math.cos(time * 0.9 + index) * 0.04;
-      const px = meshPointerX * 0.06 * blob.drift;
-      const py = meshPointerY * 0.05 * blob.drift;
-      const cx = (blob.x + ox + px) * width;
-      const cy = (blob.y + oy + py) * height;
-      const radius = blob.r * Math.min(width, height);
+    for (let i = 0; i < particles.length; i += 1) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
 
-      const gradient = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
-      gradient.addColorStop(0, `rgba(${blob.color.join(",")}, 0.15)`);
-      gradient.addColorStop(1, "rgba(0,0,0,0)");
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
 
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, width, height);
-    });
-
-    requestAnimationFrame(draw);
-  }
-
-  resize();
-  draw();
-  window.addEventListener("resize", resize);
-}
-
-function initTopology() {
-  if (!topologyCanvas || !motionEnabled || !portraitCluster || !heroPortrait) return;
-
-  const ctx = topologyCanvas.getContext("2d");
-  let time = 0;
-
-  const leftNodes = TOPOLOGY_NODES.filter((_, index) => index % 2 === 0);
-  const rightNodes = TOPOLOGY_NODES.filter((_, index) => index % 2 === 1);
-
-  function resize() {
-    const width = portraitCluster.clientWidth;
-    const height = portraitCluster.clientHeight;
-    topologyCanvas.width = width;
-    topologyCanvas.height = height;
-  }
-
-  function getSidePoints(side) {
-    const clusterRect = portraitCluster.getBoundingClientRect();
-    const portraitRect = heroPortrait.getBoundingClientRect();
-    const nodes = side === "left" ? leftNodes : rightNodes;
-    const insetY = portraitRect.height * 0.12;
-    const usableHeight = portraitRect.height - insetY * 2;
-
-    return nodes.map((node, index) => {
-      const t = (index + 1) / (nodes.length + 1);
-      const drift = Math.sin(time * 1.4 + index * 0.9) * 8;
-      const y =
-        portraitRect.top -
-        clusterRect.top +
-        insetY +
-        usableHeight * t +
-        drift;
-      const x =
-        side === "left"
-          ? portraitRect.left - clusterRect.left - 16 + Math.cos(time + index) * 5
-          : portraitRect.right - clusterRect.left + 16 + Math.cos(time + index + 1) * 5;
-
-      return {
-        x,
-        y,
-        label: node.label,
-        color: node.color
-      };
-    });
-  }
-
-  function draw() {
-    time += 0.01;
-    const width = topologyCanvas.width;
-    const height = topologyCanvas.height;
-    ctx.clearRect(0, 0, width, height);
-
-    const leftPoints = getSidePoints("left");
-    const rightPoints = getSidePoints("right");
-    const points = [...leftPoints, ...rightPoints];
-
-    ctx.lineWidth = 1;
-    points.forEach((point, i) => {
-      for (let j = i + 1; j < points.length; j += 1) {
-        const other = points[j];
-        const dist = Math.hypot(point.x - other.x, point.y - other.y);
-        const alpha = Math.max(0, 0.22 - dist / (width * 0.95));
-        ctx.strokeStyle = `rgba(94, 234, 212, ${alpha})`;
-        ctx.beginPath();
-        ctx.moveTo(point.x, point.y);
-        ctx.lineTo(other.x, other.y);
-        ctx.stroke();
-      }
-    });
-
-    points.forEach((point) => {
-      ctx.fillStyle = point.color;
       ctx.beginPath();
-      ctx.arc(point.x, point.y, 5, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(108, 99, 255, 0.35)";
       ctx.fill();
 
-      ctx.fillStyle = "rgba(244, 244, 248, 0.72)";
-      ctx.font = "600 10px JetBrains Mono, monospace";
-      ctx.textAlign = point.x < width / 2 ? "right" : "left";
-      const labelX = point.x < width / 2 ? point.x - 10 : point.x + 10;
-      ctx.fillText(point.label, labelX, point.y + 4);
-    });
+      for (let j = i + 1; j < particles.length; j += 1) {
+        const q = particles[j];
+        const dx = p.x - q.x;
+        const dy = p.y - q.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
 
-    requestAnimationFrame(draw);
+        if (dist < 130) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(108, 99, 255, ${0.14 * (1 - dist / 130)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+
+    animationId = requestAnimationFrame(draw);
   }
 
   resize();
   draw();
+
   window.addEventListener("resize", resize);
+
+  return () => {
+    cancelAnimationFrame(animationId);
+    window.removeEventListener("resize", resize);
+  };
 }
 
-if (navToggle && header) {
+function initTyping() {
+  if (!typedEl) return;
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function tick() {
+    const current = TYPED_ROLES[roleIndex];
+
+    if (!deleting) {
+      typedEl.textContent = current.slice(0, charIndex + 1);
+      charIndex += 1;
+
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(tick, 1800);
+        return;
+      }
+    } else {
+      typedEl.textContent = current.slice(0, charIndex - 1);
+      charIndex -= 1;
+
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % TYPED_ROLES.length;
+      }
+    }
+
+    setTimeout(tick, deleting ? 40 : 70);
+  }
+
+  tick();
+}
+
+if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
-    const isOpen = header.classList.toggle("is-open");
+    const isOpen = nav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      header.classList.remove("is-open");
+      nav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
     });
   });
 }
 
-revealNodes.forEach((node, index) => {
-  node.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+filterPills.forEach((pill) => {
+  pill.addEventListener("click", () => {
+    const filter = pill.getAttribute("data-filter");
+
+    filterPills.forEach((item) => {
+      item.classList.toggle("is-active", item === pill);
+      item.setAttribute("aria-selected", item === pill ? "true" : "false");
+    });
+
+    projectCards.forEach((card) => {
+      const category = card.getAttribute("data-project-category");
+      const show = filter === "all" || category === filter;
+      card.classList.toggle("is-hidden", !show);
+    });
+  });
+});
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const value = button.getAttribute("data-copy");
+    if (!value) return;
+
+    try {
+      await navigator.clipboard.writeText(value);
+      const original = button.textContent;
+      button.textContent = "Copied!";
+      window.setTimeout(() => {
+        button.textContent = original;
+      }, 1400);
+    } catch {
+      button.textContent = "Failed";
+    }
+  });
 });
 
 window.addEventListener("scroll", setScrollProgress, { passive: true });
 setScrollProgress();
-initPointerTracking();
-initParallaxTilt();
-tickMotion();
-initPreloader();
-initBackgroundMesh();
-initTopology();
+initParticles();
+initTyping();
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -417,7 +208,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.14, rootMargin: "0px 0px -6% 0px" }
+    { threshold: 0.1 }
   );
 
   revealNodes.forEach((node) => revealObserver.observe(node));
@@ -432,7 +223,7 @@ if ("IntersectionObserver" in window) {
         });
       });
     },
-    { rootMargin: "-35% 0px -50% 0px", threshold: 0 }
+    { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
   );
 
   trackedSections.forEach((section) => navObserver.observe(section));
