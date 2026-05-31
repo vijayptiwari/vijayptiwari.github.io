@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vijay Prakash Tiwari ATS Resume</title>
+  <title>Vijay Prakash Tiwari - Resume</title>
+  <meta name="author" content="Vijay Prakash Tiwari">
+  <meta name="description" content="Resume of Vijay Prakash Tiwari - Senior Software Engineer, Tech Lead, AI Systems Engineer, Solution Architect">
   <meta name="robots" content="noindex, nofollow">
   <style>
     @page {
@@ -17,132 +19,200 @@
 
     body {
       margin: 0;
-      color: #111827;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10pt;
-      line-height: 1.32;
+      color: #1a1a1a;
+      font-family: Calibri, "Segoe UI", Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.34;
       background: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     main {
-      max-width: 7.27in;
+      max-width: 7.2in;
       margin: 0 auto;
     }
 
+    /* Header */
     header {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       padding-bottom: 10px;
-      border-bottom: 1px solid #d1d5db;
+      border-bottom: 2px solid #16355f;
     }
 
     h1 {
       margin: 0;
-      font-size: 22pt;
-      line-height: 1;
+      font-size: 24pt;
+      font-weight: 700;
+      line-height: 1.05;
+      color: #16355f;
+      letter-spacing: -0.02em;
     }
 
-    .headline {
-      margin: 6px 0 0;
+    .tagline {
+      margin: 5px 0 0;
       font-size: 11pt;
-      font-weight: 700;
-      color: #0f4c81;
+      font-weight: 600;
+      color: #2d4a6f;
+      line-height: 1.3;
     }
 
     .contact {
-      margin-top: 8px;
-      color: #4b5563;
-      font-size: 9.7pt;
+      margin-top: 7px;
+      font-size: 9.8pt;
+      color: #444444;
+      line-height: 1.45;
     }
 
     .contact a {
-      color: inherit;
+      color: #444444;
       text-decoration: none;
     }
 
+    /* Sections */
     section {
-      margin-top: 10px;
-      break-inside: avoid;
-      page-break-inside: avoid;
+      margin-top: 9px;
     }
 
     h2 {
       margin: 0 0 6px;
-      font-size: 10pt;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #0f4c81;
-      border-bottom: 1px solid #dbe3ec;
       padding-bottom: 3px;
+      border-bottom: 1.5px solid #16355f;
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #16355f;
     }
 
     p {
       margin: 0;
     }
 
-    p + p {
-      margin-top: 6px;
+    /* Core competencies — ATS keyword block */
+    .competencies {
+      margin-top: 4px;
+      padding: 8px 10px;
+      background: #f4f7fb;
+      border-left: 3px solid #16355f;
+      font-size: 10pt;
+      line-height: 1.38;
+      color: #222222;
     }
 
-    .skills-row + .skills-row,
-    .role + .role,
-    .project + .project {
+    /* Skills */
+    .skill-line {
+      margin-top: 4px;
+      font-size: 10pt;
+      line-height: 1.36;
+    }
+
+    .skill-line strong {
+      color: #16355f;
+    }
+
+    /* Jobs — block layout, no flex/tables (ATS-safe) */
+    article.job {
       margin-top: 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
 
-    .skills-row {
-      display: grid;
-      grid-template-columns: 1.45in 1fr;
-      gap: 12px;
-    }
-
-    .label {
-      font-weight: 700;
-    }
-
-    .role-head,
-    .project-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: baseline;
-    }
-
-    .role-title,
-    .project-title {
-      font-weight: 700;
+    article.job h3 {
+      margin: 0;
       font-size: 11pt;
+      font-weight: 700;
+      color: #111111;
     }
 
-    .date,
-    .meta {
-      color: #4b5563;
-      font-size: 9.5pt;
-    }
-
-    .subhead {
+    .job-title {
       margin-top: 2px;
-      color: #4b5563;
-      font-size: 9.6pt;
+      font-size: 10.5pt;
+      font-weight: 600;
+      color: #16355f;
     }
 
-    .progression {
-      margin-top: 5px;
-      color: #374151;
-      font-size: 9.6pt;
+    .job-meta {
+      margin-top: 2px;
+      font-size: 9.5pt;
+      color: #555555;
     }
 
     ul {
-      margin: 5px 0 0 16px;
+      margin: 5px 0 0 18px;
       padding: 0;
     }
 
-    li + li {
+    li {
       margin-top: 3px;
     }
 
-    .compact {
+    li::marker {
+      color: #16355f;
+    }
+
+    /* Projects */
+    article.project {
+      margin-top: 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    article.project h3 {
+      margin: 0;
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #111111;
+    }
+
+    .project-meta {
+      margin-top: 2px;
       font-size: 9.5pt;
-      color: #4b5563;
+      color: #555555;
+    }
+
+    .project-tech {
+      margin-top: 3px;
+      font-size: 9.5pt;
+      color: #444444;
+      font-style: italic;
+    }
+
+    /* Education & misc */
+    .entry-title {
+      font-weight: 700;
+      font-size: 10.5pt;
+    }
+
+    .entry-meta {
+      margin-top: 2px;
+      font-size: 9.5pt;
+      color: #555555;
+    }
+
+    .compact-list li {
+      font-size: 9.8pt;
+      line-height: 1.32;
+    }
+
+    .footnote {
+      font-size: 9.2pt;
+      color: #555555;
+      line-height: 1.32;
+    }
+
+    .impact-metrics {
+      margin-top: 4px;
+      padding: 7px 10px;
+      background: #f4f7fb;
+      border: 1px solid #d8e3f0;
+      font-size: 9.8pt;
+      line-height: 1.42;
+      color: #222222;
+    }
+
+    .impact-metrics strong {
+      color: #16355f;
     }
   </style>
 </head>
@@ -150,132 +220,121 @@
   <main>
     <header>
       <h1>Vijay Prakash Tiwari</h1>
-      <p class="headline">Senior Backend Engineer | Distributed Systems | Kafka | System Design | AI-Assisted Automation</p>
+      <p class="tagline">Senior Software Engineer · Tech Lead · Distributed Systems &amp; Agentic AI</p>
       <p class="contact">
-        Pune, India | <a href="tel:+919960770157">+91-9960770157</a> | <a href="mailto:vijayptiwari28@gmail.com">vijayptiwari28@gmail.com</a> | <a href="https://github.com/vijayptiwari">github.com/vijayptiwari</a> | <a href="https://www.linkedin.com/in/vijayptiwari">linkedin.com/in/vijayptiwari</a>
+        Pune, Maharashtra, India · +91-9960770157 · vijayptiwari28@gmail.com ·
+        linkedin.com/in/vijayptiwari · github.com/vijayptiwari · vijayptiwari.github.io
       </p>
     </header>
 
-    <section>
-      <h2>Professional Summary</h2>
-      <p>Senior Software Engineer with 8+ years of experience designing and building backend systems in the telecom domain. Strong experience across Java, Spring Boot, Kafka, Couchbase, Kubernetes, OpenShift, microservices, REST APIs, event-driven architecture, distributed systems, low-level design, cloud-native delivery, release automation, and production support.</p>
-      <p>Focused on scalable, maintainable, and observable systems, with growing emphasis on AI-assisted root-cause analysis, workflow automation, anomaly detection, and developer productivity tooling.</p>
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Professional Summary</h2>
+      <p>Tech Lead and Senior Software Engineer with 9 years of experience shipping telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on a zero-code agent platform for Digital BSS. Global Amdocs Inspiring Innovator nominee (only Asian among nominees); creator of Meridian, an open-source multi-agent AI product.</p>
+      <p class="impact-metrics" style="margin-top:6px;">
+        <strong>Impact:</strong> 6+ years Digital BSS billing R&amp;D · Team of 3 · 2,000+ eng. hours saved/year (~50 engineer-weeks) · 5 billing domains (taxation, invoicing, B2B2X, IoT, NaaS) · 2/3 global Avishkar wins among 104 teams · CodeVita rank 716 (top 0.2% of 400,000+) · 3 enterprise clients at TIBCO (Macy's, United Airlines, Indian Railways)
+      </p>
+      <p style="margin-top:5px;">Expertise in Java, Python, Kafka, Kubernetes, and OpenShift with proven system design (LLD/HLD), technical leadership, and production delivery across mission-critical 24/7 billing environments.</p>
     </section>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <div class="skills-row">
-        <div class="label">Backend</div>
-        <div>Java, Spring Boot, REST APIs, Microservices, Low-Level Design, Object-Oriented Programming</div>
-      </div>
-      <div class="skills-row">
-        <div class="label">Integration</div>
-        <div>Kafka, Confluent Kafka Streams, Event-Driven Architecture, Integration Patterns, SOAP, REST, Async Processing</div>
-      </div>
-      <div class="skills-row">
-        <div class="label">Databases</div>
-        <div>Couchbase, SQL, NoSQL, Relational Database, Data Modeling</div>
-      </div>
-      <div class="skills-row">
-        <div class="label">Cloud &amp; DevOps</div>
-        <div>Kubernetes, OpenShift, Docker, CI/CD, Release Automation, Cloud-Native Delivery, Production Support</div>
-      </div>
-      <div class="skills-row">
-        <div class="label">Architecture</div>
-        <div>Distributed Systems, Scalability, Fault Tolerance, Observability, SOLID, OWASP</div>
-      </div>
-      <div class="skills-row">
-        <div class="label">Testing &amp; Quality</div>
-        <div>Performance Testing, API Testing, JMeter, SOAP UI, Root Cause Analysis</div>
-      </div>
-      <div class="skills-row">
-        <div class="label">AI Engineering</div>
-        <div>AI-Assisted RCA, Automation Agents, Workflow Intelligence, Anomaly Detection, Developer Productivity Tools</div>
-      </div>
-    </section>
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Professional Experience</h2>
 
-    <section>
-      <h2>Professional Experience</h2>
-      <div class="role">
-        <div class="role-head">
-          <div class="role-title">Amdocs Development Centre India LLP</div>
-          <div class="date">Jan 2020 - Present</div>
-        </div>
-        <div class="subhead">Telecom Domain | Backend Engineering | Microservices | Integration</div>
-        <div class="progression">Software Engineering Specialist (Dec 2022 - Present) | Software Developer - Advanced (Dec 2021 - Nov 2022) | Software Developer - Experienced (Jan 2020 - Nov 2021)</div>
+      <article class="job">
+        <h3>Amdocs Development Centre India LLP</h3>
+        <p class="job-title">Tech Lead — Agentic Offering, Billing Domain · AI System Design &amp; Implementation</p>
+        <p class="job-meta">Pune, India · Jan 2026 – Present · Team Lead · Team of 3 · Digital BSS · Real-Time Billing</p>
         <ul>
-          <li>Designed and developed backend microservices and enterprise telecom platform modules using Java and Spring Boot.</li>
-          <li>Delivered Kafka-based integrations and event-driven workflows across distributed backend systems.</li>
-          <li>Contributed to low-level design, maintainable service architecture, API integration, and backward-compatible system enhancement.</li>
-          <li>Built automation tooling to improve developer productivity, debugging support, and engineering workflow efficiency.</li>
-          <li>Drove production support, issue investigation, root-cause analysis, and operational reliability improvements.</li>
-          <li>Simplified release execution through CI/CD-oriented workflow improvements and repeatable deployment practices.</li>
+          <li>Lead system design and delivery of a zero-code agentic platform for Digital BSS Real-Time Billing — architecture, roadmap, and execution for a team of 3 on OpenShift/Argo CD.</li>
+          <li>Built foundation SDK enabling billing teams to create business agents and MCP servers without custom code; automated OpenAPI-to-MCP conversion (tools, prompts, resources, A2A cards) with CI deliverable pipelines.</li>
+          <li>Shipped versioned RAG with ingestion pipeline, rollback, dynamic/static knowledge referencing, retrieval with citations, tool RBAC, and AI/infrastructure guardrails for production agentic workloads.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="role">
-        <div class="role-head">
-          <div class="role-title">TIBCO Software India Pvt. Ltd. | Junior Consultant</div>
-          <div class="date">Jul 2017 - Dec 2019</div>
-        </div>
-        <div class="subhead">Enterprise Integration | Java | TIBCO | SOA</div>
+      <article class="job">
+        <h3>Amdocs Development Centre India LLP</h3>
+        <p class="job-title">Software Engineering Specialist — Backend &amp; Microservices</p>
+        <p class="job-meta">Pune, India · Dec 2022 – Dec 2025 · Amdocs Technology BSS R&amp;D · Telecom Billing</p>
         <ul>
-          <li>Built and supported enterprise integration solutions using TIBCO technologies and Java-backed services.</li>
-          <li>Developed integration-heavy workflows involving web services, service orchestration, complex event processing, and message-driven processing.</li>
-          <li>Supported solution delivery, issue analysis, and maintainable workflow behavior across business-critical systems.</li>
-          <li>Contributed to performance testing and bottleneck identification using JMeter, SOAP UI, Java, and shell scripting.</li>
+          <li>Built Java/Spring Boot microservices for Real-Time Billing on OpenShift/Kubernetes across 5 production domains — taxation, invoicing, B2B2X, IoT, and NaaS — deployed to tier-1 global telecom operator environments.</li>
+          <li>6+ years on Amdocs Digital BSS billing R&amp;D; authored LLD/HLD, led Kafka event-driven integrations, code reviews, and cross-module solution design for platform modules.</li>
+          <li>Delivered one-click release automation saving 2,000+ man-hours annually (~50 engineer-weeks); recognized as Amdocs Inspiring Innovator global nominee (only Asian among nominees).</li>
+          <li>Built Event-Ore (Kafka debugging in restricted K8s namespaces) and Trapper (AI-assisted RCA); won 2 of 3 global Avishkar titles among 104 teams.</li>
         </ul>
-      </div>
+      </article>
+
+      <article class="job">
+        <h3>Amdocs Development Centre India LLP</h3>
+        <p class="job-title">Software Developer — Advanced &amp; Experienced</p>
+        <p class="job-meta">Pune, India · Jan 2020 – Nov 2022 · Backend Microservices · REST APIs · Agile Delivery</p>
+        <ul>
+          <li>Developed billing microservices and REST APIs over 3 years on agile delivery squads for mission-critical 24/7 Real-Time Billing services.</li>
+          <li>Resolved production incidents via root-cause analysis and performance tuning; shipped backward-compatible enhancements under strict SLA constraints.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>TIBCO Software India Pvt. Ltd.</h3>
+        <p class="job-title">Junior Consultant — Enterprise Integration</p>
+        <p class="job-meta">Pune, India · Jul 2017 – Dec 2019 · SOA · TIBCO BusinessEvents · Java</p>
+        <ul>
+          <li>Delivered enterprise integrations for Macy's (loyalty migration), United Airlines (MCT, pricing/refund validation), and Indian Railways CRIS — using TIBCO BusinessEvents, Java, and SOAP/REST services.</li>
+          <li>Conducted performance testing and bottleneck analysis (JMeter, SOAP UI) for presales and production delivery.</li>
+        </ul>
+      </article>
     </section>
 
-    <section>
-      <h2>Selected Projects</h2>
-      <div class="project">
-        <div class="project-head">
-          <div class="project-title">Event-Ore</div>
-          <div class="meta">Kafka Monitoring &amp; Debugging Tool</div>
-        </div>
-        <p>Designed a Kafka monitoring and debugging tool to improve topic, consumer, and message visibility in namespace-restricted environments.</p>
-      </div>
-      <div class="project">
-        <div class="project-head">
-          <div class="project-title">Trapper</div>
-          <div class="meta">Automation Traffic Interceptor with AI-Assisted RCA</div>
-        </div>
-        <p>Built an automation traffic interceptor to capture workflow behavior, identify failure patterns, and support AI-assisted root-cause analysis.</p>
-      </div>
-      <div class="project">
-        <div class="project-head">
-          <div class="project-title">One-Click Release Automation</div>
-          <div class="meta">Release Workflow Simplification</div>
-        </div>
-        <p>Designed a release workflow improvement concept to reduce manual deployment steps and improve repeatability.</p>
-      </div>
+    <section aria-labelledby="competencies-heading">
+      <h2 id="competencies-heading">Core Competencies</h2>
+      <p class="competencies">
+        Senior Software Engineer, Tech Lead, Solution Architect, System Design, LLD, HLD, Distributed Systems, Microservices, Agentic AI, LangGraph, MCP, RAG, Multi-Agent Systems, LLM Integration, Java, Python, Spring Boot, Spring AI, Apache Kafka, Kubernetes, OpenShift, Docker, CI/CD, DevOps, REST APIs, OpenAPI, Cloud-Native Architecture, Event-Driven Architecture, Digital BSS, Telecom Billing, Technical Leadership, Mentoring, Agile
+      </p>
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <p><span class="label">Bachelor of Engineering in Computer Engineering</span></p>
-      <p class="compact">Savitribai Phule Pune University | 2013 - 2017 | 70.64%</p>
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <p class="skill-line"><strong>Languages:</strong> Java, Python, JavaScript, Node.js, SQL, Shell Scripting</p>
+      <p class="skill-line"><strong>Backend &amp; Architecture:</strong> Spring Boot, Spring AI, Microservices, REST APIs, MS360 SDK, OpenAPI, Swagger, System Design, Solution Architecture, LLD, HLD, SOLID, OWASP</p>
+      <p class="skill-line"><strong>AI &amp; Agentic Engineering:</strong> LangGraph, Langfuse, MCP, RAG, Multi-Agent Systems, Agent SDK, A2A, Spring AI, LLM Integration, AI Guardrails, Elasticsearch, PostgreSQL, Prompt Engineering, Playwright, AI-Assisted RCA</p>
+      <p class="skill-line"><strong>Integration &amp; Data:</strong> Apache Kafka, Kafka Streams, Confluent, Event-Driven Architecture, Couchbase, SQL, NoSQL, SOAP, REST, TIBCO BusinessEvents</p>
+      <p class="skill-line"><strong>Cloud &amp; DevOps:</strong> Kubernetes, OpenShift, Docker, Argo CD, CI/CD, Jenkins, Git, Maven, Cloud-Native Delivery, Release Automation, Production Support</p>
+      <p class="skill-line"><strong>Domain:</strong> Telecom Billing, Digital BSS, Real-Time Billing, 5G, B2B2X, IoT, NaaS, Taxation, Invoicing, Enterprise Integration</p>
+      <p class="skill-line"><strong>Practices:</strong> Agile, Technical Leadership, Team Leadership, Mentoring, Code Review, Innovation, Observability, Performance Testing, JMeter, SOAP UI</p>
     </section>
 
-    <section>
-      <h2>Achievements</h2>
-      <ul>
-        <li>Winner of Most Impacting Innovator at Amdocs for innovation work focused on engineering workflow improvement.</li>
-        <li>Nominated for Amdocs Inspiring Innovator and won Amdocs Avishkar Tools 3.0 with 2 titles out of 3 among 104 teams.</li>
-        <li>Secured global rank 716 in TCS CodeVita Season V 2016.</li>
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Open Source</h2>
+      <article class="project">
+        <h3>Meridian — Local-First Multi-Agent AI Career Platform</h3>
+        <p class="project-meta">Creator &amp; Maintainer · MIT License · github.com/vijayptiwari/meridian</p>
+        <p>Multi-agent pipeline (research, fit scoring, resume tailoring, application assistance) with Playwright portal integration — local-first, BYOK LLM, MIT-licensed open source.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <p class="entry-title">Bachelor of Engineering, Computer Engineering</p>
+      <p class="entry-meta">Savitribai Phule Pune University · Bharati Vidyapeeth's College of Engineering, Lavale, Pune · 2013 – 2017</p>
+    </section>
+
+    <section aria-labelledby="certifications-heading">
+      <h2 id="certifications-heading">Certifications</h2>
+      <ul class="compact-list">
+        <li>CD215: Couchbase Java Developer Course — Couchbase (Apr 2023)</li>
+        <li>TCP-TIBCO BusinessEvents Certified Professional — TIBCO (May 2018)</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Selected Publications</h2>
-      <ul>
-        <li>Cloud Data Security using DNA Cryptography Techniques - International Journal of Innovative Research in Computer and Communication Engineering.</li>
-        <li>DNA Computing and Implementations - International Journal of Recent and Innovative Trends in Computing and Communication.</li>
-        <li>LI-FI Technology, Implementations and Applications and Blue Brain Technology to Preserve Intelligence - International Research Journal of Engineering and Technology.</li>
+    <section aria-labelledby="awards-heading">
+      <h2 id="awards-heading">Honors and Awards</h2>
+      <ul class="compact-list">
+        <li>DevOps Champion &amp; Innovation Enthusiast — Amdocs Development Centre India.</li>
+        <li>TCS CodeVita Season V — global rank 716 (top 0.2% of 400,000+ participants).</li>
       </ul>
-      <p class="compact">Additional published topics include Face Analysis for Improvised System Security using Laser Focus, Wearable Technology and Extended Applications, and Augmented Reality and Its Technologies.</p>
+    </section>
+
+    <section aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Publications</h2>
+      <p class="footnote">7 peer-reviewed publications (IJIRCCE, IRJET, IJRITCC) on cloud security, biocomputing, and emerging technologies.</p>
     </section>
   </main>
 </body>
