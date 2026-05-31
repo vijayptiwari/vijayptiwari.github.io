@@ -1,9 +1,9 @@
-"""Crop, grade, and export portfolio portrait assets."""
+"""Crop and export portfolio portraits — natural color, no heavy grading."""
 from __future__ import annotations
 
 from pathlib import Path
 
-from PIL import Image, ImageEnhance, ImageFilter, ImageDraw
+from PIL import Image, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "assets" / "photos"
@@ -20,48 +20,35 @@ def pick_best_source() -> Path:
     return max(valid, key=lambda p: p.stat().st_size)
 
 
-def center_crop(img: Image.Image, target_w: int, target_h: int) -> Image.Image:
-    ratio = max(target_w / img.width, target_h / img.height)
-    resized = img.resize(
-        (int(img.width * ratio), int(img.height * ratio)), Image.Resampling.LANCZOS
-    )
-    left = (resized.width - target_w) // 2
-    top = (resized.height - target_h) // 2
-    return resized.crop((left, top, left + target_w, top + target_h))
-
-
 def trim_portrait(img: Image.Image) -> Image.Image:
-    """Remove excess table foreground; keep subject + upper context."""
+    """Drop table clutter; keep face, shoulders, and a little context."""
     w, h = img.size
-    left = int(w * 0.06)
-    right = int(w * 0.94)
-    top = int(h * 0.04)
-    bottom = int(h * 0.54)
-    return img.crop((left, top, right, bottom))
+    return img.crop((int(w * 0.04), int(h * 0.05), int(w * 0.96), int(h * 0.50)))
 
 
-def grade_for_dark_ui(img: Image.Image) -> Image.Image:
-    img = ImageEnhance.Brightness(img).enhance(0.96)
-    img = ImageEnhance.Contrast(img).enhance(1.1)
-    img = ImageEnhance.Color(img).enhance(0.9)
-
-    overlay = Image.new("RGBA", img.size, (13, 148, 136, 16))
-    base = Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
-
-    w, h = base.size
-    mask = Image.new("L", (w, h), 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((-w * 0.08, -h * 0.06, w * 1.08, h * 1.04), fill=255)
-    mask = mask.filter(ImageFilter.GaussianBlur(radius=min(w, h) * 0.12))
-    black = Image.new("RGB", (w, h), (6, 8, 12))
-    return Image.composite(base, black, mask)
+def polish(img: Image.Image) -> Image.Image:
+    """Light touch only — preserve natural office lighting."""
+    img = ImageEnhance.Brightness(img).enhance(1.03)
+    img = ImageEnhance.Contrast(img).enhance(1.05)
+    img = ImageEnhance.Color(img).enhance(1.02)
+    return img.filter(ImageFilter.UnsharpMask(radius=0.9, percent=70, threshold=3))
 
 
-def hero_crop(about: Image.Image, size: int) -> Image.Image:
+def crop_cover(img: Image.Image, target_w: int, target_h: int, focus_y: float) -> Image.Image:
+    scale = max(target_w / img.width, target_h / img.height)
+    rw = int(img.width * scale)
+    rh = int(img.height * scale)
+    resized = img.resize((rw, rh), Image.Resampling.LANCZOS)
+    x = max(0, (rw - target_w) // 2)
+    y = max(0, min(int((rh - target_h) * focus_y), rh - target_h))
+    return resized.crop((x, y, x + target_w, y + target_h))
+
+
+def hero_crop_from_about(about: Image.Image, size: int) -> Image.Image:
     w, h = about.size
-    side = int(min(w * 0.78, h * 0.5))
+    side = int(min(w * 0.78, h * 0.46))
     left = (w - side) // 2
-    top = int(h * 0.24)
+    top = int(h * 0.40)
     region = about.crop((left, top, left + side, top + side))
     return region.resize((size, size), Image.Resampling.LANCZOS)
 
@@ -70,8 +57,8 @@ def export(img: Image.Image, name: str) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     webp_path = OUT / f"{name}.webp"
     jpg_path = OUT / f"{name}.jpg"
-    img.save(webp_path, "WEBP", quality=86, method=6)
-    img.save(jpg_path, "JPEG", quality=88, optimize=True, progressive=True)
+    img.save(webp_path, "WEBP", quality=92, method=6)
+    img.save(jpg_path, "JPEG", quality=92, optimize=True, progressive=True)
     print(f"Wrote {webp_path.name} ({webp_path.stat().st_size // 1024} KB)")
     print(f"Wrote {jpg_path.name} ({jpg_path.stat().st_size // 1024} KB)")
 
@@ -82,11 +69,9 @@ def main() -> None:
     raw = Image.open(source).convert("RGB")
     print(f"Original: {raw.size[0]}x{raw.size[1]}")
 
-    trimmed = trim_portrait(raw)
-    graded = grade_for_dark_ui(trimmed)
-
-    about = center_crop(graded, 800, 1000)
-    hero = hero_crop(about, 560)
+    trimmed = polish(trim_portrait(raw))
+    about = crop_cover(trimmed, 900, 1120, focus_y=0.38)
+    hero = polish(hero_crop_from_about(about, 640))
 
     export(about, "vijay-portrait-about")
     export(hero, "vijay-portrait-hero")
