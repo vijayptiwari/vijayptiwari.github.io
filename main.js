@@ -1,22 +1,10 @@
-const TYPED_ROLES = [
-  "Senior Backend Engineer",
-  "Distributed Systems Specialist",
-  "Creator of Meridian",
-  "Agentic AI Builder",
-  "Kafka Platform Engineer"
-];
-
 const revealNodes = document.querySelectorAll(".reveal");
 const header = document.querySelector(".header");
-const nav = document.querySelector(".header");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
 const trackedSections = document.querySelectorAll("main section[id]");
-const filterPills = document.querySelectorAll(".filter-pill");
-const projectCards = document.querySelectorAll("[data-project-category]");
-const copyButtons = document.querySelectorAll(".copy-btn");
-const typedEl = document.getElementById("typed-text");
-const canvas = document.getElementById("particle-canvas");
+const heroVisual = document.getElementById("hero-visual");
+const heroInner = document.querySelector(".hero-visual-inner");
 
 function setScrollProgress() {
   const scrollTop = window.scrollY;
@@ -25,173 +13,50 @@ function setScrollProgress() {
   document.documentElement.style.setProperty("--progress", `${progress}%`);
 
   if (header) {
-    header.classList.toggle("is-scrolled", scrollTop > 40);
+    header.classList.toggle("is-scrolled", scrollTop > 24);
+  }
+
+  if (heroInner && scrollTop < window.innerHeight) {
+    const offset = scrollTop * 0.08;
+    const rotate = -12 + scrollTop * 0.015;
+    heroInner.style.transform = `rotateY(${rotate}deg) rotateX(8deg) translateY(${offset}px)`;
   }
 }
 
-function initParticles() {
-  if (!canvas) return;
-
-  const ctx = canvas.getContext("2d");
-  let width = 0;
-  let height = 0;
-  let particles = [];
-  let animationId = 0;
-
-  function resize() {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-
-    const count = Math.min(70, Math.floor((width * height) / 18000));
-    particles = Array.from({ length: count }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.45,
-      vy: (Math.random() - 0.5) * 0.45,
-      r: Math.random() * 2 + 1
-    }));
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-
-    for (let i = 0; i < particles.length; i += 1) {
-      const p = particles[i];
-      p.x += p.vx;
-      p.y += p.vy;
-
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(108, 99, 255, 0.35)";
-      ctx.fill();
-
-      for (let j = i + 1; j < particles.length; j += 1) {
-        const q = particles[j];
-        const dx = p.x - q.x;
-        const dy = p.y - q.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 130) {
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(q.x, q.y);
-          ctx.strokeStyle = `rgba(108, 99, 255, ${0.14 * (1 - dist / 130)})`;
-          ctx.lineWidth = 1;
-          ctx.stroke();
-        }
-      }
-    }
-
-    animationId = requestAnimationFrame(draw);
-  }
-
-  resize();
-  draw();
-
-  window.addEventListener("resize", resize);
-
-  return () => {
-    cancelAnimationFrame(animationId);
-    window.removeEventListener("resize", resize);
-  };
-}
-
-function initTyping() {
-  if (!typedEl) return;
-
-  let roleIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
-
-  function tick() {
-    const current = TYPED_ROLES[roleIndex];
-
-    if (!deleting) {
-      typedEl.textContent = current.slice(0, charIndex + 1);
-      charIndex += 1;
-
-      if (charIndex === current.length) {
-        deleting = true;
-        setTimeout(tick, 1800);
-        return;
-      }
-    } else {
-      typedEl.textContent = current.slice(0, charIndex - 1);
-      charIndex -= 1;
-
-      if (charIndex === 0) {
-        deleting = false;
-        roleIndex = (roleIndex + 1) % TYPED_ROLES.length;
-      }
-    }
-
-    setTimeout(tick, deleting ? 40 : 70);
-  }
-
-  tick();
-}
-
-if (navToggle && nav) {
+if (navToggle && header) {
   navToggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
+    const isOpen = header.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
+      header.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
     });
   });
 }
 
-filterPills.forEach((pill) => {
-  pill.addEventListener("click", () => {
-    const filter = pill.getAttribute("data-filter");
-
-    filterPills.forEach((item) => {
-      item.classList.toggle("is-active", item === pill);
-      item.setAttribute("aria-selected", item === pill ? "true" : "false");
-    });
-
-    projectCards.forEach((card) => {
-      const category = card.getAttribute("data-project-category");
-      const show = filter === "all" || category === filter;
-      card.classList.toggle("is-hidden", !show);
-    });
-  });
-});
-
-copyButtons.forEach((button) => {
-  button.addEventListener("click", async (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-
-    const value = button.getAttribute("data-copy");
-    if (!value) return;
-
-    try {
-      await navigator.clipboard.writeText(value);
-      const original = button.textContent;
-      button.textContent = "Copied!";
-      window.setTimeout(() => {
-        button.textContent = original;
-      }, 1400);
-    } catch {
-      button.textContent = "Failed";
-    }
-  });
-});
-
 window.addEventListener("scroll", setScrollProgress, { passive: true });
 setScrollProgress();
-initParticles();
-initTyping();
+
+if (heroVisual) {
+  heroVisual.addEventListener("mousemove", (event) => {
+    const rect = heroVisual.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    if (heroInner) {
+      heroInner.style.transform = `rotateY(${-12 + x * 18}deg) rotateX(${8 - y * 12}deg)`;
+    }
+  });
+
+  heroVisual.addEventListener("mouseleave", () => {
+    if (heroInner) {
+      heroInner.style.transform = "rotateY(-12deg) rotateX(8deg)";
+    }
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -203,7 +68,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
   );
 
   revealNodes.forEach((node) => revealObserver.observe(node));
@@ -218,7 +83,7 @@ if ("IntersectionObserver" in window) {
         });
       });
     },
-    { rootMargin: "-30% 0px -55% 0px", threshold: 0 }
+    { rootMargin: "-35% 0px -50% 0px", threshold: 0 }
   );
 
   trackedSections.forEach((section) => navObserver.observe(section));

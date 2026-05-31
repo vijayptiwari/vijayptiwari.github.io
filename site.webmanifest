@@ -1,9 +1,9 @@
 {
-  "name": "Vijay Prakash Tiwari | Backend Engineer",
+  "name": "Vijay Prakash Tiwari",
   "short_name": "Vijay Tiwari",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#55198b",
-  "description": "Portfolio of Vijay Prakash Tiwari — Senior Backend Engineer and creator of Meridian."
+  "background_color": "#0b0b0f",
+  "theme_color": "#0b0b0f",
+  "description": "Portfolio of Vijay Prakash Tiwari — Backend Engineer and creator of Meridian."
 }
