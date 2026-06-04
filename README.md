@@ -8,9 +8,23 @@ Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/
 
 ## What I do
 
-Tech Lead and Senior Software Engineer building telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on the **Agentic Offering** for Digital BSS at Amdocs. I also ship open-source tools like **Meridian**.
+Tech Lead and Senior Software Engineer building telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on the **Agentic Offering** for Digital BSS at Amdocs. Open-source creator of **Meridian** and **Eventore**.
 
 **Impact:** Amdocs Inspiring Innovator global nominee · 2,000+ eng. hours saved/year · Avishkar winner among 104 teams · TCS CodeVita rank 716
+
+---
+
+## Eventore — *One console for every stream*
+
+Open-source **multi-protocol streaming console** — Kafka, Pulsar, RabbitMQ, MQTT, JMS, Kinesis, GCP Pub/Sub, Azure Service Bus. Spring Boot control plane, React UI, Helm/K8s deploy, optional MCP for AI agents.
+
+- Live WebSocket streaming · ADMIN / DEV / READONLY modes · GHCR images + OCI Helm charts
+- [Product docs](https://vijayptiwari.github.io/eventore/) · [GitHub](https://github.com/vijayptiwari/eventore)
+
+```bash
+helm install eventore oci://ghcr.io/vijayptiwari/charts/eventore --version 0.1.0 \
+  -f deploy/helm/eventore/values-stream-kafka.yaml
+```
 
 ---
 
@@ -63,6 +77,7 @@ npm install && npm start
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-vijayptiwari.github.io-55198b?style=flat-square)](https://vijayptiwari.github.io/)
 [![Resume](https://img.shields.io/badge/Resume-PDF-6c63ff?style=flat-square)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf)
+[![Eventore](https://img.shields.io/badge/Eventore-Open%20Source-2563eb?style=flat-square&logo=github)](https://github.com/vijayptiwari/eventore)
 [![Meridian](https://img.shields.io/badge/Meridian-Open%20Source-14b8a6?style=flat-square&logo=github)](https://github.com/vijayptiwari/meridian)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-vijayptiwari-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/vijayptiwari)
 [![GitHub](https://img.shields.io/badge/GitHub-vijayptiwari-181717?style=flat-square&logo=github)](https://github.com/vijayptiwari)

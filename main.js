@@ -1,7 +1,7 @@
 const TYPED_ROLES = [
-  "Senior Backend Engineer",
+  "Senior Software Engineer",
   "Agentic Platform Tech Lead",
-  "Creator of Meridian",
+  "Creator of Meridian & Eventore",
   "Distributed Systems Engineer",
   "Kafka Platform Engineer"
 ];
