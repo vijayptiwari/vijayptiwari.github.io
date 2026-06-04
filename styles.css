@@ -1165,22 +1165,125 @@ img {
 .footer {
   background: var(--purple-dark);
   color: rgba(255, 255, 255, 0.85);
-  padding: 40px 0;
+  padding: 48px 0 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 32px 28px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: left;
+}
+
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-logo {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.footer-tagline {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-heading {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-tool-list,
+.footer-link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-tool-list li {
+  margin-top: 10px;
+}
+
+.footer-tool-list li:first-child {
+  margin-top: 0;
+}
+
+.footer-tool-list a {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.footer-tool-list a:hover {
+  color: #c4b5fd;
+}
+
+.footer-tool-list span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.footer-link-list li {
+  margin-top: 8px;
+}
+
+.footer-link-list li:first-child {
+  margin-top: 0;
+}
+
+.footer-link-list a {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.footer-link-list a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  padding: 18px 0 28px;
   text-align: center;
 }
 
-.footer p {
+.footer-bottom p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .footer a {
-  color: #fff;
-  font-weight: 600;
-}
-
-.footer a:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 
 /* Animations */
@@ -1234,6 +1337,17 @@ img {
   .card-grid-3,
   .card-grid-2 {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 24px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: none;
+    text-align: center;
   }
 }
 
@@ -1297,5 +1411,14 @@ img {
 
   .role-list li span {
     white-space: normal;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-tool-list span {
+    margin-top: 4px;
   }
 }
