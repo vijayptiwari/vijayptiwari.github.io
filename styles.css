@@ -1038,6 +1038,11 @@ img {
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
+.publication-item--featured a {
+  border-color: rgba(85, 25, 139, 0.25);
+  background: linear-gradient(135deg, rgba(85, 25, 139, 0.06), rgba(85, 25, 139, 0.02));
+}
+
 .publication-item a:hover {
   border-color: rgba(108, 99, 255, 0.35);
   box-shadow: var(--shadow);
@@ -1203,6 +1208,10 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-heading--sub {
+  margin-top: 20px;
 }
 
 .footer-tool-list,
