@@ -233,7 +233,26 @@
 
           <div class="hero-btns">
             <a class="btn btn-primary" href="#contact">Contact Me</a>
-            <a class="btn btn-outline" href="/resume.html">Download Resume</a>
+            <div class="resume-dropdown resume-dropdown--hero">
+              <button type="button" class="btn btn-outline resume-dropdown__trigger" aria-expanded="false" aria-haspopup="true" aria-label="Download resume — choose version">
+                Download Resume
+                <svg class="resume-dropdown__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+              </button>
+              <ul class="resume-dropdown__menu" role="menu">
+                <li role="none">
+                  <a href="/Vijay-Prakash-Tiwari-Resume.pdf" download role="menuitem">
+                    Distributed Systems &amp; Backend
+                    <small>Default · MAANG / platform roles</small>
+                  </a>
+                </li>
+                <li role="none">
+                  <a href="/Vijay-Prakash-Tiwari-Resume-AI-Systems.pdf" download role="menuitem">
+                    AI Systems &amp; Agent Infrastructure
+                    <small>AI startups · agent / MCP roles</small>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <p class="hero-links">
             <a href="#framework">Agent Framework</a>
@@ -885,10 +904,29 @@
               <a class="contact-card__value contact-card__link" href="tel:+919960770157">+91-9960770157</a>
               <button class="copy-btn" type="button" data-copy="+919960770157">Copy phone</button>
             </div>
-            <a class="contact-card reveal" href="/resume.html">
+            <div class="contact-card contact-card--resume reveal">
               <span class="contact-card__label">Resume</span>
-              <strong class="contact-card__value">Download PDF</strong>
-            </a>
+              <div class="resume-dropdown resume-dropdown--contact">
+                <button type="button" class="resume-dropdown__trigger contact-card__value" aria-expanded="false" aria-haspopup="true" aria-label="Download resume — choose version">
+                  Download PDF
+                  <svg class="resume-dropdown__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <ul class="resume-dropdown__menu" role="menu">
+                  <li role="none">
+                    <a href="/Vijay-Prakash-Tiwari-Resume.pdf" download role="menuitem">
+                      Distributed Systems &amp; Backend
+                      <small>Default · MAANG / platform roles</small>
+                    </a>
+                  </li>
+                  <li role="none">
+                    <a href="/Vijay-Prakash-Tiwari-Resume-AI-Systems.pdf" download role="menuitem">
+                      AI Systems &amp; Agent Infrastructure
+                      <small>AI startups · agent / MCP roles</small>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -928,7 +966,22 @@
             <li><a href="https://github.com/vijayptiwari" target="_blank" rel="noreferrer">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/vijayptiwari" target="_blank" rel="noreferrer">LinkedIn</a></li>
             <li><a href="mailto:vijayptiwari28@gmail.com">Email</a></li>
-            <li><a href="/resume.html">Resume (PDF)</a></li>
+            <li>
+              <div class="resume-dropdown resume-dropdown--footer">
+                <button type="button" class="resume-dropdown__trigger" aria-expanded="false" aria-haspopup="true" aria-label="Download resume — choose version">
+                  Resume (PDF)
+                  <svg class="resume-dropdown__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+                <ul class="resume-dropdown__menu" role="menu">
+                  <li role="none">
+                    <a href="/Vijay-Prakash-Tiwari-Resume.pdf" download role="menuitem">Distributed Systems &amp; Backend</a>
+                  </li>
+                  <li role="none">
+                    <a href="/Vijay-Prakash-Tiwari-Resume-AI-Systems.pdf" download role="menuitem">AI Systems &amp; Agent Infrastructure</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
 

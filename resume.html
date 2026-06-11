@@ -19,12 +19,31 @@
           <p style="color: var(--text-body); line-height: 1.7;">Two ATS-targeted editions — pick the one that matches the role you are applying for.</p>
         </div>
         <div class="hero-btns" style="margin-top: 28px; flex-direction: column; align-items: stretch;">
-          <a class="btn btn-primary" href="/Vijay-Prakash-Tiwari-Resume.pdf" download>Distributed Systems &amp; Backend (default)</a>
-          <a class="btn btn-outline" href="/Vijay-Prakash-Tiwari-Resume-AI-Systems.pdf" download>AI Systems &amp; Agent Infrastructure</a>
+          <div class="resume-dropdown resume-dropdown--hero" style="width: 100%;">
+            <button type="button" class="btn btn-primary resume-dropdown__trigger" style="width: 100%;" aria-expanded="false" aria-haspopup="true" aria-label="Download resume — choose version">
+              Download Resume
+              <svg class="resume-dropdown__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <ul class="resume-dropdown__menu" role="menu" style="min-width: 100%;">
+              <li role="none">
+                <a href="/Vijay-Prakash-Tiwari-Resume.pdf" download role="menuitem">
+                  Distributed Systems &amp; Backend
+                  <small>Default · MAANG / platform roles</small>
+                </a>
+              </li>
+              <li role="none">
+                <a href="/Vijay-Prakash-Tiwari-Resume-AI-Systems.pdf" download role="menuitem">
+                  AI Systems &amp; Agent Infrastructure
+                  <small>AI startups · agent / MCP roles</small>
+                </a>
+              </li>
+            </ul>
+          </div>
           <a class="btn btn-outline" href="/">Back to Portfolio</a>
         </div>
       </div>
     </section>
   </div>
+  <script src="/main.js"></script>
 </body>
 </html>

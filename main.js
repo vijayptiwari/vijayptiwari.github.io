@@ -213,6 +213,41 @@ copyButtons.forEach((button) => {
   });
 });
 
+const resumeDropdowns = document.querySelectorAll(".resume-dropdown");
+
+function closeResumeDropdowns(except) {
+  resumeDropdowns.forEach((dropdown) => {
+    if (dropdown === except) return;
+    dropdown.classList.remove("is-open");
+    const trigger = dropdown.querySelector(".resume-dropdown__trigger");
+    if (trigger) trigger.setAttribute("aria-expanded", "false");
+  });
+}
+
+resumeDropdowns.forEach((dropdown) => {
+  const trigger = dropdown.querySelector(".resume-dropdown__trigger");
+  if (!trigger) return;
+
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    const willOpen = !dropdown.classList.contains("is-open");
+    closeResumeDropdowns(willOpen ? dropdown : null);
+    dropdown.classList.toggle("is-open", willOpen);
+    trigger.setAttribute("aria-expanded", String(willOpen));
+  });
+
+  dropdown.querySelectorAll(".resume-dropdown__menu a").forEach((link) => {
+    link.addEventListener("click", () => closeResumeDropdowns(null));
+  });
+});
+
+document.addEventListener("click", () => closeResumeDropdowns(null));
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeResumeDropdowns(null);
+});
+
 window.addEventListener("scroll", setScrollProgress, { passive: true });
 setScrollProgress();
 initParticles();
