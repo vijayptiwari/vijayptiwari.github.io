@@ -143,16 +143,35 @@ function initTyping() {
 }
 
 if (navToggle && nav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("is-open");
+  function setNavOpen(isOpen) {
+    nav.classList.toggle("is-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("nav-open", isOpen);
+    navToggle.textContent = isOpen ? "Close" : "Menu";
+  }
+
+  function closeNav() {
+    setNavOpen(false);
+  }
+
+  navToggle.addEventListener("click", () => {
+    setNavOpen(!nav.classList.contains("is-open"));
   });
 
   navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeNav);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav.classList.contains("is-open")) return;
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    if (nav.contains(target)) return;
+    closeNav();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeNav();
   });
 }
 
