@@ -2,7 +2,7 @@
 
 **Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [Meridian](https://vijayptiwari.github.io/meridian/) · Author of [Agent Engineering Framework](https://vijayptiwari.github.io/agent-engineering-framework/)
 
-Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/) · [Resume (PDF)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/vijayptiwari) · [Email](mailto:vijayptiwari28@gmail.com)
+Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/) · [Resume (PDF)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/vijayptiwari) · [Email](mailto:vijayptiwariofficial@gmail.com)
 
 ---
 
