@@ -1,6 +1,6 @@
 # Vijay Prakash Tiwari
 
-**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [Meridian](https://vijayptiwari.github.io/meridian/) · Author of [Agent Engineering Framework](https://vijayptiwari.github.io/agent-engineering-framework/)
+**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [Agent Engineering Framework](https://vijayptiwari.github.io/agent-engineering-framework/)
 
 Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/) · [Resume (PDF)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/vijayptiwari) · [Email](mailto:vijayptiwariofficial@gmail.com)
 
@@ -8,9 +8,17 @@ Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/
 
 ## What I do
 
-Tech Lead and Senior Software Engineer building telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on the **Agentic Offering** for Digital BSS at Amdocs. Open-source creator of **Meridian** and **Eventore**; author of the **Agent Engineering Framework** white paper (10 pillars of production agent engineering).
+Tech Lead and Senior Software Engineer building telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on the **Agentic Offering** for Digital BSS at Amdocs. Open-source creator of **LangStitch**, **Meridian**, and **Eventore**; author of the **Agent Engineering Framework** white paper (10 pillars of production agent engineering).
 
 **Impact:** Amdocs Inspiring Innovator global nominee · 2,000+ eng. hours saved/year · Avishkar winner among 104 teams · TCS CodeVita rank 716
+
+---
+
+## LangStitch — *Visual LangGraph IDE*
+
+Open-source **visual IDE for LangGraph** — skill/guardrail/RAG designers, multi-intent routing, Python 3.13 multi-module export, live try on GitHub Pages.
+
+- [Product site + live try](https://vijayptiwari.github.io/LangStitch/) · [Open IDE](https://vijayptiwari.github.io/LangStitch/app/) · [GitHub](https://github.com/vijayptiwari/LangStitch)
 
 ---
 
@@ -38,55 +46,32 @@ helm install eventore oci://ghcr.io/vijayptiwari/charts/eventore --version 0.1.0
 
 ## Meridian — *Align your next move*
 
-Open-source, **local-first multi-agent AI career agent**. Job research, fit scoring, resume tailoring, and application assistance — your data never leaves your machine.
+Open-source **local-first AI career agent** — job search, fit scoring, resume tailoring, upskilling, and career transitions. Runs on your machine; no cloud upload; BYOK LLM.
 
-- Multi-agent pipeline with Playwright portal integration
-- BYOK LLM · Demo mode · Checkpoint resume
+- Multi-agent pipeline · Playwright portals · checkpoint resume · demo mode
 - [Live docs](https://vijayptiwari.github.io/meridian/) · [GitHub](https://github.com/vijayptiwari/meridian)
 
 ```bash
 git clone https://github.com/vijayptiwari/meridian.git && cd meridian
 npm install && npm run ui
-# → http://127.0.0.1:3030
 ```
 
 ---
 
-## Tech stack
+## Portfolio site
 
-| Backend & Architecture | Integration & Data | Cloud & DevOps | Agentic AI |
-| :--- | :--- | :--- | :--- |
-| Java · Python · Spring Boot · Microservices | Kafka · Event-Driven · REST · Couchbase | Kubernetes · OpenShift · Docker · Argo CD | LangGraph · MCP · RAG · Multi-Agent · Playwright |
+Source for my personal portfolio hosted on **GitHub Pages** → [vijayptiwari.github.io](https://vijayptiwari.github.io/)
 
----
-
-## Experience highlights
-
-- **Amdocs — Tech Lead, Agentic Offering** *(Jan 2026–present)* · Team of 3 · Zero-code agent platform, OpenAPI→MCP, governed RAG, LangGraph, Spring AI
-- **Amdocs — Software Engineering Specialist** *(2020–2025)* · Real-time billing microservices, Kafka, OpenShift, DevOps champion
-- **TIBCO** *(2017–2019)* · Enterprise integration for Macy's, United Airlines, Indian Railways CRIS
+Includes:
+- **Open-source products hub** — LangStitch, Meridian, Eventore, Agent Framework
+- **Live try embed** — LangStitch IDE iframe
+- **SEO** — sitemap, JSON-LD, Open Graph, Twitter cards, `assets/js/seo.js` (Meridian/Eventore pattern)
+- **Resume variants** — distributed systems & AI systems PDFs
 
 ---
-
-## This repository
-
-Source for my personal portfolio site hosted on **GitHub Pages** → [vijayptiwari.github.io](https://vijayptiwari.github.io/)
-
-Static HTML/CSS/JS · No build step required for deployment.
-
-```bash
-npm install && npm start
-# → http://127.0.0.1:3000
-```
-
----
-
-## Connect
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-vijayptiwari.github.io-55198b?style=flat-square)](https://vijayptiwari.github.io/)
-[![Resume](https://img.shields.io/badge/Resume-PDF-6c63ff?style=flat-square)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf)
-[![Agent Framework](https://img.shields.io/badge/Agent%20Framework-White%20Paper-7c5cff?style=flat-square&logo=github)](https://vijayptiwari.github.io/agent-engineering-framework/)
+[![LangStitch](https://img.shields.io/badge/LangStitch-Open%20Source-818cf8?style=flat-square&logo=github)](https://github.com/vijayptiwari/LangStitch)
 [![Eventore](https://img.shields.io/badge/Eventore-Open%20Source-2563eb?style=flat-square&logo=github)](https://github.com/vijayptiwari/eventore)
 [![Meridian](https://img.shields.io/badge/Meridian-Open%20Source-14b8a6?style=flat-square&logo=github)](https://github.com/vijayptiwari/meridian)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-vijayptiwari-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/vijayptiwari)
-[![GitHub](https://img.shields.io/badge/GitHub-vijayptiwari-181717?style=flat-square&logo=github)](https://github.com/vijayptiwari)
+[![Agent Framework](https://img.shields.io/badge/Agent%20Framework-White%20Paper-7c3aed?style=flat-square)](https://vijayptiwari.github.io/agent-engineering-framework/)
