@@ -65,7 +65,7 @@ Source for my personal portfolio hosted on **GitHub Pages** → [vijayptiwari.gi
 Includes:
 - **Open-source products hub** — LangStitch, Meridian, Eventore, Agent Framework
 - **Live try embed** — LangStitch IDE iframe
-- **SEO** — sitemap, JSON-LD, Open Graph, Twitter cards, `assets/js/seo.js` (Meridian/Eventore pattern)
+- **SEO** — sitemap index (portfolio + LangStitch + Meridian + Eventore child sitemaps), JSON-LD, Open Graph, Twitter cards, `assets/js/seo.js`
 - **Resume variants** — distributed systems & AI systems PDFs
 
 ---

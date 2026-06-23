@@ -31,7 +31,11 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" as="image" href="/assets/photos/hero.png">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap index" href="/sitemap.xml">
+  <link rel="alternate" type="application/xml" title="Portfolio pages" href="/sitemap-portfolio.xml">
+  <link rel="alternate" type="application/xml" title="LangStitch sitemap" href="https://vijayptiwari.github.io/LangStitch/sitemap.xml">
+  <link rel="alternate" type="application/xml" title="Meridian sitemap" href="https://vijayptiwari.github.io/meridian/sitemap.xml">
+  <link rel="alternate" type="application/xml" title="Eventore sitemap" href="https://vijayptiwari.github.io/eventore/sitemap.xml">
   <script src="/assets/js/seo.js" defer></script>
   <meta property="og:site_name" content="Vijay Prakash Tiwari">
   <meta property="og:title" content="Vijay Prakash Tiwari | Senior Software Engineer · Tech Lead · Agentic AI">
@@ -187,6 +191,44 @@
           },
           "dateCreated": "2020-01-01T00:00:00+05:30",
           "dateModified": "2026-06-23T18:00:00+05:30"
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://vijayptiwari.github.io/#products",
+          "name": "Open-source products by Vijay Prakash Tiwari",
+          "description": "LangStitch, Meridian, Eventore, and the Agent Engineering Framework — product sites with docs, live demos, and GitHub repositories.",
+          "url": "https://vijayptiwari.github.io/#products",
+          "isPartOf": { "@id": "https://vijayptiwari.github.io/#website" },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "LangStitch",
+                "url": "https://vijayptiwari.github.io/LangStitch/",
+                "item": { "@id": "https://vijayptiwari.github.io/LangStitch/#app" }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Meridian",
+                "url": "https://vijayptiwari.github.io/meridian/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Eventore",
+                "url": "https://vijayptiwari.github.io/eventore/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Agent Engineering Framework",
+                "url": "https://vijayptiwari.github.io/agent-engineering-framework/"
+              }
+            ]
+          }
         }
       ]
     }

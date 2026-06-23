@@ -73,7 +73,8 @@
   upsertMeta("googlebot", "index, follow, max-image-preview:large");
   upsertMeta("bingbot", "index, follow");
   upsertLink("canonical", canonical);
-  upsertLink("sitemap", SITE_ORIGIN + "/sitemap.xml");
+  upsertLink("sitemap", SITE_ORIGIN + "/sitemap.xml", { type: "application/xml", title: "Sitemap index" });
+  upsertLink("alternate", SITE_ORIGIN + "/sitemap-portfolio.xml", { type: "application/xml", title: "Portfolio sitemap" });
   upsertMeta("og:site_name", SITE_NAME, true);
   upsertMeta("og:type", page.type || "website", true);
   upsertMeta("og:url", canonical, true);

@@ -8,4 +8,9 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+# Root sitemap index — includes portfolio, LangStitch, Meridian, and Eventore sitemaps
 Sitemap: https://vijayptiwari.github.io/sitemap.xml
+Sitemap: https://vijayptiwari.github.io/sitemap-portfolio.xml
+Sitemap: https://vijayptiwari.github.io/LangStitch/sitemap.xml
+Sitemap: https://vijayptiwari.github.io/meridian/sitemap.xml
+Sitemap: https://vijayptiwari.github.io/eventore/sitemap.xml
