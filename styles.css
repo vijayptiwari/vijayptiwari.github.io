@@ -975,44 +975,79 @@ img {
   text-decoration: underline;
 }
 
-.try-live-block {
-  margin-top: 24px;
-  border: 2px solid rgba(108, 99, 255, 0.25);
+.try-live-block,
+.try-live-frame {
+  display: none;
+}
+
+/* LangStitch static preview (replaces iframe embed) */
+.langstitch-preview {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #0f1420;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  background: #05070d;
   box-shadow: var(--shadow-hover);
 }
 
-.try-live-block__head {
+.langstitch-preview__bar {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 16px;
-  background: #1e1e2e;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  gap: 6px;
+  padding: 10px 14px;
+  background: #0c1018;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.try-live-block__head h3 {
+.langstitch-preview__bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.langstitch-preview__bar em {
+  margin-left: 8px;
+  font-style: normal;
+  font-size: 0.72rem;
+  color: #71717a;
+  font-family: var(--font-mono, ui-monospace, monospace);
+}
+
+.langstitch-preview__canvas {
+  position: relative;
+  min-height: 220px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.08), transparent 45%),
+    #070a10;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.langstitch-preview__node {
+  position: absolute;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.45rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(12, 16, 26, 0.95);
+  color: #e4e4e7;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.langstitch-preview__node--start { top: 38%; left: 8%; color: #86efac; }
+.langstitch-preview__node--rag { top: 32%; left: 36%; color: #a5b4fc; }
+.langstitch-preview__node--llm { top: 22%; left: 62%; color: #c4b5fd; }
+.langstitch-preview__node--end { top: 38%; right: 8%; color: #fda4af; }
+
+.langstitch-preview__cta {
   margin: 0;
-  font-size: 0.95rem;
-  color: #e2e8f0;
-}
-
-.try-live-block__head p {
-  margin: 4px 0 0;
+  padding: 10px 14px;
   font-size: 0.78rem;
   color: #94a3b8;
-}
-
-.try-live-frame {
-  display: block;
-  width: 100%;
-  height: min(520px, 62vh);
-  border: none;
-  background: #06080f;
+  background: #0c1018;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
 }
 
 .product-card--langstitch {
@@ -1844,10 +1879,6 @@ img {
 
   .meridian-feature h2 {
     font-size: 1.35rem;
-  }
-
-  .try-live-frame {
-    height: min(420px, 55vh);
   }
 
   .products-hub {

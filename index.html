@@ -427,7 +427,7 @@
             </div>
             <div class="trust-item">
               <span class="trust-item__icon">UX</span>
-              <span>Product sites with docs, sitemaps, SEO, and try-live experiences where applicable</span>
+              <span>Product sites with docs, sitemaps, SEO, and clear IDE entry points</span>
             </div>
             <div class="trust-item">
               <span class="trust-item__icon">CI</span>
@@ -443,9 +443,9 @@
             <article class="product-card product-card--langstitch">
               <span class="product-card__eyebrow">LangGraph IDE · MIT</span>
               <h3>LangStitch</h3>
-              <p>Visual LangGraph IDE — skill/guardrail/RAG designers, multi-intent routing, Python 3.13 export, live try in browser.</p>
+              <p>Visual LangGraph IDE — skill/guardrail/RAG designers, multi-intent routing, Python 3.13 export.</p>
               <div class="product-card__stats">
-                <span class="product-stat">Try live</span>
+                <span class="product-stat">Open IDE</span>
                 <span class="product-stat">Python 3.13</span>
                 <span class="product-stat">LangSmith</span>
               </div>
@@ -605,39 +605,26 @@
                 <li>Asset designers — Skills, Guardrails, Rules, Personas, RAG pipelines</li>
                 <li>RAG Agent + Multi-Intent Classifier nodes on the canvas</li>
                 <li>Platform API — Git, export, Docker build, Helm deploy</li>
-                <li>Live try on GitHub Pages — no install required for the canvas</li>
+                <li>Open IDE on GitHub Pages — full viewport, no cramped embed</li>
               </ul>
               <div class="hero-btns" style="margin-top: 24px;">
                 <a class="btn btn-primary" href="https://vijayptiwari.github.io/LangStitch/" target="_blank" rel="noreferrer">Product site</a>
                 <a class="btn btn-outline" href="https://vijayptiwari.github.io/LangStitch/app/" target="_blank" rel="noreferrer">Open IDE</a>
                 <a class="btn btn-outline" href="https://github.com/vijayptiwari/LangStitch" target="_blank" rel="noreferrer">GitHub</a>
               </div>
-              <div class="try-live-block">
-                <div class="try-live-block__head">
-                  <div>
-                    <h3>Try LangStitch live</h3>
-                    <p>Embedded canvas preview — open full screen for the complete IDE experience.</p>
-                  </div>
-                  <a class="btn btn-primary" href="https://vijayptiwari.github.io/LangStitch/app/" target="_blank" rel="noreferrer">Full screen</a>
-                </div>
-                <iframe
-                  class="try-live-frame"
-                  src="https://vijayptiwari.github.io/LangStitch/app/"
-                  title="LangStitch IDE live preview"
-                  loading="lazy"
-                  allow="clipboard-read; clipboard-write"
-                ></iframe>
-              </div>
             </div>
-            <div class="meridian-terminal">
-              <div class="accent">$ git clone https://github.com/vijayptiwari/LangStitch.git</div>
-              <div class="accent">$ cd LangStitch && docker compose -f docker-compose.prod.yml up</div>
-              <div class="green">→ http://localhost:8080 (UI + Platform API)</div>
-              <div style="margin-top:14px" class="accent">Export structure</div>
-              <div>graphs/ · nodes/ · skills/ · rag/</div>
-              <div>guardrails/ · personas/ · tools/</div>
-              <div>langsmith.json · pyproject.toml</div>
-              <div style="margin-top:14px" class="green">Python 3.13 · LangGraph · LangSmith</div>
+            <div class="langstitch-preview" aria-hidden="true">
+              <div class="langstitch-preview__bar">
+                <span></span><span></span><span></span>
+                <em>LangStitch · agent-workflow</em>
+              </div>
+              <div class="langstitch-preview__canvas">
+                <div class="langstitch-preview__node langstitch-preview__node--start">Start</div>
+                <div class="langstitch-preview__node langstitch-preview__node--rag">RAG Agent</div>
+                <div class="langstitch-preview__node langstitch-preview__node--llm">LLM</div>
+                <div class="langstitch-preview__node langstitch-preview__node--end">End</div>
+              </div>
+              <p class="langstitch-preview__cta">Open the IDE for the full canvas →</p>
             </div>
           </article>
         </div>
@@ -773,7 +760,7 @@
               <div class="project-body">
                 <h3>LangStitch — Visual LangGraph IDE</h3>
                 <p class="project-subtitle">Creator · MIT · v0.1.0 · Live on GitHub Pages</p>
-                <p class="project-desc">Drag-and-drop LangGraph IDE with skill/guardrail/RAG designers, multi-intent routing, Python 3.13 multi-module ZIP export, and embedded live try at vijayptiwari.github.io/LangStitch.</p>
+                <p class="project-desc">Drag-and-drop LangGraph IDE with skill/guardrail/RAG designers, multi-intent routing, Python 3.13 multi-module ZIP export — open the IDE at vijayptiwari.github.io/LangStitch/app.</p>
                 <div class="project-tags">
                   <span class="project-tag">React</span>
                   <span class="project-tag">LangGraph</span>
@@ -1133,7 +1120,7 @@
             </a>
             <a class="contact-card reveal" href="https://vijayptiwari.github.io/LangStitch/" target="_blank" rel="noreferrer">
               <span class="contact-card__label">LangStitch</span>
-              <strong class="contact-card__value">Try live IDE</strong>
+              <strong class="contact-card__value">Open IDE</strong>
             </a>
             <a class="contact-card reveal" href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">
               <span class="contact-card__label">Meridian</span>
@@ -1189,7 +1176,7 @@
           <ul class="footer-tool-list">
             <li>
               <a href="https://vijayptiwari.github.io/LangStitch/" target="_blank" rel="noreferrer">LangStitch</a>
-              <span>Visual LangGraph IDE · live try</span>
+              <span>Visual LangGraph IDE · open in full tab</span>
             </li>
             <li>
               <a href="https://vijayptiwari.github.io/meridian/" target="_blank" rel="noreferrer">Meridian</a>
