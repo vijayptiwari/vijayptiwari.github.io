@@ -26,6 +26,15 @@ body {
   line-height: 1.7;
 }
 
+body.framework-theme {
+  --cyan: #a78bfa;
+  --blue: #7c5cff;
+  --amber: #57d8ed;
+  background:
+    radial-gradient(circle at 76% 12%, rgba(103, 76, 216, 0.2), transparent 33rem),
+    linear-gradient(180deg, #070d21 0%, #0a1027 55%, #050a18 100%);
+}
+
 img { max-width: 100%; height: auto; }
 a { color: var(--cyan); text-underline-offset: 0.2em; }
 a:hover { color: #8aebf7; }
@@ -275,6 +284,7 @@ blockquote p { margin: 0; color: white !important; font-size: 1.14rem !important
 
 .artifact-list { display: grid; gap: 12px; margin-top: 28px; }
 .artifact-list a { padding: 20px 22px; border: 1px solid var(--line); border-radius: 12px; color: white; background: var(--panel); text-decoration: none; }
+.artifact-list > div { padding: 20px 22px; border: 1px solid var(--line); border-radius: 12px; color: white; background: var(--panel); }
 .artifact-list a:hover { border-color: rgba(54, 212, 238, 0.62); }
 .artifact-list strong { display: block; }
 .artifact-list span { display: block; margin-top: 4px; color: var(--muted); font-size: 0.82rem; }

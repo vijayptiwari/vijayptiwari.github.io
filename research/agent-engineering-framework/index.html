@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Pillars of Production Agent Engineering | Open Framework</title>
+  <meta name="description" content="An open practitioner framework for engineering reliable production AI agents across ten coordinated disciplines beyond prompt engineering.">
+  <meta name="author" content="Vijay Prakash Tiwari">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="bingbot" content="index, follow">
+  <meta name="theme-color" content="#0a1027">
+
+  <link rel="canonical" href="https://vijayptiwari.github.io/research/agent-engineering-framework/">
+  <link rel="alternate" hreflang="en" href="https://vijayptiwari.github.io/research/agent-engineering-framework/">
+  <link rel="alternate" hreflang="x-default" href="https://vijayptiwari.github.io/research/agent-engineering-framework/">
+  <link rel="author" href="https://vijayptiwari.github.io/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" href="/assets/photos/hero.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/research/paper.css">
+
+  <meta property="og:site_name" content="Vijay Prakash Tiwari">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://vijayptiwari.github.io/research/agent-engineering-framework/">
+  <meta property="og:title" content="The 10 Pillars of Production Agent Engineering">
+  <meta property="og:description" content="Beyond prompt engineering: an open framework, readiness rubric, and design checklist for reliable production AI agents.">
+  <meta property="og:image" content="https://vijayptiwari.github.io/assets/research/agent-engineering-framework-cover.png">
+  <meta property="og:image:secure_url" content="https://vijayptiwari.github.io/assets/research/agent-engineering-framework-cover.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1729">
+  <meta property="og:image:height" content="910">
+  <meta property="og:image:alt" content="The 10 Pillars of Production Agent Engineering by Vijay Prakash Tiwari">
+  <meta property="article:author" content="https://www.linkedin.com/in/vijayptiwari">
+  <meta property="article:published_time" content="2026-06-10T00:00:00+05:30">
+  <meta property="article:modified_time" content="2026-09-06T00:00:00+05:30">
+  <meta property="article:section" content="AI Engineering">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@vijayptiwari">
+  <meta name="twitter:title" content="The 10 Pillars of Production Agent Engineering">
+  <meta name="twitter:description" content="A production agent is a deterministic engineering envelope around a probabilistic core. Explore the open framework, rubric, and checklist.">
+  <meta name="twitter:image" content="https://vijayptiwari.github.io/assets/research/agent-engineering-framework-cover.png">
+  <meta name="twitter:image:alt" content="The 10 Pillars of Production Agent Engineering by Vijay Prakash Tiwari">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://vijayptiwari.github.io/#person",
+          "name": "Vijay Prakash Tiwari",
+          "url": "https://vijayptiwari.github.io/",
+          "sameAs": [
+            "https://github.com/vijayptiwari",
+            "https://www.linkedin.com/in/vijayptiwari"
+          ]
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://vijayptiwari.github.io/research/agent-engineering-framework/#article",
+          "url": "https://vijayptiwari.github.io/research/agent-engineering-framework/",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://vijayptiwari.github.io/research/agent-engineering-framework/"
+          },
+          "headline": "The AI Agent Engineering and Development Framework: The 10 Pillars of Production Agent Engineering",
+          "alternativeHeadline": "Beyond Prompt Engineering",
+          "description": "A practitioner framework that organizes reliable production AI-agent development into ten coordinated disciplines: Prompt, Goal, Trajectory, Context, Memory, Tool, Intelligence, Execution, Governance, and Evaluation Engineering.",
+          "image": [
+            "https://vijayptiwari.github.io/assets/research/agent-engineering-framework-cover.png"
+          ],
+          "datePublished": "2026-06-10T00:00:00+05:30",
+          "dateModified": "2026-09-06T00:00:00+05:30",
+          "author": { "@id": "https://vijayptiwari.github.io/#person" },
+          "publisher": { "@id": "https://vijayptiwari.github.io/#person" },
+          "inLanguage": "en-IN",
+          "isAccessibleForFree": true,
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "version": "1.2",
+          "articleSection": "AI Engineering",
+          "keywords": [
+            "agent engineering",
+            "production AI agents",
+            "agentic AI",
+            "prompt engineering",
+            "trajectory engineering",
+            "context engineering",
+            "AI governance",
+            "agent evaluation",
+            "LLMOps"
+          ],
+          "sameAs": [
+            "https://vijayptiwari.github.io/agent-engineering-framework/",
+            "https://github.com/vijayptiwari/agent-engineering-framework",
+            "https://github.com/vijayptiwari/agent-engineering-framework/blob/main/whitepaper.md"
+          ],
+          "about": [
+            { "@type": "Thing", "name": "AI agent engineering" },
+            { "@type": "Thing", "name": "Production artificial intelligence" },
+            { "@type": "Thing", "name": "AI system reliability" }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://vijayptiwari.github.io/research/agent-engineering-framework/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Portfolio",
+              "item": "https://vijayptiwari.github.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Research",
+              "item": "https://vijayptiwari.github.io/#research"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Agent Engineering Framework",
+              "item": "https://vijayptiwari.github.io/research/agent-engineering-framework/"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body class="framework-theme">
+  <a class="skip-link" href="#main-content">Skip to article</a>
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="/" aria-label="Vijay Prakash Tiwari portfolio">&lt;Vijay<span>/</span>&gt;</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Portfolio</a>
+        <a href="/#research">Research</a>
+        <a href="https://github.com/vijayptiwari/agent-engineering-framework" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article>
+      <header class="paper-hero">
+        <div class="shell">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Portfolio</a><span aria-hidden="true">/</span><a href="/#research">Research</a><span aria-hidden="true">/</span><span>Agent Engineering Framework</span>
+          </nav>
+
+          <div class="paper-hero__grid">
+            <div class="paper-hero__copy">
+              <p class="eyebrow">Open practitioner framework · v1.2</p>
+              <h1>The 10 Pillars of Production Agent Engineering</h1>
+              <p class="dek">Beyond prompt engineering: a deterministic envelope around a probabilistic core.</p>
+              <p class="byline">By <a href="/">Vijay Prakash Tiwari</a> · Published <time datetime="2026-06-10">June 10, 2026</time></p>
+              <div class="actions">
+                <a class="button button--primary" href="https://github.com/vijayptiwari/agent-engineering-framework/blob/main/whitepaper.md">Read the original paper</a>
+                <a class="button button--secondary" href="https://vijayptiwari.github.io/agent-engineering-framework/">Open the framework site</a>
+              </div>
+            </div>
+            <figure class="cover-frame">
+              <img src="/assets/research/agent-engineering-framework-cover.png" width="1729" height="910" fetchpriority="high" alt="Cover for the 10 Pillars of Production Agent Engineering, showing ten structural nodes surrounding a probabilistic AI core">
+            </figure>
+          </div>
+        </div>
+      </header>
+
+      <div class="shell article-layout">
+        <div class="article-body">
+          <section aria-labelledby="premise-title">
+            <p class="section-label">The premise</p>
+            <h2 id="premise-title">Prompt quality is necessary. It was never sufficient.</h2>
+            <p>Modern AI agents plan, retrieve knowledge, call tools, remember interactions, coordinate work, and act inside business processes. Once an AI system moves beyond a demonstration, reliability depends on far more than how its initial instruction is phrased.</p>
+            <p>The framework reframes production agents as a systems-engineering problem. The language model supplies a probabilistic reasoning core; explicit engineering controls around it define success, constrain action, manage state, make execution durable, and measure whether the system is actually improving.</p>
+            <blockquote>
+              <p>A production agent is not Prompt + LLM. It is a deterministic engineering envelope around a probabilistic core.</p>
+            </blockquote>
+          </section>
+
+          <section aria-labelledby="pillars-title">
+            <p class="section-label">The framework</p>
+            <h2 id="pillars-title">Ten coordinated control surfaces</h2>
+            <p>Each pillar addresses a different design question, failure mode, and set of observable metrics. The value comes from treating them as a coordinated system rather than isolated techniques.</p>
+            <div class="record-grid pillar-grid">
+              <div><strong>1. Prompt Engineering</strong><span>How do we instruct the agent?</span></div>
+              <div><strong>2. Goal Engineering</strong><span>What should the agent achieve?</span></div>
+              <div><strong>3. Trajectory Engineering</strong><span>How should it move toward the goal?</span></div>
+              <div><strong>4. Context Engineering</strong><span>What should it see right now?</span></div>
+              <div><strong>5. Memory Engineering</strong><span>What should persist over time?</span></div>
+              <div><strong>6. Tool Engineering</strong><span>What actions can it perform?</span></div>
+              <div><strong>7. Intelligence Engineering</strong><span>Which model should do which work?</span></div>
+              <div><strong>8. Execution Engineering</strong><span>How does it run reliably?</span></div>
+              <div><strong>9. Governance Engineering</strong><span>How is it kept safe and compliant?</span></div>
+              <div><strong>10. Evaluation Engineering</strong><span>How do we know it is good?</span></div>
+            </div>
+          </section>
+
+          <section aria-labelledby="trajectory-title">
+            <p class="section-label">A foundational distinction</p>
+            <h2 id="trajectory-title">Goal, plan, and trajectory are not the same thing</h2>
+            <p>A <strong>goal</strong> defines the desired end state, acceptance criteria, stopping conditions, and trade-offs. A <strong>plan</strong> describes the intended path before execution. A <strong>trajectory</strong> is what actually happens: model calls, tool invocations, observations, branches, retries, and corrections.</p>
+            <p>Two agents can share the same goal and plan while producing very different trajectories—and very different reliability. Production engineering therefore has to evaluate both the final outcome and the path that produced it.</p>
+          </section>
+
+          <section aria-labelledby="lifecycle-title">
+            <p class="section-label">Delivery lifecycle</p>
+            <h2 id="lifecycle-title">From specification to continuous improvement</h2>
+            <p>The pillars map onto six delivery phases. The sequence makes two priorities explicit: specify before prompting, and evaluate before deployment while continuing to evaluate in operation.</p>
+            <ol class="routing-flow" aria-label="Production agent development lifecycle">
+              <li><span>01</span><strong>Specify</strong><small>Goals and governance</small></li>
+              <li><span>02</span><strong>Design</strong><small>Trajectory, context, tools, intelligence</small></li>
+              <li><span>03</span><strong>Build</strong><small>Prompts, execution, and memory</small></li>
+              <li><span>04</span><strong>Evaluate</strong><small>Datasets, benchmarks, and regressions</small></li>
+              <li><span>05</span><strong>Deploy</strong><small>Gates, logging, budgets, and rollout</small></li>
+              <li><span>06</span><strong>Operate</strong><small>Monitor, curate, and re-benchmark</small></li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="practice-title">
+            <p class="section-label">Practitioner tools</p>
+            <h2 id="practice-title">Turn the framework into design and release gates</h2>
+            <p>The paper is accompanied by artifacts intended for real engineering conversations rather than passive reading.</p>
+            <div class="metrics" aria-label="Framework contents">
+              <div><strong>10</strong><span>engineering pillars</span></div>
+              <div><strong>6</strong><span>delivery phases</span></div>
+              <div><strong>3</strong><span>worked case studies</span></div>
+              <div><strong>35</strong><span>cited sources</span></div>
+            </div>
+            <p>The readiness rubric scores each pillar from 0 to 5. A total below 30 out of 50—or any score of 0 or 1 in Execution, Governance, or Evaluation—indicates a prototype rather than a production-ready system. The companion checklist turns each pillar into concrete pre-deployment questions.</p>
+          </section>
+
+          <section aria-labelledby="cases-title">
+            <p class="section-label">Worked applications</p>
+            <h2 id="cases-title">Three systems viewed through all ten pillars</h2>
+            <div class="artifact-list case-list">
+              <div><strong>Telecom incident RCA agent</strong><span>Evidence collection, hypothesis validation, operational tools, stopping conditions, and trace-quality evaluation</span></div>
+              <div><strong>Customer billing-dispute agent</strong><span>Policy versions, customer context, authority boundaries, approval gates, and auditable outcomes</span></div>
+              <div><strong>Automated software-maintenance agent</strong><span>Repository context, tool permissions, durable execution, regression tests, and controlled delivery</span></div>
+            </div>
+          </section>
+
+          <section aria-labelledby="contribution-title">
+            <p class="section-label">Contribution and limits</p>
+            <h2 id="contribution-title">A practical synthesis—not a claim to have invented every discipline</h2>
+            <p>Prompting, retrieval, memory, tool use, routing, governance, and evaluation all have established research and practice. The contribution is the synthesis: a coordinated, teachable, production-oriented vocabulary that teams can use to design systems, surface gaps, assign ownership, and assess readiness.</p>
+            <div class="evidence-note">
+              <strong>Claim boundary</strong>
+              <p>The framework is a practitioner synthesis, not an empirical result. It has not yet been validated through controlled comparisons that correlate rubric scores with production outcomes. Pillar boundaries are pragmatic, and large multi-agent economies may require additional coordination concepts.</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="artifacts-title">
+            <p class="section-label">Open artifacts</p>
+            <h2 id="artifacts-title">Read the paper and apply the framework</h2>
+            <div class="artifact-list">
+              <a href="https://github.com/vijayptiwari/agent-engineering-framework/blob/main/whitepaper.md"><strong>Original white paper</strong><span>Research synthesis, pillar definitions, case studies, lifecycle, related work, and limitations</span></a>
+              <a href="https://github.com/vijayptiwari/agent-engineering-framework/blob/main/rubric/readiness-rubric.md"><strong>Production readiness rubric</strong><span>Score each pillar from 0 to 5 and expose weak control surfaces</span></a>
+              <a href="https://github.com/vijayptiwari/agent-engineering-framework/blob/main/checklists/production-agent-checklist.md"><strong>Production-agent design checklist</strong><span>Pre-deployment questions organized across all ten pillars</span></a>
+              <a href="https://github.com/vijayptiwari/agent-engineering-framework/releases/tag/v1.2"><strong>Versioned release</strong><span>Stable v1.2 publication snapshot with citation metadata</span></a>
+            </div>
+          </section>
+
+          <section aria-labelledby="related-title">
+            <p class="section-label">Related research</p>
+            <h2 id="related-title">From the broad framework to one testable control boundary</h2>
+            <p><a href="/research/evidence-grounded-agent-routing/">Evidence-Grounded Agent Routing</a> develops one part of the broader framework into an executable, benchmarked proposal: how an agentic system should justify, constrain, record, and evaluate delegation decisions.</p>
+          </section>
+        </div>
+
+        <aside class="paper-aside" aria-label="Framework details">
+          <div class="aside-card">
+            <p class="section-label">Framework details</p>
+            <dl>
+              <div><dt>Author</dt><dd>Vijay Prakash Tiwari</dd></div>
+              <div><dt>Version</dt><dd>1.2</dd></div>
+              <div><dt>Published</dt><dd>June 2026</dd></div>
+              <div><dt>License</dt><dd>CC BY 4.0</dd></div>
+              <div><dt>Type</dt><dd>Practitioner synthesis</dd></div>
+            </dl>
+          </div>
+          <div class="aside-card">
+            <p class="section-label">Topics</p>
+            <div class="topic-list">
+              <span>Agent Engineering</span><span>Production AI</span><span>Agentic AI</span><span>Trajectory</span><span>Context</span><span>Governance</span><span>Evaluation</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="closing">
+        <div class="shell closing__inner">
+          <div>
+            <p class="section-label">Open framework</p>
+            <h2>Is a pillar missing—or is one unnecessary?</h2>
+            <p>Challenge the model, contribute a case study, or apply the readiness rubric to your own system.</p>
+          </div>
+          <a class="button button--light" href="https://github.com/vijayptiwari/agent-engineering-framework/issues">Join the discussion</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p>© 2026 Vijay Prakash Tiwari</p>
+      <p><a href="/">Portfolio</a> · <a href="https://github.com/vijayptiwari/whitepapers">White papers</a> · <a href="https://www.linkedin.com/in/vijayptiwari">LinkedIn</a></p>
+    </div>
+  </footer>
+</body>
+</html>

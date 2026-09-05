@@ -1,6 +1,6 @@
 # Vijay Prakash Tiwari
 
-**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [Evidence-Grounded Agent Routing](https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/) and the [Agent Engineering Framework](https://vijayptiwari.github.io/agent-engineering-framework/)
+**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [Evidence-Grounded Agent Routing](https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/) and the [Agent Engineering Framework](https://vijayptiwari.github.io/research/agent-engineering-framework/)
 
 Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/) · [Resume (PDF)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/vijayptiwari) · [Email](mailto:vijayptiwariofficial@gmail.com)
 
@@ -26,7 +26,7 @@ Open-source **visual IDE for LangGraph** — skill/guardrail/RAG designers, mult
 
 Open practitioner framework for **production AI agents** — ten coordinated disciplines (Prompt, Goal, Trajectory, Context, Memory, Tool, Intelligence, Execution, Governance, Evaluation) with case studies, readiness rubric, and design checklist. CC BY 4.0 · v1.2.
 
-- [Live site](https://vijayptiwari.github.io/agent-engineering-framework/) · [White paper](https://github.com/vijayptiwari/agent-engineering-framework/blob/main/whitepaper.md) · [GitHub](https://github.com/vijayptiwari/agent-engineering-framework)
+- [Portfolio overview](https://vijayptiwari.github.io/research/agent-engineering-framework/) · [Framework site](https://vijayptiwari.github.io/agent-engineering-framework/) · [White paper](https://github.com/vijayptiwari/agent-engineering-framework/blob/main/whitepaper.md) · [GitHub](https://github.com/vijayptiwari/agent-engineering-framework)
 
 ---
 
@@ -82,5 +82,5 @@ Includes:
 [![LangStitch](https://img.shields.io/badge/LangStitch-Open%20Source-818cf8?style=flat-square&logo=github)](https://github.com/vijayptiwari/LangStitch)
 [![Eventore](https://img.shields.io/badge/Eventore-Open%20Source-2563eb?style=flat-square&logo=github)](https://github.com/vijayptiwari/eventore)
 [![Meridian](https://img.shields.io/badge/Meridian-Open%20Source-14b8a6?style=flat-square&logo=github)](https://github.com/vijayptiwari/meridian)
-[![Agent Framework](https://img.shields.io/badge/Agent%20Framework-White%20Paper-7c3aed?style=flat-square)](https://vijayptiwari.github.io/agent-engineering-framework/)
+[![Agent Framework](https://img.shields.io/badge/Agent%20Framework-White%20Paper-7c3aed?style=flat-square)](https://vijayptiwari.github.io/research/agent-engineering-framework/)
 [![Evidence Routing](https://img.shields.io/badge/Evidence--Grounded%20Routing-White%20Paper-0891b2?style=flat-square)](https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/)

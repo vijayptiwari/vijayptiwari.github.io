@@ -16,6 +16,11 @@ const pages = [
     file: "research/evidence-grounded-agent-routing/index.html",
     canonical: `${origin}/research/evidence-grounded-agent-routing/`,
     phrases: ["Routing Decision Record", "Claim boundary", "TechArticle"]
+  },
+  {
+    file: "research/agent-engineering-framework/index.html",
+    canonical: `${origin}/research/agent-engineering-framework/`,
+    phrases: ["Ten coordinated control surfaces", "deterministic engineering envelope", "TechArticle"]
   }
 ];
 
