@@ -1,6 +1,6 @@
 # Vijay Prakash Tiwari
 
-**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [Evidence-Grounded Agent Routing](https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/) and the [Agent Engineering Framework](https://vijayptiwari.github.io/research/agent-engineering-framework/)
+**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [nine published works](https://vijayptiwari.github.io/research/) including Evidence-Grounded Agent Routing and the Agent Engineering Framework
 
 Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/) · [Resume (PDF)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/vijayptiwari) · [Email](mailto:vijayptiwariofficial@gmail.com)
 
@@ -38,6 +38,15 @@ Open white paper and executable **LangGraph reference implementation** for sourc
 
 ---
 
+## Research archive — *2016–2026*
+
+A single, indexed home for current open agent-engineering work and seven journal publications from undergraduate engineering. Every archival page includes verified metadata, an honest claim boundary, a formatted citation, and a link to the original journal record.
+
+- [Explore all research and publications](https://vijayptiwari.github.io/research/)
+- Topics: agent engineering, AI delegation, cloud security, DNA computing, Li-Fi, neural simulation, biometrics, wearable computing, and augmented reality
+
+---
+
 ## Eventore — *One console for every stream*
 
 Open-source **multi-protocol streaming console** — Kafka, Pulsar, RabbitMQ, MQTT, JMS, Kinesis, GCP Pub/Sub, Azure Service Bus. Spring Boot control plane, React UI, Helm/K8s deploy, optional MCP for AI agents.
@@ -71,7 +80,7 @@ npm install && npm run ui
 Source for my personal portfolio hosted on **GitHub Pages** → [vijayptiwari.github.io](https://vijayptiwari.github.io/)
 
 Includes:
-- **Open-source products and research hub** — LangStitch, Meridian, Eventore, Evidence-Grounded Agent Routing, Agent Framework
+- **Open-source products and research hub** — LangStitch, Meridian, Eventore, two current open papers, and seven journal publications
 - **Live try embed** — LangStitch IDE iframe
 - **SEO** — sitemap index (portfolio + LangStitch + Meridian + Eventore child sitemaps), JSON-LD, Open Graph, Twitter cards, `assets/js/seo.js`
 - **Resume variants** — distributed systems & AI systems PDFs

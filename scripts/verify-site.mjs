@@ -21,6 +21,46 @@ const pages = [
     file: "research/agent-engineering-framework/index.html",
     canonical: `${origin}/research/agent-engineering-framework/`,
     phrases: ["Ten coordinated control surfaces", "deterministic engineering envelope", "TechArticle"]
+  },
+  {
+    file: "research/index.html",
+    canonical: `${origin}/research/`,
+    phrases: ["Seven publications from undergraduate engineering", "numberOfItems", "CollectionPage"]
+  },
+  {
+    file: "research/cloud-data-security-dna-cryptography/index.html",
+    canonical: `${origin}/research/cloud-data-security-dna-cryptography/`,
+    phrases: ["Python execution-time simulation", "Claim boundary", "ScholarlyArticle"]
+  },
+  {
+    file: "research/dna-computing-implementations/index.html",
+    canonical: `${origin}/research/dna-computing-implementations/`,
+    phrases: ["molecular computation", "Claim boundary", "ScholarlyArticle"]
+  },
+  {
+    file: "research/li-fi-technology/index.html",
+    canonical: `${origin}/research/li-fi-technology/`,
+    phrases: ["visible-light communication", "Claim boundary", "ScholarlyArticle"]
+  },
+  {
+    file: "research/blue-brain-technology/index.html",
+    canonical: `${origin}/research/blue-brain-technology/`,
+    phrases: ["Separate established simulation research", "Claim boundary", "ScholarlyArticle"]
+  },
+  {
+    file: "research/face-analysis-laser-focus/index.html",
+    canonical: `${origin}/research/face-analysis-laser-focus/`,
+    phrases: ["Verified correction", "Volume 3, Issue 4", "ScholarlyArticle"]
+  },
+  {
+    file: "research/wearable-technology/index.html",
+    canonical: `${origin}/research/wearable-technology/`,
+    phrases: ["continuous computing", "Claim boundary", "ScholarlyArticle"]
+  },
+  {
+    file: "research/augmented-reality-technologies/index.html",
+    canonical: `${origin}/research/augmented-reality-technologies/`,
+    phrases: ["systems-integration problem", "Claim boundary", "ScholarlyArticle"]
   }
 ];
 

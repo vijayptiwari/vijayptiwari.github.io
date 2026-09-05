@@ -28,6 +28,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://vijayptiwari.github.io/research/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://vijayptiwari.github.io/research/agent-engineering-framework/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -38,6 +44,48 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://vijayptiwari.github.io/research/cloud-data-security-dna-cryptography/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://vijayptiwari.github.io/research/dna-computing-implementations/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://vijayptiwari.github.io/research/li-fi-technology/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://vijayptiwari.github.io/research/blue-brain-technology/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://vijayptiwari.github.io/research/face-analysis-laser-focus/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://vijayptiwari.github.io/research/wearable-technology/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://vijayptiwari.github.io/research/augmented-reality-technologies/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
   </url>
   <!-- Product hub indexes (detailed URLs live in each product sitemap) -->
   <url>
