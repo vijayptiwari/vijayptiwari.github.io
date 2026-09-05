@@ -1,6 +1,6 @@
 # Vijay Prakash Tiwari
 
-**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [Agent Engineering Framework](https://vijayptiwari.github.io/agent-engineering-framework/)
+**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [Evidence-Grounded Agent Routing](https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/) and the [Agent Engineering Framework](https://vijayptiwari.github.io/agent-engineering-framework/)
 
 Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/) · [Resume (PDF)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/vijayptiwari) · [Email](mailto:vijayptiwariofficial@gmail.com)
 
@@ -8,7 +8,7 @@ Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/
 
 ## What I do
 
-Tech Lead and Senior Software Engineer building telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on the **Agentic Offering** for Digital BSS at Amdocs. Open-source creator of **LangStitch**, **Meridian**, and **Eventore**; author of the **Agent Engineering Framework** white paper (10 pillars of production agent engineering).
+Tech Lead and Senior Software Engineer building telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on the **Agentic Offering** for Digital BSS at Amdocs. Open-source creator of **LangStitch**, **Meridian**, and **Eventore**; author of **Evidence-Grounded Agent Routing** and the **Agent Engineering Framework**.
 
 **Impact:** Amdocs Inspiring Innovator global nominee · 2,000+ eng. hours saved/year · Avishkar winner among 104 teams · TCS CodeVita rank 716
 
@@ -27,6 +27,14 @@ Open-source **visual IDE for LangGraph** — skill/guardrail/RAG designers, mult
 Open practitioner framework for **production AI agents** — ten coordinated disciplines (Prompt, Goal, Trajectory, Context, Memory, Tool, Intelligence, Execution, Governance, Evaluation) with case studies, readiness rubric, and design checklist. CC BY 4.0 · v1.2.
 
 - [Live site](https://vijayptiwari.github.io/agent-engineering-framework/) · [White paper](https://github.com/vijayptiwari/agent-engineering-framework/blob/main/whitepaper.md) · [GitHub](https://github.com/vijayptiwari/agent-engineering-framework)
+
+---
+
+## Evidence-Grounded Agent Routing — *Auditable delegation*
+
+Open white paper and executable **LangGraph reference implementation** for source-linked evidence, hard eligibility gates, calibrated selection, abstention, bounded delegation contracts, decision provenance, and outcome evaluation.
+
+- [Portfolio overview](https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/) · [Original paper](https://github.com/vijayptiwari/evidence-grounded-agent-routing/blob/main/WHITEPAPER.md) · [GitHub](https://github.com/vijayptiwari/evidence-grounded-agent-routing)
 
 ---
 
@@ -63,7 +71,7 @@ npm install && npm run ui
 Source for my personal portfolio hosted on **GitHub Pages** → [vijayptiwari.github.io](https://vijayptiwari.github.io/)
 
 Includes:
-- **Open-source products hub** — LangStitch, Meridian, Eventore, Agent Framework
+- **Open-source products and research hub** — LangStitch, Meridian, Eventore, Evidence-Grounded Agent Routing, Agent Framework
 - **Live try embed** — LangStitch IDE iframe
 - **SEO** — sitemap index (portfolio + LangStitch + Meridian + Eventore child sitemaps), JSON-LD, Open Graph, Twitter cards, `assets/js/seo.js`
 - **Resume variants** — distributed systems & AI systems PDFs
@@ -75,3 +83,4 @@ Includes:
 [![Eventore](https://img.shields.io/badge/Eventore-Open%20Source-2563eb?style=flat-square&logo=github)](https://github.com/vijayptiwari/eventore)
 [![Meridian](https://img.shields.io/badge/Meridian-Open%20Source-14b8a6?style=flat-square&logo=github)](https://github.com/vijayptiwari/meridian)
 [![Agent Framework](https://img.shields.io/badge/Agent%20Framework-White%20Paper-7c3aed?style=flat-square)](https://vijayptiwari.github.io/agent-engineering-framework/)
+[![Evidence Routing](https://img.shields.io/badge/Evidence--Grounded%20Routing-White%20Paper-0891b2?style=flat-square)](https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/)

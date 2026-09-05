@@ -4,7 +4,8 @@
   "description": "Personal portfolio — Vijay Prakash Tiwari",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "check": "node scripts/verify-site.mjs"
   },
   "author": "Vijay Prakash Tiwari",
   "license": "ISC",

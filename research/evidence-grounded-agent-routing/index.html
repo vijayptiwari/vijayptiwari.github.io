@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evidence-Grounded Agent Routing | Auditable AI Delegation</title>
+  <meta name="description" content="Evidence-Grounded Agent Routing is an open white paper and LangGraph reference implementation for auditable, policy-aware AI agent delegation.">
+  <meta name="author" content="Vijay Prakash Tiwari">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="bingbot" content="index, follow">
+  <meta name="theme-color" content="#061b31">
+
+  <link rel="canonical" href="https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/">
+  <link rel="alternate" hreflang="en" href="https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/">
+  <link rel="alternate" hreflang="x-default" href="https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/">
+  <link rel="author" href="https://vijayptiwari.github.io/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" href="/assets/photos/hero.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/research/paper.css">
+
+  <meta property="og:site_name" content="Vijay Prakash Tiwari">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/">
+  <meta property="og:title" content="Evidence-Grounded Agent Routing">
+  <meta property="og:description" content="An open white paper and executable LangGraph reference implementation for auditable, policy-aware delegation in agentic systems.">
+  <meta property="og:image" content="https://vijayptiwari.github.io/assets/research/evidence-grounded-agent-routing-cover.png">
+  <meta property="og:image:secure_url" content="https://vijayptiwari.github.io/assets/research/evidence-grounded-agent-routing-cover.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
+  <meta property="og:image:alt" content="Evidence-Grounded Agent Routing by Vijay Prakash Tiwari">
+  <meta property="article:author" content="https://www.linkedin.com/in/vijayptiwari">
+  <meta property="article:published_time" content="2026-09-05T00:00:00+05:30">
+  <meta property="article:modified_time" content="2026-09-06T00:00:00+05:30">
+  <meta property="article:section" content="AI Engineering">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@vijayptiwari">
+  <meta name="twitter:title" content="Evidence-Grounded Agent Routing">
+  <meta name="twitter:description" content="Auditable, policy-aware delegation for agentic systems—with an open paper, implementation, benchmark, and decision-record schema.">
+  <meta name="twitter:image" content="https://vijayptiwari.github.io/assets/research/evidence-grounded-agent-routing-cover.png">
+  <meta name="twitter:image:alt" content="Evidence-Grounded Agent Routing by Vijay Prakash Tiwari">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://vijayptiwari.github.io/#person",
+          "name": "Vijay Prakash Tiwari",
+          "url": "https://vijayptiwari.github.io/",
+          "sameAs": [
+            "https://github.com/vijayptiwari",
+            "https://www.linkedin.com/in/vijayptiwari"
+          ]
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/#article",
+          "url": "https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/"
+          },
+          "headline": "Evidence-Grounded Agent Routing: Auditable Delegation for Agentic Systems",
+          "alternativeHeadline": "From opaque agent selection to evidence-backed, policy-aware delegation",
+          "description": "An open white paper and executable LangGraph reference implementation for routing AI-agent work using source-linked evidence, hard eligibility gates, calibrated selection, abstention, bounded delegation contracts, and outcome evaluation.",
+          "image": [
+            "https://vijayptiwari.github.io/assets/research/evidence-grounded-agent-routing-cover.png"
+          ],
+          "datePublished": "2026-09-05T00:00:00+05:30",
+          "dateModified": "2026-09-06T00:00:00+05:30",
+          "author": { "@id": "https://vijayptiwari.github.io/#person" },
+          "publisher": { "@id": "https://vijayptiwari.github.io/#person" },
+          "inLanguage": "en-IN",
+          "isAccessibleForFree": true,
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "version": "0.1.0",
+          "articleSection": "AI Engineering",
+          "keywords": [
+            "evidence-grounded agent routing",
+            "AI agent delegation",
+            "agentic AI",
+            "LangGraph",
+            "LangChain",
+            "routing decision record",
+            "AI governance",
+            "LLMOps",
+            "selective prediction"
+          ],
+          "sameAs": [
+            "https://github.com/vijayptiwari/evidence-grounded-agent-routing",
+            "https://github.com/vijayptiwari/evidence-grounded-agent-routing/blob/main/WHITEPAPER.md"
+          ],
+          "about": [
+            { "@type": "Thing", "name": "AI agent orchestration" },
+            { "@type": "Thing", "name": "Decision provenance" },
+            { "@type": "Thing", "name": "Artificial intelligence governance" }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Portfolio",
+              "item": "https://vijayptiwari.github.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Research",
+              "item": "https://vijayptiwari.github.io/#research"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Evidence-Grounded Agent Routing",
+              "item": "https://vijayptiwari.github.io/research/evidence-grounded-agent-routing/"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to article</a>
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="/" aria-label="Vijay Prakash Tiwari portfolio">&lt;Vijay<span>/</span>&gt;</a>
+      <nav aria-label="Primary navigation">
+        <a href="/">Portfolio</a>
+        <a href="/#research">Research</a>
+        <a href="https://github.com/vijayptiwari/evidence-grounded-agent-routing" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article>
+      <header class="paper-hero">
+        <div class="shell">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Portfolio</a><span aria-hidden="true">/</span><a href="/#research">Research</a><span aria-hidden="true">/</span><span>Evidence-Grounded Agent Routing</span>
+          </nav>
+
+          <div class="paper-hero__grid">
+            <div class="paper-hero__copy">
+              <p class="eyebrow">Open white paper · v0.1.0</p>
+              <h1>Evidence-Grounded Agent Routing</h1>
+              <p class="dek">From opaque agent selection to auditable, policy-aware delegation.</p>
+              <p class="byline">By <a href="/">Vijay Prakash Tiwari</a> · Published <time datetime="2026-09-05">September 5, 2026</time></p>
+              <div class="actions">
+                <a class="button button--primary" href="https://github.com/vijayptiwari/evidence-grounded-agent-routing/blob/main/WHITEPAPER.md">Read the original paper</a>
+                <a class="button button--secondary" href="https://github.com/vijayptiwari/evidence-grounded-agent-routing">Explore the implementation</a>
+              </div>
+            </div>
+            <figure class="cover-frame">
+              <img src="/assets/research/evidence-grounded-agent-routing-cover.png" width="1731" height="909" fetchpriority="high" alt="Cover illustration for Evidence-Grounded Agent Routing, showing candidate paths passing through an evidence lens and eligibility gate">
+            </figure>
+          </div>
+        </div>
+      </header>
+
+      <div class="shell article-layout">
+        <div class="article-body">
+          <section aria-labelledby="summary-title">
+            <p class="section-label">The problem</p>
+            <h2 id="summary-title">A router should produce evidence, not just an agent name</h2>
+            <p>In many agentic systems, a request arrives, candidate agents or tools receive scores, and the highest-scoring option wins. That is enough to execute a workflow, but it is not enough to explain or govern one.</p>
+            <p>When delegation fails, an operator needs to reconstruct the evidence considered, verify that the selected candidate was permitted and available, understand why alternatives were rejected, and determine whether the system should have clarified, abstained, or escalated instead.</p>
+            <blockquote>
+              <p>Evidence is not eligibility. A score is not a probability. Probability is not utility. Policy is not intent. Explanation is not provenance.</p>
+            </blockquote>
+          </section>
+
+          <section aria-labelledby="lifecycle-title">
+            <p class="section-label">The proposal</p>
+            <h2 id="lifecycle-title">A decision-provenance lifecycle for delegation</h2>
+            <p>Evidence-Grounded Agent Routing treats routing as a small decision system. Hard constraints are evaluated before optimization, confidence is calibrated, and the router can choose a safe non-selection action when the available evidence is insufficient.</p>
+            <ol class="routing-flow" aria-label="Evidence-grounded routing lifecycle">
+              <li><span>01</span><strong>Request</strong><small>Intent and constraints</small></li>
+              <li><span>02</span><strong>Candidates</strong><small>Recall before ranking</small></li>
+              <li><span>03</span><strong>Evidence</strong><small>Source-linked snapshots</small></li>
+              <li><span>04</span><strong>Eligibility</strong><small>Policy and operations</small></li>
+              <li><span>05</span><strong>Decision</strong><small>Select or defer</small></li>
+              <li><span>06</span><strong>Outcome</strong><small>Evaluate and recalibrate</small></li>
+            </ol>
+            <p>The resulting action can be <strong>select</strong>, <strong>parallel</strong>, <strong>clarify</strong>, <strong>abstain</strong>, or <strong>escalate</strong>. The architecture avoids treating forced selection as the only successful outcome.</p>
+          </section>
+
+          <section aria-labelledby="record-title">
+            <p class="section-label">The artifact</p>
+            <h2 id="record-title">The Routing Decision Record</h2>
+            <p>Every consequential route produces a versioned Routing Decision Record, or RDR. It connects the pre-decision evidence to the eventual outcome and preserves what is needed to replay or challenge the delegation.</p>
+            <div class="record-grid">
+              <div><strong>Evidence</strong><span>Candidate facts with sources, timestamps, and freshness</span></div>
+              <div><strong>Eligibility</strong><span>Capability, authority, policy, availability, tools, and budget</span></div>
+              <div><strong>Selection</strong><span>Raw fit, calibrated probability, utility, and reason codes</span></div>
+              <div><strong>Alternatives</strong><span>Rejected candidates and decision-relevant counterfactuals</span></div>
+              <div><strong>Contract</strong><span>Delegated scope, resources, limits, and stop conditions</span></div>
+              <div><strong>Outcome</strong><span>Observed result for evaluation, drift detection, and recalibration</span></div>
+            </div>
+          </section>
+
+          <section aria-labelledby="results-title">
+            <p class="section-label">Executable evidence</p>
+            <h2 id="results-title">What the reference implementation demonstrates</h2>
+            <p>The companion repository implements the control path in Python and LangGraph with typed records, policy and operational gates, configurable scoring, abstention, provenance capture, replay checks, and automated tests.</p>
+            <div class="metrics" aria-label="Synthetic development benchmark results">
+              <div><strong>0.9667</strong><span>full-config route accuracy</span></div>
+              <div><strong>0.5667</strong><span>score-only baseline</span></div>
+              <div><strong>0.0000</strong><span>measured constraint violations</span></div>
+              <div><strong>16</strong><span>automated tests</span></div>
+            </div>
+            <div class="evidence-note">
+              <strong>Claim boundary</strong>
+              <p>These are development results from 42 authored synthetic cases: 12 calibration cases and 30 evaluation cases. They demonstrate that the architecture is executable and that its safeguards affect behavior within the tested scenarios. They are not independent evidence, production validation, or a claim of general superiority. One known evaluation case remains visible in the repository.</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="contribution-title">
+            <p class="section-label">Meaningful uniqueness</p>
+            <h2 id="contribution-title">The contribution is integration, not invention by renaming</h2>
+            <p>Capability matching, policy engines, confidence calibration, abstention, provenance, and evaluation each have established histories. The paper’s contribution is to integrate them into one operational lifecycle for agent delegation.</p>
+            <p>The router no longer emits only an agent identifier. It produces a falsifiable decision claim: given this request, candidate set, evidence, policy, and system version, this action was eligible and preferable—and the record exists to examine that conclusion later.</p>
+          </section>
+
+          <section aria-labelledby="artifacts-title">
+            <p class="section-label">Open artifacts</p>
+            <h2 id="artifacts-title">Read, run, inspect, and challenge the work</h2>
+            <div class="artifact-list">
+              <a href="https://github.com/vijayptiwari/evidence-grounded-agent-routing/blob/main/WHITEPAPER.md"><strong>Original white paper</strong><span>Architecture, formal model, research context, limitations, and references</span></a>
+              <a href="https://github.com/vijayptiwari/evidence-grounded-agent-routing"><strong>Reference implementation</strong><span>LangGraph workflow, schemas, policies, adapters, examples, and tests</span></a>
+              <a href="https://github.com/vijayptiwari/evidence-grounded-agent-routing/tree/main/benchmark"><strong>Benchmark and dataset card</strong><span>Cases, results, ablations, methodology, and explicit claim boundaries</span></a>
+              <a href="https://github.com/vijayptiwari/evidence-grounded-agent-routing/releases/tag/v0.1.0"><strong>Versioned release</strong><span>Reproducible v0.1.0 research and implementation snapshot</span></a>
+            </div>
+          </section>
+        </div>
+
+        <aside class="paper-aside" aria-label="Paper details">
+          <div class="aside-card">
+            <p class="section-label">Paper details</p>
+            <dl>
+              <div><dt>Author</dt><dd>Vijay Prakash Tiwari</dd></div>
+              <div><dt>Version</dt><dd>0.1.0</dd></div>
+              <div><dt>Published</dt><dd>September 2026</dd></div>
+              <div><dt>Paper license</dt><dd>CC BY 4.0</dd></div>
+              <div><dt>Code license</dt><dd>Apache-2.0</dd></div>
+            </dl>
+          </div>
+          <div class="aside-card">
+            <p class="section-label">Topics</p>
+            <div class="topic-list">
+              <span>Agentic AI</span><span>LangGraph</span><span>LangChain</span><span>Agent routing</span><span>AI governance</span><span>Decision provenance</span><span>LLMOps</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="closing">
+        <div class="shell closing__inner">
+          <div>
+            <p class="section-label">Open for review</p>
+            <h2>How should an agent justify a delegation decision?</h2>
+            <p>Review the paper, reproduce the benchmark, or challenge the decision-record schema.</p>
+          </div>
+          <a class="button button--light" href="https://github.com/vijayptiwari/evidence-grounded-agent-routing/issues">Join the discussion</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p>© 2026 Vijay Prakash Tiwari</p>
+      <p><a href="/">Portfolio</a> · <a href="https://github.com/vijayptiwari/whitepapers">White papers</a> · <a href="https://www.linkedin.com/in/vijayptiwari">LinkedIn</a></p>
+    </div>
+  </footer>
+</body>
+</html>
