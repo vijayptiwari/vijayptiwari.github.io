@@ -10,7 +10,7 @@ const pages = [
   {
     file: "index.html",
     canonical: `${origin}/`,
-    phrases: ["Evidence-Grounded Agent Routing", "/research/evidence-grounded-agent-routing/"]
+    phrases: ["Agent Reliability Lead", "https://langstitch.com/", "Evidence-Grounded Agent Routing", "/research/evidence-grounded-agent-routing/"]
   },
   {
     file: "research/evidence-grounded-agent-routing/index.html",

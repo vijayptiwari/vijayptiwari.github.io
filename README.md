@@ -1,6 +1,6 @@
 # Vijay Prakash Tiwari
 
-**Senior Software Engineer · Tech Lead · Distributed Systems & Agentic AI** · Creator of [LangStitch](https://vijayptiwari.github.io/LangStitch/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [nine published works](https://vijayptiwari.github.io/research/) including Evidence-Grounded Agent Routing and the Agent Engineering Framework
+**Agent Reliability Lead · Distributed Systems · Agentic AI** · Creator of [LangStitch](https://langstitch.com/) · [Meridian](https://vijayptiwari.github.io/meridian/) · [Eventore](https://vijayptiwari.github.io/eventore/) · Author of [nine published works](https://vijayptiwari.github.io/research/) including Evidence-Grounded Agent Routing and the Agent Engineering Framework
 
 Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/) · [Resume (PDF)](https://vijayptiwari.github.io/Vijay-Prakash-Tiwari-Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/vijayptiwari) · [Email](mailto:vijayptiwariofficial@gmail.com)
 
@@ -8,17 +8,17 @@ Pune, India · 9 years experience · [Portfolio](https://vijayptiwari.github.io/
 
 ## What I do
 
-Tech Lead and Senior Software Engineer building telecom-scale Real-Time Billing platforms and agentic AI systems — currently leading a team of 3 on the **Agentic Offering** for Digital BSS at Amdocs. Open-source creator of **LangStitch**, **Meridian**, and **Eventore**; author of **Evidence-Grounded Agent Routing** and the **Agent Engineering Framework**.
+Agent Reliability Lead at Amdocs, responsible for the reliability, consistency, and performance of production AI agents—including drift detection, prompt integrity, and continuous improvement of agent engineering practice. Nine years of experience across telecom-scale billing, distributed backend platforms, enterprise integration, and agent infrastructure. Creator of **LangStitch**, **Meridian**, and **Eventore**; author of **Evidence-Grounded Agent Routing** and the **Agent Engineering Framework**.
 
 **Impact:** Amdocs Inspiring Innovator global nominee · 2,000+ eng. hours saved/year · Avishkar winner among 104 teams · TCS CodeVita rank 716
 
 ---
 
-## LangStitch — *Visual LangGraph IDE*
+## LangStitch — *Agent Engineering Platform*
 
-Open-source **visual IDE for LangGraph** — skill/guardrail/RAG designers, multi-intent routing, Python 3.13 multi-module export, live try on GitHub Pages.
+An MIT-licensed platform spanning a typed **visual LangGraph canvas**, IR v2 compiler, multi-language SDK, component marketplace, and LangTailor desktop IDE. Python ships on PyPI and Spring AI on Maven Central; Go and Rust targets are expanding.
 
-- [Product site + live try](https://vijayptiwari.github.io/LangStitch/) · [Open IDE](https://vijayptiwari.github.io/LangStitch/app/) · [GitHub](https://github.com/vijayptiwari/LangStitch)
+- [Platform](https://langstitch.com/) · [SDK](https://sdk.langstitch.com/) · [LangTailor IDE](https://langtailor.langstitch.com/#download) · [GitHub organization](https://github.com/LangStitch)
 
 ---
 
@@ -81,14 +81,14 @@ Source for my personal portfolio hosted on **GitHub Pages** → [vijayptiwari.gi
 
 Includes:
 - **Open-source products and research hub** — LangStitch, Meridian, Eventore, two current open papers, and seven journal publications
-- **Live try embed** — LangStitch IDE iframe
-- **SEO** — sitemap index (portfolio + LangStitch + Meridian + Eventore child sitemaps), JSON-LD, Open Graph, Twitter cards, `assets/js/seo.js`
+- **Selected case studies** — architecture-led profiles for LangStitch, Meridian, and Eventore
+- **SEO** — portfolio and research sitemaps, JSON-LD, Open Graph, Twitter cards, `assets/js/seo.js`
 - **Resume variants** — distributed systems & AI systems PDFs
 
 ---
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-vijayptiwari.github.io-55198b?style=flat-square)](https://vijayptiwari.github.io/)
-[![LangStitch](https://img.shields.io/badge/LangStitch-Open%20Source-818cf8?style=flat-square&logo=github)](https://github.com/vijayptiwari/LangStitch)
+[![LangStitch](https://img.shields.io/badge/LangStitch-Agent%20Engineering-818cf8?style=flat-square&logo=github)](https://langstitch.com/)
 [![Eventore](https://img.shields.io/badge/Eventore-Open%20Source-2563eb?style=flat-square&logo=github)](https://github.com/vijayptiwari/eventore)
 [![Meridian](https://img.shields.io/badge/Meridian-Open%20Source-14b8a6?style=flat-square&logo=github)](https://github.com/vijayptiwari/meridian)
 [![Agent Framework](https://img.shields.io/badge/Agent%20Framework-White%20Paper-7c3aed?style=flat-square)](https://vijayptiwari.github.io/research/agent-engineering-framework/)
