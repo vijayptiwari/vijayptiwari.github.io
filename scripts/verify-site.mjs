@@ -25,7 +25,7 @@ const pages = [
   {
     file: "research/index.html",
     canonical: `${origin}/research/`,
-    phrases: ["Seven publications from undergraduate engineering", "numberOfItems", "CollectionPage"]
+    phrases: ["Seven journal publications", "numberOfItems", "CollectionPage"]
   },
   {
     file: "research/cloud-data-security-dna-cryptography/index.html",

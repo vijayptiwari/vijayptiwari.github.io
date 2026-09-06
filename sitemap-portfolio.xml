@@ -89,12 +89,6 @@
   </url>
   <!-- Product hub indexes (detailed URLs live in each product sitemap) -->
   <url>
-    <loc>https://vijayptiwari.github.io/LangStitch/</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
     <loc>https://vijayptiwari.github.io/meridian/</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
